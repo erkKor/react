@@ -1,0 +1,50 @@
+
+
+.showcasecard-big-small{
+    margin-top: 4rem;
+    width: 100%;
+    .container{
+        display: flex;
+        height: 560px; 
+    }
+    
+    .big-card{
+        background-image: url(/src/assets/images/placeholders/light-brown-ph.png);
+        background-size: 100% 100%;
+        width: 1045px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        padding-left: 4rem;
+        
+        p{
+            max-width: 450px;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .small-card{
+        background-image: url(/src/assets/images/placeholders/standing-guy.png);
+        background-size: 100% 100%;
+        width: 635px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        padding-left: 4rem;
+        height: 560px;
+        h2{
+            margin-top: 5.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    h2{
+        margin: 0;
+        font-size: 2.8rem;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+    span{
+        display: block;
+    }
+}

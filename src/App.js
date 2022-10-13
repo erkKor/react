@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/style.min.css"
+import Navbar from "./components/Navbar";
+import Showcase from "./components/Showcase";
+import ShowcaseCardBigSmall from "./components/ShowcaseCardBigSmall";
+import FeaturedProducts from "./components/FeaturedProducts";
+import ShowcaseCardDouble from "./components/ShowcaseCardDouble";
+import OurSpeciality from "./components/OurSpeciality";
+import BigSquareWCardsLeft from "./components/BigSquareWCardsLeft";
+import BigSquareWCardsRight from "./components/BigSquareWCardsRight";
+import SaleBanner from "./components/SaleBanner";
+import TrippleColumnProducts from "./components/TrippleColumnProducts";
+import InfoIcons from "./components/InfoIcons";
+import Footer from "./components/Footer"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar />
+    <Showcase />
+    <ShowcaseCardBigSmall />
+    <FeaturedProducts />
+    <ShowcaseCardDouble />
+    <OurSpeciality />
+    <BigSquareWCardsLeft />
+    <BigSquareWCardsRight />
+    <SaleBanner />
+    <TrippleColumnProducts />
+    <InfoIcons />
+    <Footer />
+    </>
   );
 }
 
 export default App;
+
+
+/* 
+  import Logo from '../assets/images/logo.svg'
+  <img src={Logo} />
+
+  <div style={{"height": "300px"}}></div>
+*/

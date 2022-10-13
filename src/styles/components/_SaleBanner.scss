@@ -1,0 +1,27 @@
+.big-sale-banner{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    .container{
+        background-color: $color-gray-21;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        width: $container-small;
+        
+    }
+
+    h3{
+        font-size: $font-size-45;
+        margin: 0;
+    }
+    p{
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+}

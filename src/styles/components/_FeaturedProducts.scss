@@ -1,0 +1,24 @@
+.featured-products{
+    margin-top: 5rem;
+
+    .container{
+        max-width: 1110px;
+    }
+
+    .card-grid{
+        margin:0 10rem;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(4, 255px);
+        grid-template-rows: repeat(2, 325px);
+        gap:1.5rem;
+    }
+    .section-title{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        h3{
+            margin: 0;
+        }
+    }
+}

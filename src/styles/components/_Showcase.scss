@@ -1,0 +1,40 @@
+.showcase{
+    // background-color:$color-gray-1;
+    background: rgb(230,230,230);
+    background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(245,245,245,1) 100%);
+    overflow: hidden;
+    
+    .container{
+        display: flex;
+        align-items: center;
+    }
+
+    .showcase-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+
+        h1{
+            font-size: 4.5rem;
+            font-weight: $font-weight-bold;
+            line-height: 1.1;
+            text-align: center;
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+        p{
+            margin-top: 1rem;
+            font-size: 1.3rem
+        }
+    }
+
+    .img1{
+       margin-left:-120px;
+    }
+    .img2{
+       margin-right:-120px;
+    }
+}

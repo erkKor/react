@@ -1,0 +1,68 @@
+.our-speciality{
+    margin-top: 2rem;
+    .container{
+        background-color: $color-gray-0;
+        height: 400px;
+        
+        .section-title{
+            display: flex;
+            justify-content: center;
+            padding-top: 2rem;
+        }
+        .wide-cards{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3rem;
+            .wide-card{
+                height: 230px;
+                width:490px;
+                background-color: white;
+                display: flex;
+                margin: 0 1rem;
+                .card-content{
+                    width: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-left: 2rem;            
+                }
+                .gray-square{
+                    width: 260px;
+                    height: 100%;
+                    background-color: $color-gray-10;
+        
+                }
+            }
+        }
+       
+
+        h3{
+            font-size: 20px;
+        }
+        a{
+            position: relative;
+            color:$color-dark;
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 1px solid black;
+            
+            &:hover{
+                color: $color-theme;
+                border-bottom: 1px solid $color-theme;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                background-color: white;
+                width:95px;
+                height: 1px;
+                bottom: -1px;
+                right: 0;
+            }
+            i{
+                font-size: 12px;
+            }
+        }
+    }
+}

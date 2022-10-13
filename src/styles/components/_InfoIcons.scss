@@ -1,0 +1,45 @@
+.info-icons{
+    display: flex;
+    justify-content: center;
+    .container{
+    //    display: grid;
+    //    justify-content: center;
+    //    grid-template-columns: repeat(4,300px);
+        width: 1100px;
+        justify-content: space-evenly;
+        align-items: center;
+        display: flex;
+        border-top: 2px solid $color-gray-2;
+       
+    }
+    .info-container{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .icon-circle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
+            
+            img{
+                height: 30px;
+                width: 30px;
+                
+            }
+        }
+   
+        p{
+            margin: 0;
+            text-align: center;
+        }
+        h3{
+            margin:1rem 0;
+        }
+    }
+}

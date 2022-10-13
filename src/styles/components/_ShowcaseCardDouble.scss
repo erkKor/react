@@ -1,0 +1,64 @@
+.double-showcase-card{
+    margin-top: 2rem;
+    width: 100%;
+    .container{
+        display: flex;
+        height: 400px;
+        gap:1.5rem;
+    }
+    .left-card{
+        background-image: url(/src/assets/images/placeholders/pamela-reif.png);
+        background-size: 100% 100%;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-end;
+
+        color:white;
+        .card-content{
+            position:  relative;
+            padding-right: 2rem;
+            h2{
+                margin-top: 5rem;
+            }
+            button{
+                margin-top: 2rem;
+                position: absolute;
+            }
+        }
+        
+    }
+    .right-card{
+        background-image: url(/src/assets/images/placeholders/be-conscious.png);
+        background-size: 100% 100%;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
+        color: $color-dark;
+        .card-content{
+            position:  relative;
+            padding-left: 4rem;
+            h2{
+                margin-top: 5rem;
+                
+            }
+            button{
+                margin-top: 2rem;
+                position: absolute;
+            }
+        }
+    }
+    h2{
+        margin: 0;
+        font-size: 2.8rem;
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 2px;
+    }
+    span{
+        display: block;
+    }
+}
