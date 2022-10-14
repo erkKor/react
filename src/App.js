@@ -18,7 +18,7 @@ function App() {
     <>
     <Navbar />
     <Showcase />
-    <ShowcaseCardBigSmall />
+    {/* <ShowcaseCardBigSmall />
     <FeaturedProducts />
     <ShowcaseCardDouble />
     <OurSpeciality />
@@ -27,7 +27,7 @@ function App() {
     <SaleBanner />
     <TrippleColumnProducts />
     <InfoIcons />
-    <Footer />g
+    <Footer /> */}
     </>
   );
 }
