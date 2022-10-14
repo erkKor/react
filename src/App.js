@@ -18,8 +18,8 @@ function App() {
     <>
     <Navbar />
     <Showcase />
-    {/* <ShowcaseCardBigSmall />
-    <FeaturedProducts />
+    <ShowcaseCardBigSmall />
+    {/* <FeaturedProducts />
     <ShowcaseCardDouble />
     <OurSpeciality />
     <BigSquareWCardsLeft />

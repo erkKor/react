@@ -1,50 +1,123 @@
-
-
 .showcasecard-big-small{
     margin-top: 4rem;
     width: 100%;
+    .big-card{
+        background-color: $color-light-brown;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        padding: 1rem 0;
+        p{
+            padding-bottom: 1rem;
+        }
+    }
+
+    .small-card{
+        background-color: $color-gray-3;
+        width: 343px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+        padding: 1rem 0;
+        h2{
+            font-size: 1.4rem;
+            padding-bottom: 0.5rem;
+        }
+        span{
+            display: inline;
+        }
+    }
+
+    h2{
+        margin: 0;
+        font-size:1.8rem;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    p{
+        font-size: 14px;
+        padding: 0 1rem;
+    }
+    span{
+        display: block;
+    }
+
+    .button-theme-dark{
+        @include buttonSmall;
+    }
+}
+
+@include md{
+.showcasecard-big-small{
     .container{
         display: flex;
-        height: 560px; 
+        height: 290px; 
     }
-    
     .big-card{
         background-image: url(/src/assets/images/placeholders/light-brown-ph.png);
         background-size: 100% 100%;
         width: 1045px;
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-        padding-left: 4rem;
-        
-        p{
-            max-width: 450px;
-            padding-bottom: 1rem;
-        }
+        align-items: flex-start;
+        padding-left: 2rem;
     }
 
     .small-card{
         background-image: url(/src/assets/images/placeholders/standing-guy.png);
         background-size: 100% 100%;
         width: 635px;
-        display: flex;
-        flex-direction: column;
+        height: 290px;
         justify-content:center;
-        padding-left: 4rem;
-        height: 560px;
+        align-items: flex-start;
+        padding: 0;
+        padding-left: 2rem;
         h2{
+            font-size: 1.8rem;
             margin-top: 5.5rem;
             margin-bottom: 2rem;
+            span{
+                display: block;
+            }
+        }
+    }
+
+    p{
+        font-size: 1rem;
+        padding: 0;
+    }
+}
+}
+
+@include ul{
+.showcasecard-big-small{
+    width: 100%;
+    .container{
+        height: 560px; 
+    }
+    
+    .big-card{
+        padding-left: 4rem;
+        p{
+            max-width: 450px;
+        }
+    }
+
+    .small-card{
+        height: 560px;
+        padding-left: 4rem;
+        h2{
+            font-size: 2.8rem;
         }
     }
 
     h2{
-        margin: 0;
         font-size: 2.8rem;
-        font-weight: bold;
-        line-height: 1.2;
     }
-    span{
-        display: block;
+    
+    .button-theme-dark{
+        @include buttonRegular;
     }
+}
 }
