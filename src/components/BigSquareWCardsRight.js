@@ -6,13 +6,13 @@ const BigSquareWCardsRight = () => {
     <section className="big-square-cards" id="bigSquareRight">
         <div className="container">
             <div className="card-grid">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Card discPrice='€49.00'/>
+                <Card discPrice='€49.00'/>
+                <Card discPrice='€49.00'/>
+                <Card discPrice='€49.00'/>
             </div>
             <div className="big-square">
-                <h1>2 FOR USD $29</h1>
+                <h1>2 FOR USD $49</h1>
                 <button className="button-theme-white">FLASH SALE
                     <div className="button-theme-border"></div>
                 </button>

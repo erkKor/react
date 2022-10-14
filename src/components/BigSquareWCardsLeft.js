@@ -12,10 +12,10 @@ const BigSquareWCardsLeft = () => {
                 </button>
             </div>
             <div className="card-grid">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Card discPrice='€29.00'/>
+                <Card discPrice='€29.00'/>
+                <Card discPrice='€29.00'/>
+                <Card discPrice='€29.00'/>
             </div>
         </div>
     </section>

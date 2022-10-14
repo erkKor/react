@@ -27,7 +27,7 @@ function App() {
     <SaleBanner />
     <TrippleColumnProducts />
     <InfoIcons />
-    <Footer />
+    <Footer />g
     </>
   );
 }

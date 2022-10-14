@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const SmallCard = () => {
+const SmallCard = ({orgPrice, discPrice}) => {
   return (
     <div className="small-card">
         <div className="card-background">
@@ -19,12 +20,17 @@ const SmallCard = () => {
                 <i className="fa-sharp fa-solid fa-star"></i>
             </div>
             <div className="card-prices"> 
-                <div className="original-price"></div>
-                <div className="discount-price">$30.00</div>
+                <div className="original-price">{orgPrice}</div>
+                <div className="discount-price">{discPrice}</div>
             </div>
         </div>
     </div>
   )
+}
+
+SmallCard.propTypes = {
+    orgPrice: PropTypes.number,
+    discPrice: PropTypes.number,
 }
 
 export default SmallCard

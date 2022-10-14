@@ -7,21 +7,21 @@ const TrippleColumnProducts = () => {
         <div className="container">
             <div className="product-column">
                 <h3>Latest Product</h3>
-                <SmallCard />
-                <SmallCard />
-                <SmallCard />
+                <SmallCard discPrice='€35.00'/>
+                <SmallCard discPrice='€35.00'/>
+                <SmallCard discPrice='€35.00'/>
             </div>
             <div className="product-column">
                 <h3>Best Selling Product</h3>
-                <SmallCard />
-                <SmallCard />
-                <SmallCard />
+                <SmallCard discPrice='€35.00'/>
+                <SmallCard discPrice='€35.00'/>
+                <SmallCard discPrice='€35.00'/>
             </div>
             <div className="product-column">
                 <h3>Top Reacted Product</h3>
-                <SmallCard />
-                <SmallCard />
-                <SmallCard />
+                <SmallCard discPrice='€35.00'/>
+                <SmallCard discPrice='€35.00'/>
+                <SmallCard discPrice='€35.00'/>
             </div>
         </div>
     </section>

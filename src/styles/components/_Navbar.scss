@@ -1,5 +1,7 @@
 header{
-    padding: 0.5rem 0;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid $color-gray-10;
     &.header-gray{
         background: rgb(230,230,230);
         background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(245,245,245,1) 100%);
@@ -12,11 +14,22 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        height: 65px;
+        margin: 0 0.5rem;
         .brand{
             font-size: $font-size-24;
+            font-weight: bold;
+            button{
+                border: none;
+                background-color: transparent;
+                font-size: 1.5rem;
+                padding: 0;
+                padding-right:0.4rem;
+                
+            }
         }
         .menu-categories{
+            display: none;
             .active{
                 color: $color-theme;
             }
@@ -26,13 +39,52 @@ header{
             align-items: center;
             a{
                 position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+        color:$color-dark;
+        margin: 0 0.6rem;
+        font-size: 1.5rem;
+        font-weight: $font-weight-medium;
+
+        &:hover{
+            color:$color-theme;
+        }
+        
+    }
+}
+
+
+
+@include md{
+header{
+    padding: 0.5rem 0;
+    border: none;
+    position: relative;
+    .container{
+        height:auto;
+        margin: 0 1rem;
+        .brand{
+            button{
+                display: none;
+            }
+        }
+        .menu-categories{
+            display: block;
+        }
+
+        .icon-links{
+            a{
                 background-color: white;
                 height: 36px;
                 width: 36px;
                 border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
                 transition: 0.3s ease-in-out;
 
@@ -44,15 +96,20 @@ header{
         }
     }
     a{
-        text-decoration: none;
-        color:$color-dark;
-        margin: 0 0.6rem;
         font-size: $font-size-16;
-        font-weight: $font-weight-medium;
-
         &:hover{
             color:$color-theme;
         }
         
     }
+}
+}
+
+@include ul{
+header{
+    .container{
+        height: auto;
+        margin: auto;
+    }
+}
 }

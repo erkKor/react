@@ -4,21 +4,26 @@ const Navbar = () => {
   return (
     <header className="header-gray">
         <nav className="container">
-            <div className="brand"><strong>Fixxo.</strong></div>
+            <div className="brand">
+                <button id="" type="button" onclick="slideLeft()" >
+                    {/* <i className="fa-light fa-bars"></i> */}
+                    <i className="fa-light fa-bars-staggered"></i>
+                </button>
+                Fixxo.</div>
             <div className="menu-categories">
-                <a href="" className="active">Home</a>
-                <a href="">Categories</a>
-                <a href="">Products</a>
-                <a href="">Contacts</a>
+                <a href="/" className="active">Home</a>
+                <a href="/">Categories</a>
+                <a href="/">Products</a>
+                <a href="/">Contacts</a>
             </div>
             <div className="icon-links">
-                    <a href=""><i className="fa-light fa-magnifying-glass"></i></a>
-                    <a href=""><i className="fa-light  fa-code-compare rotate-icon rotate-icon" ></i></a>
-                    <a href="">
+                    <a href="/"><i className="fa-light fa-magnifying-glass"></i></a>
+                    <a href="/"><i className="fa-light  fa-code-compare rotate-icon rotate-icon" ></i></a>
+                    <a href="/">
                         <i className="fa-light fa-heart"></i>
                         <span className="badge">1</span>
                     </a>
-                    <a href="">
+                    <a href="/">
                         <i className="fa-light fa-bag-shopping"></i>
                         <span className="badge">3</span>
                     </a>
