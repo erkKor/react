@@ -1,4 +1,6 @@
 import "./styles/style.min.css"
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+
 import Navbar from "./components/Navbar";
 import Showcase from "./components/Showcase";
 import ShowcaseCardBigSmall from "./components/ShowcaseCardBigSmall";
@@ -12,23 +14,20 @@ import TrippleColumnProducts from "./components/TrippleColumnProducts";
 import InfoIcons from "./components/InfoIcons";
 import Footer from "./components/Footer"
 
+import HomeView from "./views/HomeView";
+import ContactView from "./views/ContactView";
+import NotFoundView from "./views/NotFoundView";
+
 
 function App() {
   return (
-    <>
-    <Navbar />
-    <Showcase />
-    <ShowcaseCardBigSmall />
-    {/* <FeaturedProducts />
-    <ShowcaseCardDouble />
-    <OurSpeciality />
-    <BigSquareWCardsLeft />
-    <BigSquareWCardsRight />
-    <SaleBanner />
-    <TrippleColumnProducts />
-    <InfoIcons />
-    <Footer /> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeView />}/>
+        <Route path="/Contacts" element={<ContactView />}/>
+        <Route path="*" element={<NotFoundView />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

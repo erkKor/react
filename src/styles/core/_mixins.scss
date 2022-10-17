@@ -6,6 +6,9 @@
     .button-theme-border::before,.button-theme-border::after{
         width: 86%;
         height: 64%;
+
+        width:calc(100% - 16px);
+        height: calc(100% - 16px);
     }
     }
     .button-theme-border::before,.button-theme-border::after{

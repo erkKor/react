@@ -76,8 +76,11 @@ margin: 0;
             transition: 0.3s ease-in-out;
             &:hover{
                 .button-theme-border::before,.button-theme-border::after{
-                    width: 93%;
-                    height: 68%;
+                    // width: 93%;
+                    // height: 68%;
+
+                    width:calc(100% - 16px);
+                    height: calc(100% - 16px);
                 }
             }
         }
@@ -176,8 +179,10 @@ margin: 0;
             transition: 0.3s ease-in-out;
             &:hover{
                 .button-theme-border::before,.button-theme-border::after{
-                    width: 90%;
-                    height: 68%;
+                    // width: 90%;
+                    // height: 68%;
+                    width: calc(100% - 16px);
+                    height: calc(100% - 16px);
                 }
             }
         }
@@ -230,6 +235,11 @@ margin: 0;
         .button-theme-border::before,.button-theme-border::after{
             width: 91%;
             height: 73%;
+
+            width:calc(100% - 16px);
+            height: calc(100% - 16px);
+
+            
         }
     }
     .button-theme-border::before,.button-theme-border::after{
