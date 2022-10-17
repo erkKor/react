@@ -1,21 +1,14 @@
 import "./styles/style.min.css"
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
-import Navbar from "./components/Navbar";
-import Showcase from "./components/Showcase";
-import ShowcaseCardBigSmall from "./components/ShowcaseCardBigSmall";
-import FeaturedProducts from "./components/FeaturedProducts";
-import ShowcaseCardDouble from "./components/ShowcaseCardDouble";
-import OurSpeciality from "./components/OurSpeciality";
-import BigSquareWCardsLeft from "./components/BigSquareWCardsLeft";
-import BigSquareWCardsRight from "./components/BigSquareWCardsRight";
-import SaleBanner from "./components/SaleBanner";
-import TrippleColumnProducts from "./components/TrippleColumnProducts";
-import InfoIcons from "./components/InfoIcons";
-import Footer from "./components/Footer"
-
 import HomeView from "./views/HomeView";
+import ProductsView from "./views/ProductsView";
+import CategoriesView from "./views/CategoriesView"
 import ContactView from "./views/ContactView";
+import SearchView from "./views/SearchView"
+import CompareView from "./views/CompareView"
+import WishlistView from "./views/WishlistView"
+import ShoppingCartView from "./views/ShoppingCartView"
 import NotFoundView from "./views/NotFoundView";
 
 
@@ -24,7 +17,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeView />}/>
+        <Route path="/Products" element={<ProductsView/>}/>
+        <Route path="/Categories" element={<CategoriesView />}/>
         <Route path="/Contacts" element={<ContactView />}/>
+        <Route path="/Search" element={<SearchView />}/>
+        <Route path="/Compare" element={<CompareView />}/>
+        <Route path="/Wishlist" element={<WishlistView />}/>
+        <Route path="/ShoppingCart" element={<ShoppingCartView />}/>
         <Route path="*" element={<NotFoundView />}/>
       </Routes>
     </BrowserRouter>

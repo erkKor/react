@@ -1,0 +1,43 @@
+.contact-form{
+    margin-top: 2rem;
+    .container{
+        width: 1110px;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:30px;
+
+        input{
+            padding: 15px 18px;
+            border: 1px solid $color-gray-2;
+            width: 93%;
+
+        }
+        .textarea{
+            grid-column: 2 / -1;
+            font-family: $font-poppins;
+            border: 1px solid $color-gray-2;
+            height: 140px;
+            padding: 15px 18px;
+            resize: none;
+            
+        }
+
+        button{
+            width: 210px;
+            grid-column: 1 / -1;
+        }
+
+        .errorMessage{
+            margin-top: 5px;
+            color: $color-theme;
+            font-size: 0.8em;
+        }
+        .error{
+            color: $color-theme;
+            border-color: $color-theme;
+        }
+    }
+}

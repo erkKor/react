@@ -1,16 +1,16 @@
 import React from 'react'
-import BigSquareWCardsLeft from '../components/BigSquareWCardsLeft'
-import BigSquareWCardsRight from '../components/BigSquareWCardsRight'
-import FeaturedProducts from '../components/FeaturedProducts'
-import Footer from '../components/Footer'
-import InfoIcons from '../components/InfoIcons'
 import Navbar from '../components/Navbar'
-import OurSpeciality from '../components/OurSpeciality'
-import SaleBanner from '../components/SaleBanner'
 import Showcase from '../components/Showcase'
 import ShowcaseCardBigSmall from '../components/ShowcaseCardBigSmall'
+import FeaturedProducts from '../components/FeaturedProducts'
 import ShowcaseCardDouble from '../components/ShowcaseCardDouble'
+import OurSpeciality from '../components/OurSpeciality'
+import BigSquareWCardsLeft from '../components/BigSquareWCardsLeft'
+import BigSquareWCardsRight from '../components/BigSquareWCardsRight'
+import SaleBanner from '../components/SaleBanner'
 import TrippleColumnProducts from '../components/TrippleColumnProducts'
+import InfoIcons from '../components/InfoIcons'
+import Footer from '../components/Footer'
 
 const HomeView = () => {
   return (

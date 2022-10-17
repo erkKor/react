@@ -11,7 +11,9 @@ const Navbar = ({headerType}) => {
                     {/* <i className="fa-light fa-bars"></i> */}
                     <i className="fa-light fa-bars-staggered"></i>
                 </button>
-                Fixxo.</div>
+                <NavLink>Fixxo.</NavLink>
+
+            </div>
             <div className="menu-categories">
                 <NavLink to="/" end>Home</NavLink>
                 <NavLink to="/categories" end>Categories</NavLink>
@@ -21,16 +23,8 @@ const Navbar = ({headerType}) => {
             <div className="icon-links">
                 <MenuIcon link="/search" icon="fa-light fa-magnifying-glass"/>
                 <MenuIcon link="/compare" icon="fa-light  fa-code-compare rotate-icon rotate-icon"/>
-                <MenuIcon link="/wishlist" icon="fa-light fa-heart"/>
-                <MenuIcon link="/shoppingcart" icon="fa-light fa-bag-shopping"/>
-                    {/* <a href="/">
-                        <i className="fa-light fa-heart"></i>
-                        <span className="badge">1</span>
-                    </a>
-                    <a href="/">
-                        <i className="fa-light fa-bag-shopping"></i>
-                        <span className="badge">3</span>
-                    </a> */}
+                <MenuIcon link="/wishlist" icon="fa-light fa-heart" badge="badge" badgeNumber="1"/>
+                <MenuIcon link="/shoppingcart" icon="fa-light fa-bag-shopping" badge="badge" badgeNumber="3"/>
             </div>
         </nav>
     </header>
