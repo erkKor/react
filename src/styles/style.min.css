@@ -1058,7 +1058,6 @@ header a {
 .contact-form form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
 }
 .contact-form form input {
   padding: 15px 18px;
@@ -1066,15 +1065,15 @@ header a {
   width: 93%;
 }
 .contact-form form .textarea {
-  grid-column: 2/-1;
   font-family: "Poppins", sans-serif;
   border: 1px solid #CDCED0;
   height: 140px;
   padding: 15px 18px;
   resize: none;
+  grid-column: 1/-1;
+  width: 100%;
 }
 .contact-form form button {
-  width: 210px;
   grid-column: 1/-1;
 }
 .contact-form form .errorMessage {
@@ -1084,5 +1083,4 @@ header a {
 }
 .contact-form form .error {
   color: #FF7373;
-  border-color: #FF7373;
 }
