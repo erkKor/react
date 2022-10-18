@@ -6,6 +6,7 @@ const Navbar = ({headerType}) => {
     const [showMenu, setShowMenu] = useState(false)
 
     const toggleMenu = () =>{
+
         setShowMenu(!showMenu)
     }
 

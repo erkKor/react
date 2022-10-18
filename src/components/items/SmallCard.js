@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const SmallCard = ({orgPrice, discPrice}) => {
   return (
@@ -27,10 +26,4 @@ const SmallCard = ({orgPrice, discPrice}) => {
     </div>
   )
 }
-
-SmallCard.propTypes = {
-    orgPrice: PropTypes.number,
-    discPrice: PropTypes.number,
-}
-
 export default SmallCard

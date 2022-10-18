@@ -1,7 +1,8 @@
 import React from 'react'
 import Card from './items/Card'
 
-const FeaturedProducts = () => {
+
+const FeaturedProducts = ({products}) => {
   return (
     <section className="featured-products">
         <div className="container">
@@ -9,14 +10,10 @@ const FeaturedProducts = () => {
                 <h3>Featured Products</h3>
             </div>
             <div className="card-grid">
-                <Card orgPrice='€40.00' discPrice='€30.00'/>
-                <Card discPrice='€30.00'/>
-                <Card discPrice='€30.00'/>
-                <Card discPrice='€30.00'/>
-                <Card discPrice='€30.00'/>
-                <Card orgPrice='€40.00' discPrice='€30.00'/>
-                <Card discPrice='€30.00'/>
-                <Card discPrice='€30.00'/>
+                {
+                  products.map(product => <Card key={product.id} product={product} />)
+                }
+                
             </div>
         </div>
     </section>
