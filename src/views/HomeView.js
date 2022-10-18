@@ -16,7 +16,7 @@ const HomeView = () => {
   return (
     <>
       <Navbar headerType="header-gray"/>
-      <Showcase />
+      {/* <Showcase />
       <ShowcaseCardBigSmall />
       <FeaturedProducts />
       <ShowcaseCardDouble />
@@ -26,7 +26,7 @@ const HomeView = () => {
       <SaleBanner />
       <TrippleColumnProducts />
       <InfoIcons />
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

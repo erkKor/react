@@ -1,0 +1,45 @@
+.product-details{
+    .container{
+        width: 1110px;
+        margin: auto;
+    }
+
+    .top-part{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:30px;
+
+        .product-image{
+            color: red;
+            display: grid;
+            height: 600px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 3fr 1fr;
+            gap: 30px;
+
+            .image-squares{
+                background-color:  $color-gray-0;
+            }
+
+            #main-image{
+                grid-column: 1 / -1;
+                background-color:  $color-gray-0;
+            }
+        }
+        .product-shop-choices{
+            h2{
+                margin: 0;
+            }
+            p{
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+// Gridlayout
+// 3 3 3
+// 3 3 3
+// 3 3 3
+// 3 3 3

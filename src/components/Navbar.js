@@ -7,12 +7,7 @@ const Navbar = ({headerType}) => {
     <header className={headerType}>
         <nav className="container">
             <div className="brand">
-                <button id="" type="button" onclick="slideLeft()" >
-                    {/* <i className="fa-light fa-bars"></i> */}
-                    <i className="fa-light fa-bars-staggered"></i>
-                </button>
                 <NavLink>Fixxo.</NavLink>
-
             </div>
             <div className="menu-categories">
                 <NavLink to="/" end>Home</NavLink>
@@ -25,6 +20,10 @@ const Navbar = ({headerType}) => {
                 <MenuIcon link="/compare" icon="fa-light  fa-code-compare rotate-icon rotate-icon"/>
                 <MenuIcon link="/wishlist" icon="fa-light fa-heart" badge="badge" badgeNumber="1"/>
                 <MenuIcon link="/shoppingcart" icon="fa-light fa-bag-shopping" badge="badge" badgeNumber="3"/>
+                <button id="" className="icon-link btn-icon-link">
+                    {/* <i className="fa-light fa-bars"></i> */}
+                    <i className="fa-light fa-bars-staggered"></i>
+                </button>
             </div>
         </nav>
     </header>
