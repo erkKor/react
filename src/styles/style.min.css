@@ -352,13 +352,22 @@ body {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
+}
+
+.d-grid {
+  display: grid !important;
 }
 
 @media (min-width: 1600px) {
   .container {
     margin: auto;
     width: 1680px;
+  }
+}
+@media (min-width: 768px) {
+  .d-md-flex {
+    display: flex !important;
   }
 }
 header {
@@ -379,7 +388,7 @@ header .container {
   align-content: center;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "brand links" "categories categories";
-  height: 65px;
+  margin: 0.5rem 0.5rem;
 }
 header .container .brand {
   grid-area: brand;
@@ -412,6 +421,7 @@ header .container .menu-categories a:hover {
 header .container .icon-links {
   grid-area: links;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 header .container .icon-links .icon-link {
@@ -425,6 +435,13 @@ header .container .icon-links .icon-link {
   border-radius: 50%;
   box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
   transition: 0.3s ease-in-out;
+}
+header .container .icon-links .btn-icon-link {
+  color: #222529;
+  margin: 0 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
 }
 header a {
   text-decoration: none;

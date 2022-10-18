@@ -379,7 +379,10 @@ margin: 0;
 }
 
 .d-none{
-    display: none;
+    display: none !important;
+}
+.d-grid{
+    display: grid !important;
 }
 
 
@@ -392,5 +395,7 @@ margin: 0;
 
 
 @include md{
-
+    .d-md-flex{
+    display: flex !important;
+    }
 }
