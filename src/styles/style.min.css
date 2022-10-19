@@ -1064,69 +1064,141 @@ header a {
   }
 }
 .our-speciality {
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 .our-speciality .container {
   background-color: #F5F5F5;
-  height: 400px;
 }
-.our-speciality .container .section-title {
+.our-speciality .section-title {
   display: flex;
   justify-content: center;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
 }
-.our-speciality .container .wide-cards {
+.our-speciality .wide-cards {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3rem;
+  padding: 0 3rem 1rem;
+  gap: 1rem;
 }
-.our-speciality .container .wide-cards .wide-card {
-  height: 230px;
-  width: 490px;
+.our-speciality .wide-cards .wide-card {
+  height: 100px;
+  width: 100%;
   background-color: white;
   display: flex;
-  margin: 0 1rem;
 }
-.our-speciality .container .wide-cards .wide-card .card-content {
+.our-speciality .wide-cards .wide-card .card-content {
   width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 2rem;
 }
-.our-speciality .container .wide-cards .wide-card .gray-square {
-  width: 260px;
+.our-speciality .wide-cards .wide-card .gray-square {
+  width: 70px;
   height: 100%;
   background-color: #BBBBBB;
 }
-.our-speciality .container h3 {
-  font-size: 20px;
+.our-speciality h3 {
+  font-size: 14px;
+  margin: 7px 0;
 }
-.our-speciality .container a {
+.our-speciality a {
+  font-size: 14px;
   position: relative;
   color: #222529;
   font-weight: bold;
   text-decoration: none;
   border-bottom: 1px solid black;
 }
-.our-speciality .container a:hover {
+.our-speciality a:hover {
   color: #FF7373;
   border-bottom: 1px solid #FF7373;
 }
-.our-speciality .container a::after {
+.our-speciality a::after {
   content: "";
   position: absolute;
   background-color: white;
-  width: 95px;
+  width: 68px;
   height: 1px;
   bottom: -1px;
   right: 0;
 }
-.our-speciality .container a i {
-  font-size: 12px;
+.our-speciality a i {
+  font-size: 10px;
 }
 
+@media (min-width: 768px) {
+  .our-speciality {
+    margin-top: 2rem;
+  }
+  .our-speciality .container {
+    height: 250px;
+  }
+  .our-speciality .section-title {
+    padding-top: 1rem;
+  }
+  .our-speciality .wide-cards {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+  .our-speciality .wide-cards .wide-card {
+    height: 150px;
+    width: 220px;
+    margin: 0 0.5rem;
+  }
+  .our-speciality .wide-cards .wide-card .card-content {
+    padding-left: 1.5rem;
+  }
+  .our-speciality .wide-cards .wide-card .gray-square {
+    width: 60px;
+  }
+  .our-speciality h3 {
+    font-size: 16px;
+  }
+  .our-speciality a::after {
+    width: 55px;
+  }
+  .our-speciality a i {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  .our-speciality .container {
+    height: 400px;
+  }
+  .our-speciality .section-title {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .our-speciality .wide-cards {
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
+  .our-speciality .wide-cards .wide-card {
+    height: 230px;
+    width: 490px;
+    margin: 0 1rem;
+  }
+  .our-speciality .wide-cards .wide-card .card-content {
+    padding-left: 2rem;
+  }
+  .our-speciality .wide-cards .wide-card .gray-square {
+    width: 260px;
+  }
+  .our-speciality h3 {
+    font-size: 20px;
+    margin: 14px 0;
+  }
+  .our-speciality a {
+    font-size: 16px;
+  }
+  .our-speciality a::after {
+    width: 95px;
+  }
+}
 .big-square-cards {
   margin-top: 2rem;
 }

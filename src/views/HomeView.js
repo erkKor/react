@@ -4,7 +4,7 @@ import Showcase from '../components/Showcase'
 import ShowcaseCardBigSmall from '../components/ShowcaseCardBigSmall'
 import FeaturedProducts from '../components/sections/FeaturedProducts'
 import ShowcaseCardDouble from '../components/sections/ShowcaseCardDouble'
-import OurSpeciality from '../components/OurSpeciality'
+import OurSpeciality from '../components/sections/OurSpeciality'
 import BigSquareWCardsLeft from '../components/sections/BigSquareWCardsLeft'
 import BigSquareWCardsRight from '../components/sections/BigSquareWCardsRight'
 import SaleBanner from '../components/sections/SaleBanner'
@@ -39,10 +39,10 @@ const HomeView = () => {
       <Navbar headerType="header-gray"/>
       {/* <Showcase />
       <ShowcaseCardBigSmall />
-      <FeaturedProducts products={featuredProducts}/> */}
-      <ShowcaseCardDouble />
-      {/* <OurSpeciality /> 
-      <BigSquareWCardsLeft products={cardProducts}/>
+      <FeaturedProducts products={featuredProducts}/> 
+      <ShowcaseCardDouble />*/}
+       <OurSpeciality /> 
+     {/* <BigSquareWCardsLeft products={cardProducts}/>
       <BigSquareWCardsRight products={cardProducts}/>
        <SaleBanner />
       <TrippleColumnProducts />
