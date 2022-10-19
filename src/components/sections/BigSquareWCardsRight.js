@@ -1,15 +1,14 @@
 import React from 'react'
-import Card from './items/Card'
+import Card from '../items/Card'
 
-const BigSquareWCardsRight = () => {
+const BigSquareWCardsRight = ({products}) => {
   return (
     <section className="big-square-cards" id="bigSquareRight">
         <div className="container">
-            <div className="card-grid">
-                <Card discPrice='€49.00'/>
-                <Card discPrice='€49.00'/>
-                <Card discPrice='€49.00'/>
-                <Card discPrice='€49.00'/>
+        <div className="card-grid">
+                {
+                  products.map(product => <Card key={product.id} product={product} />)
+                }
             </div>
             <div className="big-square">
                 <h1>2 FOR USD $49</h1>

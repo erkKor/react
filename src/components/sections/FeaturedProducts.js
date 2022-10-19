@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './items/Card'
+import Card from '../items/Card'
 
 
 const FeaturedProducts = ({products}) => {

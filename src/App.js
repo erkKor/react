@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import HomeView from "./views/HomeView";
 import ProductsView from "./views/ProductsView";
+import ProductDetailsView from "./views/ProductDetailsView";
 import CategoriesView from "./views/CategoriesView"
 import ContactView from "./views/ContactView";
 import SearchView from "./views/SearchView"
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeView />}/>
         <Route path="/Products" element={<ProductsView/>}/>
+        <Route path="/Products/:id" element={<ProductDetailsView />}/>
         <Route path="/Categories" element={<CategoriesView />}/>
         <Route path="/Contacts" element={<ContactView />}/>
         <Route path="/Search" element={<SearchView />}/>

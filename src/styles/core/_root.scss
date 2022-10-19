@@ -14,7 +14,7 @@ margin: 0;
 }
 
 .card{
-    width: 250px;
+    width: 100%;
     position: relative;
     overflow: hidden;
 
@@ -27,8 +27,7 @@ margin: 0;
             .button-theme{
                 bottom:0;
             }
-        }
-        
+        } 
     }
     
     .card-menu{

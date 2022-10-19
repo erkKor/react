@@ -3,7 +3,7 @@ header{
     border-bottom: 1px solid $color-gray-10;
     position: fixed;
     top:0;
-    z-index: 1;
+    z-index: 100;
     &.header-gray{
         background: rgb(230,230,230);
         background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(245,245,245,1) 100%);
@@ -72,6 +72,7 @@ header{
                 font-size: 1.2rem;
                 font-weight: $font-weight-medium;
                 border: none;
+                display: block;
             }
         }
     }
@@ -97,11 +98,6 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .brand{
-            button{
-                display: none;
-            }
-        }
         .menu-categories{
             display: block;
             a{
@@ -111,7 +107,6 @@ header{
 
         .icon-links{
             .icon-link{
-
                 &:hover{
                     background-color: $color-dark;
                     color: white;  
@@ -123,6 +118,9 @@ header{
                 background-color: $color-dark;
                 color: white;  
                 box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.75); 
+            }
+            .btn-icon-link{
+                display: none;
             }
         }
     }

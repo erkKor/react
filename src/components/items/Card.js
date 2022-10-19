@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 const Card = ({product}) => {
   
     const addToWishlist = (e) =>{
-        console.log("added to wishlist")
+        console.log(`${e} added to wishlist`)
     }
     const addToCompare = (e) =>{
         console.log("added to compare")
@@ -23,8 +23,8 @@ const Card = ({product}) => {
             <li><button onClick={addToCart}><i className="fa-light fa-bag-shopping"></i></button></li>
         </ul>
         <div className="card-background">
-        <img src={product.img} />
-        <NavLink to="/products">
+        <img src={product.img} alt={product.name}/>
+        <NavLink to={`/products/${product.id}`}>
             <Button to="/products" theme='button-theme' themeBorder='button-theme-border' btnText="SHOP NOW"/>
         </NavLink>
         </div>

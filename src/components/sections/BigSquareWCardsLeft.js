@@ -1,7 +1,7 @@
 import React from 'react'
-import Card from './items/Card'
+import Card from '../items/Card'
 
-const BigSquareWCardsLeft = () => {
+const BigSquareWCardsLeft = ({products}) => {
   return (
     <section className="big-square-cards">
         <div className="container">
@@ -12,10 +12,9 @@ const BigSquareWCardsLeft = () => {
                 </button>
             </div>
             <div className="card-grid">
-                <Card discPrice='€29.00'/>
-                <Card discPrice='€29.00'/>
-                <Card discPrice='€29.00'/>
-                <Card discPrice='€29.00'/>
+                {
+                  products.map(product => <Card key={product.id} product={product} />)
+                }
             </div>
         </div>
     </section>
