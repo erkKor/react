@@ -1359,13 +1359,13 @@ header a {
   }
 }
 .big-sale-banner {
-  margin: 2rem 0;
+  margin: 5rem 0;
   display: flex;
   justify-content: center;
 }
 .big-sale-banner .container {
   background-color: #707070;
-  height: 320px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1374,16 +1374,69 @@ header a {
   width: 1110px;
 }
 .big-sale-banner h3 {
-  font-size: 2.8rem;
+  font-size: 2rem;
   margin: 0;
 }
 .big-sale-banner p {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: bold;
   margin-top: 0.5rem;
-  margin-bottom: 2.5rem;
+}
+.big-sale-banner .button-theme-white {
+  height: 45px;
+  width: 125px;
+  font-size: 12px;
+}
+.big-sale-banner .button-theme-white:hover .button-theme-border::before, .big-sale-banner .button-theme-white:hover .button-theme-border::after {
+  width: 86%;
+  height: 64%;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+}
+.big-sale-banner .button-theme-white .button-theme-border::before, .big-sale-banner .button-theme-white .button-theme-border::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  transition: 0.3s linear;
 }
 
+@media (min-width: 768px) {
+  .big-sale-banner .container {
+    height: 240px;
+  }
+  .big-sale-banner h3 {
+    font-size: 2.8rem;
+  }
+  .big-sale-banner p {
+    font-size: 20px;
+    margin-bottom: 2.5rem;
+  }
+  .big-sale-banner .button-theme-white {
+    height: 60px;
+    width: 188px;
+    font-size: 13.33px;
+  }
+  .big-sale-banner .button-theme-white:hover .button-theme-border::before, .big-sale-banner .button-theme-white:hover .button-theme-border::after {
+    width: 91%;
+    height: 73%;
+  }
+  .big-sale-banner .button-theme-white .button-theme-border::before, .big-sale-banner .button-theme-white .button-theme-border::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    transition: 0.3s linear;
+  }
+}
+@media (min-width: 1200px) {
+  .big-sale-banner .container {
+    height: 320px;
+  }
+  .big-sale-banner h3 {
+    font-size: 2.8rem;
+  }
+}
 .three-row-products {
   margin-bottom: 2rem;
 }

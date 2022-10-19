@@ -37,15 +37,15 @@ const HomeView = () => {
   return (
     <>
       <Navbar headerType="header-gray"/>
-      <Showcase />
+      {/* <Showcase />
       <ShowcaseCardBigSmall />
       <FeaturedProducts products={featuredProducts}/> 
       <ShowcaseCardDouble />
-       <OurSpeciality />
+      <OurSpeciality />
       <BigSquareWCardsLeft products={cardProducts}/>
-      <BigSquareWCardsRight products={cardProducts}/>
-       {/*<SaleBanner />
-      <TrippleColumnProducts />
+      <BigSquareWCardsRight products={cardProducts}/> */}
+       <SaleBanner />
+      {/*<TrippleColumnProducts />
       <InfoIcons />
       <Footer /> */}
     </>
