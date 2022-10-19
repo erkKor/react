@@ -6,19 +6,19 @@ const TrippleColumnProducts = ({productsOne, productsTwo, productsThree}) => {
     <section className="three-row-products">
         <div className="container">
             <div className="product-column">
-                <h3>Latest Product</h3>
+                <h2>Latest Product</h2>
                 {
                   productsOne.map(productOne => <SmallCard key={productOne.id} product={productOne} />)
                 }
             </div>
             <div className="product-column">
-                <h3>Best Selling Product</h3>
+                <h2>Best Selling Product</h2>
                 {
                   productsTwo.map(productTwo => <SmallCard key={productTwo.id} product={productTwo} />)
                 }
             </div>
             <div className="product-column">
-                <h3>Top Reacted Product</h3>
+                <h2>Top Reacted Product</h2>
                 {
                   productsThree.map(productThree => <SmallCard key={productThree.id} product={productThree} />)
                 }
