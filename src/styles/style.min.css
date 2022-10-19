@@ -868,59 +868,42 @@ header a {
   }
 }
 .double-showcase-card {
-  margin-top: 2rem;
+  margin-top: 10rem;
   width: 100%;
 }
-.double-showcase-card .container {
-  display: flex;
-  height: 400px;
-  gap: 1.5rem;
-}
 .double-showcase-card .left-card {
-  background-image: url(/src/assets/images/placeholders/pamela-reif.png);
-  background-size: 100% 100%;
-  width: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
+  height: 80px;
+  background-color: #75695C;
   color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
 }
 .double-showcase-card .left-card .card-content {
   position: relative;
-  padding-right: 2rem;
-}
-.double-showcase-card .left-card .card-content h2 {
-  margin-top: 5rem;
-}
-.double-showcase-card .left-card .card-content button {
-  margin-top: 2rem;
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .double-showcase-card .right-card {
-  background-image: url(/src/assets/images/placeholders/be-conscious.png);
-  background-size: 100% 100%;
-  width: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  height: 80px;
+  background-color: #D9D9D9;
   color: #222529;
+  display: flex;
+  padding: 0 1rem;
 }
 .double-showcase-card .right-card .card-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
   position: relative;
-  padding-left: 4rem;
-}
-.double-showcase-card .right-card .card-content h2 {
-  margin-top: 5rem;
-}
-.double-showcase-card .right-card .card-content button {
-  margin-top: 2rem;
-  position: absolute;
+  padding-right: 1rem;
 }
 .double-showcase-card h2 {
   margin: 0;
-  font-size: 2.8rem;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 2px;
@@ -928,7 +911,158 @@ header a {
 .double-showcase-card span {
   display: block;
 }
+.double-showcase-card .button-theme-dark {
+  height: 45px;
+  width: 125px;
+  font-size: 12px;
+}
+.double-showcase-card .button-theme-dark:hover .button-theme-border::before, .double-showcase-card .button-theme-dark:hover .button-theme-border::after {
+  width: 86%;
+  height: 64%;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+}
+.double-showcase-card .button-theme-dark .button-theme-border::before, .double-showcase-card .button-theme-dark .button-theme-border::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  transition: 0.3s linear;
+}
+.double-showcase-card .button-theme-white {
+  height: 45px;
+  width: 125px;
+  font-size: 12px;
+}
+.double-showcase-card .button-theme-white:hover .button-theme-border::before, .double-showcase-card .button-theme-white:hover .button-theme-border::after {
+  width: 86%;
+  height: 64%;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+}
+.double-showcase-card .button-theme-white .button-theme-border::before, .double-showcase-card .button-theme-white .button-theme-border::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  transition: 0.3s linear;
+}
 
+@media (min-width: 768px) {
+  .double-showcase-card .container {
+    display: flex;
+    height: 200px;
+    gap: 1.5rem;
+  }
+  .double-showcase-card .left-card {
+    height: auto;
+    width: 800px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .double-showcase-card .left-card .card-content {
+    width: auto;
+    display: block;
+    padding-right: 2rem;
+  }
+  .double-showcase-card .left-card .card-content h2 {
+    margin-top: 2rem;
+  }
+  .double-showcase-card .left-card .card-content button {
+    margin-top: 1rem;
+    position: absolute;
+  }
+  .double-showcase-card .right-card {
+    width: 800px;
+    height: auto;
+    flex-direction: row;
+  }
+  .double-showcase-card .right-card .card-content {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-left: 2rem;
+  }
+  .double-showcase-card .right-card .card-content h2 {
+    margin-top: 2rem;
+  }
+  .double-showcase-card .right-card .card-content button {
+    margin-top: 8rem;
+    position: absolute;
+  }
+  .double-showcase-card h2 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1600px) {
+  .double-showcase-card .container {
+    height: 400px;
+  }
+  .double-showcase-card .left-card {
+    background-image: url(/src/assets/images/placeholders/pamela-reif.png);
+    background-size: 100% 100%;
+    width: 800px;
+    align-items: flex-end;
+  }
+  .double-showcase-card .left-card .card-content h2 {
+    margin-top: 5rem;
+  }
+  .double-showcase-card .left-card .card-content button {
+    margin-top: 2rem;
+  }
+  .double-showcase-card .right-card {
+    background-image: url(/src/assets/images/placeholders/be-conscious.png);
+    background-size: 100% 100%;
+    width: 800px;
+  }
+  .double-showcase-card .right-card .card-content {
+    padding-left: 4rem;
+    display: block;
+  }
+  .double-showcase-card .right-card .card-content h2 {
+    margin-top: 5rem;
+  }
+  .double-showcase-card .right-card .card-content button {
+    margin-top: 2rem;
+  }
+  .double-showcase-card h2 {
+    font-size: 2.8rem;
+  }
+  .double-showcase-card .button-theme-dark {
+    height: 60px;
+    width: 188px;
+    font-size: 13.33px;
+  }
+  .double-showcase-card .button-theme-dark:hover .button-theme-border::before, .double-showcase-card .button-theme-dark:hover .button-theme-border::after {
+    width: 91%;
+    height: 73%;
+  }
+  .double-showcase-card .button-theme-dark .button-theme-border::before, .double-showcase-card .button-theme-dark .button-theme-border::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    transition: 0.3s linear;
+  }
+  .double-showcase-card .button-theme-white {
+    height: 60px;
+    width: 188px;
+    font-size: 13.33px;
+  }
+  .double-showcase-card .button-theme-white:hover .button-theme-border::before, .double-showcase-card .button-theme-white:hover .button-theme-border::after {
+    width: 91%;
+    height: 73%;
+  }
+  .double-showcase-card .button-theme-white .button-theme-border::before, .double-showcase-card .button-theme-white .button-theme-border::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    transition: 0.3s linear;
+  }
+}
 .our-speciality {
   margin-top: 2rem;
 }

@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Showcase from '../components/Showcase'
 import ShowcaseCardBigSmall from '../components/ShowcaseCardBigSmall'
 import FeaturedProducts from '../components/sections/FeaturedProducts'
-import ShowcaseCardDouble from '../components/ShowcaseCardDouble'
+import ShowcaseCardDouble from '../components/sections/ShowcaseCardDouble'
 import OurSpeciality from '../components/OurSpeciality'
 import BigSquareWCardsLeft from '../components/sections/BigSquareWCardsLeft'
 import BigSquareWCardsRight from '../components/sections/BigSquareWCardsRight'
@@ -37,9 +37,9 @@ const HomeView = () => {
   return (
     <>
       <Navbar headerType="header-gray"/>
-      <Showcase />
+      {/* <Showcase />
       <ShowcaseCardBigSmall />
-      <FeaturedProducts products={featuredProducts}/>
+      <FeaturedProducts products={featuredProducts}/> */}
       <ShowcaseCardDouble />
       {/* <OurSpeciality /> 
       <BigSquareWCardsLeft products={cardProducts}/>
