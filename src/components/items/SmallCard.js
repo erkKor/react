@@ -1,16 +1,18 @@
 import React from 'react'
+import Button from './Button'
+import { NavLink } from 'react-router-dom'
 
-const SmallCard = ({orgPrice, discPrice}) => {
+const SmallCard = ({product}) => {
   return (
     <div className="small-card">
         <div className="card-background">
-            <button className="button-theme">Quick view
-                <div className="button-theme-border"></div>
-            </button>
+        <NavLink to={`/products/${product.id}`}>
+            <Button to="/products" theme='button-theme' themeBorder='button-theme-border' btnText="SHOP NOW"/>
+        </NavLink>
         </div>
         <div className="card-body">
-            <p>Category</p>
-            <h3>Modern Black Blouse</h3>
+            <p>{product.category}</p>
+            <h3>{product.name}</h3>
             <div className="stars">
                 <i className="fa-sharp fa-solid fa-star"></i>
                 <i className="fa-sharp fa-solid fa-star"></i>
@@ -19,8 +21,8 @@ const SmallCard = ({orgPrice, discPrice}) => {
                 <i className="fa-sharp fa-solid fa-star"></i>
             </div>
             <div className="card-prices"> 
-                <div className="original-price">{orgPrice}</div>
-                <div className="discount-price">{discPrice}</div>
+                <div className="original-price"></div>
+                <div className="discount-price">{product.price}</div>
             </div>
         </div>
     </div>

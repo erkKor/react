@@ -26,11 +26,29 @@ const HomeView = () => {
     { id: 8, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" }
   ])
   const [cardProducts, setCardProducts] = useState([
-    { id: 1, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 2, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-    { id: 3, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-    { id: 4, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
+    { id: 9, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
+    { id: 10, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    { id: 11, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    { id: 12, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
   
+  ])
+
+
+
+  const [latestProducts, setLatestProducts] = useState([
+    { id: 13, name: "Green Sylvester ", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
+    { id: 14, name: "Green Sylvester ", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    { id: 15, name: "Green Sylvester ", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+  ])
+  const [bestSellersProducts, setBestSellersProducts] = useState([
+    { id: 16, name: "Blue Not Nice Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
+    { id: 17, name: "Blue Not Nice Blouse", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    { id: 18, name: "Blue Not Nice Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+  ])
+  const [topReactedProducts, setTopReactedProducts] = useState([
+    { id: 19, name: "Red Very Nice Hat", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
+    { id: 20, name: "Red Very Nice Hat", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
+    { id: 21, name: "Red Very Nice Hat", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
   ])
 
 
@@ -43,10 +61,14 @@ const HomeView = () => {
       <ShowcaseCardDouble />
       <OurSpeciality />
       <BigSquareWCardsLeft products={cardProducts}/>
-      <BigSquareWCardsRight products={cardProducts}/> */}
-       <SaleBanner />
-      {/*<TrippleColumnProducts />
-      <InfoIcons />
+      <BigSquareWCardsRight products={cardProducts}/> 
+      <SaleBanner />*/}
+      <TrippleColumnProducts 
+        productsOne={latestProducts} 
+        productsTwo={bestSellersProducts} 
+        productsThree={topReactedProducts}
+      />
+       {/*<InfoIcons />
       <Footer /> */}
     </>
   )

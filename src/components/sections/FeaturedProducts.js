@@ -13,7 +13,6 @@ const FeaturedProducts = ({products}) => {
                 {
                   products.map(product => <Card key={product.id} product={product} />)
                 }
-                
             </div>
         </div>
     </section>
