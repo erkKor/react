@@ -1,6 +1,7 @@
 import React from 'react'
+import SizeButton from './items/SizeButton'
 
-const ProductDetails = ({orgPrice, discPrice}) => {
+const ProductDetails = () => {
   return (
     <section className='product-details'>
         <div className='container'>
@@ -25,12 +26,16 @@ const ProductDetails = ({orgPrice, discPrice}) => {
                         <i className="fa-sharp fa-solid fa-star"></i>
                     </div>
                     <div className="product-prices"> 
-                        <div className="original-price">{orgPrice}</div>
+                        <div className="original-price"></div>
                         <div className="discount-price">€35.00</div>
                     </div>
                     <p>
                     Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. (read more) 
                     </p>
+                    <div className='getdown'></div>
+                    <div className="button-choices">
+                        <SizeButton />
+                    </div>
                 </div>
             </div>
         </div>

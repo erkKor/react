@@ -660,7 +660,7 @@ header a {
   }
 }
 .showcasecard-big-small {
-  margin-top: 4rem;
+  margin-top: 3rem;
   width: 100%;
 }
 .showcasecard-big-small .big-card {
@@ -798,7 +798,7 @@ header a {
   }
 }
 .featured-products {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 .featured-products .container {
   max-width: 1110px;
@@ -807,8 +807,8 @@ header a {
   margin: 0 10rem;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(1, 300px);
-  grid-template-rows: repeat(1, auto);
+  grid-template-columns: repeat(2, 164px);
+  grid-template-rows: repeat(2, 340px);
   gap: 1.5rem;
 }
 .featured-products .section-title {
@@ -819,9 +819,13 @@ header a {
 .featured-products .section-title h3 {
   margin: 0;
 }
+.featured-products .card .card-background img {
+  width: 100%;
+}
 .featured-products .card .card-background .button-theme {
   z-index: 1;
   bottom: 0;
+  left: 0;
   position: absolute;
   width: 100%;
   height: 50px;
@@ -1065,7 +1069,7 @@ header a {
   }
 }
 .our-speciality {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 .our-speciality .container {
   background-color: #F5F5F5;
@@ -1211,6 +1215,7 @@ header a {
   width: 100%;
   color: white;
   font-size: 20px;
+  margin-bottom: 16px;
 }
 .big-square-cards .big-square h1 {
   margin: 0;
@@ -1633,6 +1638,9 @@ header a {
   width: 1110px;
   margin: auto;
 }
+.product-details .getdown {
+  margin-top: 1rem;
+}
 .product-details .top-part {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1658,4 +1666,49 @@ header a {
 }
 .product-details .top-part .product-shop-choices p {
   margin: 0;
+}
+.product-details .radioCont {
+  display: flex;
+  height: 40px;
+}
+.product-details .radioCont .radio-sizeBtn {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0 1rem;
+}
+.product-details .radioCont .radio-sizeBtn:hover input ~ .checkmark {
+  background-color: #222529;
+  color: white;
+}
+.product-details .radioCont .radio-sizeBtn input:checked ~ .checkmark {
+  background-color: #222529;
+  color: white;
+}
+.product-details .radioCont .radio-sizeBtn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.product-details .radioCont .radio-sizeBtn .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-details .radioCont .radio-sizeBtn .checkmark p {
+  font-size: 16px;
+  font-weight: 500;
 }
