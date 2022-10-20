@@ -1587,29 +1587,40 @@ header a {
 .contact-form .container {
   width: 1110px;
 }
+.contact-form h3 {
+  margin: 1rem 0.5rem;
+}
 .contact-form form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin: 0.5rem 0.5rem;
+}
+.contact-form form .inputs {
+  width: 1132px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
 .contact-form form input {
+  width: 515px;
   padding: 15px 18px;
   border: 1px solid #CDCED0;
-  width: 93%;
+  outline: none;
+}
+.contact-form form .commentsDiv {
+  width: 1100px;
 }
 .contact-form form .textarea {
+  height: 140px;
+  width: 100%;
   font-family: "Poppins", sans-serif;
   border: 1px solid #CDCED0;
-  height: 140px;
   padding: 15px 18px;
   resize: none;
-  grid-column: 1/-1;
-  width: 100%;
+  outline: none;
 }
 .contact-form form button {
-  grid-column: 1/-1;
+  margin-top: 1rem;
 }
 .contact-form form .errorMessage {
-  margin-top: 5px;
   color: #FF7373;
   font-size: 0.8em;
 }

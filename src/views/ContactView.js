@@ -9,7 +9,7 @@ const ContactView = () => {
     <>
       <Navbar headerType="header-light"/>
       <Breadcrumb />
-      <Map />
+      {/* <Map /> */}
       <ContactForm />
     </>
   )

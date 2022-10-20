@@ -4,34 +4,46 @@
         width: 1110px;
     }
 
+    h3{
+        margin: 1rem 0.5rem; 
+    }
     form{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        
-
+        margin: 0.5rem 0.5rem;       
+        .inputs{
+            width: 1132px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
         input{
+            width: 515px;
             padding: 15px 18px;
             border: 1px solid $color-gray-2;
-            width: 93%;
+            outline: none;
+        }
+
+        .commentsDiv{
+            width: 1100px;
         }
         .textarea{
+            height: 140px;
+            width: 100%;
             font-family: $font-poppins;
             border: 1px solid $color-gray-2;
-            height: 140px;
             padding: 15px 18px;
             resize: none;
-            grid-column: 1 / -1;
-            width: 100%;
+            outline: none;
+            
         }
-
         button{
-            grid-column: 1 / -1;
+            margin-top: 1rem;
         }
 
         .errorMessage{
-            margin-top: 5px;
+            // padding-left: 18px;
             color: $color-theme;
             font-size: 0.8em;
+            
         }
         .error{
             color: $color-theme;
@@ -39,3 +51,45 @@
         }
     }
 }
+
+
+// form{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap:1rem;
+//     margin: 0.5rem 0.5rem;       
+
+//     input{
+//         padding: 15px 18px;
+//         border: 1px solid $color-gray-2;
+//         width: 93%;
+//     }
+
+//     .commentsDiv{
+//         width: 1100px;
+//     }
+//     .textarea{
+//         font-family: $font-poppins;
+//         border: 1px solid $color-gray-2;
+//         height: 140px;
+//         padding: 15px 18px;
+//         resize: none;
+//         grid-area: comments;
+//         width: 100%;
+//         grid-column: 2 / -1;
+//     }
+
+//     button{
+//         grid-column: 1 / -1;
+//     }
+
+//     .errorMessage{
+//         margin-top: 5px;
+//         color: $color-theme;
+//         font-size: 0.8em;
+//     }
+//     .error{
+//         color: $color-theme;
+//         border-color: $color-theme;
+//     }
+// }
