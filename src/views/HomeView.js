@@ -13,7 +13,6 @@ import InfoIcons from '../components/InfoIcons'
 import Footer from '../components/Footer'
 
 const HomeView = () => {
-
     
   const [featuredProducts, setFeaturedProducts] = useState([
     { id: 1, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
@@ -32,8 +31,6 @@ const HomeView = () => {
     { id: 12, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
   
   ])
-
-
 
   const [latestProducts, setLatestProducts] = useState([
     { id: 13, name: "Green Sylvester ", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
@@ -62,14 +59,14 @@ const HomeView = () => {
       <OurSpeciality />
       <BigSquareWCardsLeft products={cardProducts}/>
       <BigSquareWCardsRight products={cardProducts}/> 
-      <SaleBanner />*/}
+      <SaleBanner />
       <TrippleColumnProducts 
         productsOne={latestProducts} 
         productsTwo={bestSellersProducts} 
         productsThree={topReactedProducts}
-      />
-       {/*<InfoIcons />
-      <Footer /> */}
+      />*/}
+       <InfoIcons />
+      {/*<Footer /> */}
     </>
   )
 }

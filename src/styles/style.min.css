@@ -1501,19 +1501,19 @@ header a {
 .info-icons {
   display: flex;
   justify-content: center;
+  margin-top: 10rem;
 }
 .info-icons .container {
   width: 1100px;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
-  display: flex;
   border-top: 2px solid #CDCED0;
 }
 .info-icons .info-container {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .info-icons .info-container .icon-circle {
@@ -1523,7 +1523,7 @@ header a {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 20px -8px rgba(0, 0, 0, 0.75);
 }
 .info-icons .info-container .icon-circle img {
   height: 30px;
@@ -1532,11 +1532,26 @@ header a {
 .info-icons .info-container p {
   margin: 0;
   text-align: center;
+  font-size: 10px;
 }
 .info-icons .info-container h3 {
-  margin: 1rem 0;
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 12px;
 }
 
+@media (min-width: 768px) {
+  .info-icons .info-container {
+    margin-top: 3rem;
+  }
+  .info-icons .info-container p {
+    font-size: 16px;
+  }
+  .info-icons .info-container h3 {
+    margin: 1rem 0;
+    font-size: 18px;
+  }
+}
 .footer {
   margin-top: 4rem;
   width: 100%;
