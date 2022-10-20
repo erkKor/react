@@ -43,8 +43,10 @@
 .three-row-products{
     margin-bottom: 2rem;
     .container{
+        margin: auto;
+        width: 1100px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
     h2{
         text-align: start;

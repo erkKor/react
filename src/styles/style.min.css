@@ -443,6 +443,7 @@ header .container .menu-categories .active {
 }
 header .container .menu-categories a {
   padding: 0.5rem 0;
+  transition: 0.3s ease-in-out;
 }
 header .container .menu-categories a:hover {
   color: #FF7373;
@@ -1111,6 +1112,7 @@ header a {
   font-weight: bold;
   text-decoration: none;
   border-bottom: 1px solid black;
+  transition: 0.3s ease-in-out;
 }
 .our-speciality a:hover {
   color: #FF7373;
@@ -1264,98 +1266,37 @@ header a {
 }
 
 @media (min-width: 768px) {
-  .big-square-cards {
-    margin-top: 2rem;
-  }
   .big-square-cards .container {
     display: flex;
   }
   .big-square-cards .big-square {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #BBBBBB;
     height: 674px;
     width: 46%;
-    color: white;
     font-size: 32px;
   }
   .big-square-cards .big-square h1 {
-    margin: 0;
-    margin-bottom: 1rem;
     padding: 0 2rem;
   }
   .big-square-cards .card-grid {
-    display: grid;
-    justify-content: center;
     grid-template-columns: repeat(2, 200px);
     grid-template-rows: repeat(2, 325px);
     gap: 1.5rem;
-    margin: 0 2rem;
-  }
-  .big-square-cards .card-body {
-    align-items: flex-start;
-  }
-  .big-square-cards .card-body .discount-price {
-    margin-left: -5px;
-  }
-  #bigSquareRight .container {
-    justify-content: flex-end;
   }
 }
 @media (min-width: 1200px) {
-  .big-square-cards {
-    margin-top: 2rem;
-  }
-  .big-square-cards .container {
-    display: flex;
-  }
   .big-square-cards .big-square {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #BBBBBB;
-    height: 674px;
     width: 49%;
-    color: white;
     font-size: 40px;
   }
-  .big-square-cards .big-square h1 {
-    margin: 0;
-    margin-bottom: 1rem;
-  }
   .big-square-cards .card-grid {
-    display: grid;
-    justify-content: center;
     grid-template-columns: repeat(2, 255px);
     grid-template-rows: repeat(2, 325px);
-    gap: 1.5rem;
-    margin: 0 2rem;
   }
   .big-square-cards .card:hover .card-background .button-theme {
     bottom: 0;
   }
-  .big-square-cards .card .card-background img {
-    width: 100%;
-  }
   .big-square-cards .card .card-background .button-theme {
-    z-index: 1;
     bottom: -60px;
-    left: 0;
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    transition: 0.3s ease-in-out;
-  }
-  .big-square-cards .card .card-body {
-    align-items: flex-start;
-  }
-  .big-square-cards .card .card-body .discount-price {
-    margin-left: -5px;
-  }
-  #bigSquareRight .container {
-    justify-content: flex-end;
   }
 }
 .big-sale-banner {
@@ -1479,8 +1420,10 @@ header a {
     margin-bottom: 2rem;
   }
   .three-row-products .container {
+    margin: auto;
+    width: 1100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
   .three-row-products h2 {
     text-align: start;
@@ -1501,7 +1444,7 @@ header a {
 .info-icons {
   display: flex;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 2rem;
 }
 .info-icons .container {
   width: 1100px;
@@ -1575,8 +1518,38 @@ header a {
   color: #222529;
   margin: 0 0.5rem;
   font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+.footer a:hover i {
+  color: #FF7373;
 }
 
+@media (min-width: 768px) {
+  .footer {
+    margin-top: 4rem;
+    width: 100%;
+    height: 110px;
+    background-color: #F5F5F5;
+    border-top: 1px solid #CDCED0;
+    color: #222529;
+  }
+  .footer .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer p {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+  .footer i {
+    color: #222529;
+    margin: 0 0.5rem;
+    font-size: 18px;
+  }
+}
 .breadcrumb {
   margin-top: 4rem;
 }
