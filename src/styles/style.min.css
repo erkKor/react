@@ -387,32 +387,6 @@ body {
   display: grid !important;
 }
 
-.qty-btn {
-  margin-left: 40rem;
-  display: flex;
-  width: 130px;
-}
-.qty-btn .input {
-  width: 60px;
-  height: 45px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  font-family: "Poppins", sans-serif;
-  color: #222529;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.qty-btn button {
-  border: 1px solid black;
-  background-color: white;
-  width: 35px;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-}
-
 @media (min-width: 1600px) {
   .container {
     margin: auto;
@@ -1782,9 +1756,21 @@ header a {
 .product-details .top-part .product-shop-choices p {
   margin: 0;
 }
+.product-details .button-choices h3 {
+  font-weight: 400;
+}
+.product-details .button-choices .button-row {
+  display: flex;
+}
+.product-details .button-choices .button-theme {
+  height: 47px;
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+}
 .product-details .radioCont {
   display: flex;
   height: 40px;
+  margin-top: 0.7rem;
 }
 .product-details .radioCont .radio-sizeBtn {
   display: block;
@@ -1826,4 +1812,31 @@ header a {
 .product-details .radioCont .radio-sizeBtn .checkmark p {
   font-size: 16px;
   font-weight: 500;
+}
+.product-details .qty-btn {
+  display: flex;
+  width: 130px;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+.product-details .qty-btn .input {
+  width: 60px;
+  height: 45px;
+  border-top: 1px solid #222529;
+  border-bottom: 1px solid #222529;
+  font-family: "Poppins", sans-serif;
+  color: #222529;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-details .qty-btn button {
+  border: 1px solid #222529;
+  background-color: white;
+  width: 35px;
+  height: 46.99px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
 }

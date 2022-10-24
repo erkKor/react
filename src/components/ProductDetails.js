@@ -1,5 +1,7 @@
 import React from 'react'
+import QuantityButton from './items/QuantityButton'
 import SizeButton from './items/SizeButton'
+import Button from './items/Button'
 
 const ProductDetails = () => {
   return (
@@ -34,7 +36,17 @@ const ProductDetails = () => {
                     </p>
                     <div className='getdown'></div>
                     <div className="button-choices">
-                        <SizeButton />
+                        <div className="button-row">
+                            <h3>Size:</h3>
+                            <SizeButton />
+                        </div>
+                        <div className="button-row">
+                            <h3>Qty:</h3>
+                            <QuantityButton />
+                            <button className="button-theme" type="submit">ADD TO CART</button>
+                        </div>
+
+                        
                     </div>
                 </div>
             </div>

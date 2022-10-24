@@ -38,9 +38,25 @@
         }
     }
 
+    .button-choices{
+        h3{
+            font-weight: 400;
+        }
+        .button-row{
+            display: flex;
+        }
+
+        .button-theme{
+            height: 47px;
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+        }
+    }
+
     .radioCont{
         display: flex;
         height: 40px;
+        margin-top: 0.7rem;
         .radio-sizeBtn {
             display: block;
             position: relative;
@@ -80,5 +96,34 @@
             }
         }
     }
+
+    .qty-btn{
+        display: flex;
+        width: 130px;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+        .input{
+            width: 60px;
+            height: 45px;
+            border-top:1px solid $color-dark;
+            border-bottom:1px solid $color-dark;
+            font-family: $font-poppins;
+            color:$color-dark;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            border:1px solid $color-dark;
+            background-color: white;
+            width: 35px;
+            height: 46.99px;
+            font-family: $font-poppins;
+            font-weight: 600;
+            font-size: 25px;
+        }
+    }
+    
 
 }
