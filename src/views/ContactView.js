@@ -3,14 +3,17 @@ import Breadcrumb from '../components/items/Breadcrumb'
 import Navbar from '../components/Navbar'
 import Map from '../components/items/Map'
 import ContactForm from '../components/ContactForm'
+import QuantityButton from '../components/items/QuantityButton'
 
 const ContactView = () => {
+  window.top.document.title = 'Contacts | Fixxo.'
   return (
     <>
       <Navbar headerType="header-light"/>
-      <Breadcrumb />
+      <Breadcrumb currentPage="Contacts"/>
       {/* <Map /> */}
-      <ContactForm />
+      {/* <ContactForm /> */}
+      <QuantityButton />
     </>
   )
 }

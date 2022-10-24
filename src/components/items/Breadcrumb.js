@@ -1,12 +1,13 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const Breadcrumb = () => {
+const Breadcrumb = ({currentPage}) => {
   return (
     <section className="breadcrumb">
         <div className="container">
             <ul className="breadcrumb-list">
-                <li><a href="">Home</a></li>
-                <li>Conctacts</li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li>{currentPage}</li>
             </ul>
         </div>
     </section>

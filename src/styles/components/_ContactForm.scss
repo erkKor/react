@@ -1,6 +1,112 @@
 .contact-form{
     margin-top: 2rem;
     .container{
+        width: auto;
+    }
+
+    h3{
+        margin: 1rem 0.5rem; 
+    }
+    form{
+        margin: 0.5rem 0.5rem;       
+        .inputs{
+            width:auto;
+            display: block;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        input{
+            margin: 0.5rem 0;
+            width: 290px;
+            padding: 15px 18px;
+            border: 1px solid $color-gray-2;
+            outline: none;
+        }
+        .textarea{
+            height: 140px;
+            width: 290px;
+            font-family: $font-poppins;
+            border: 1px solid $color-gray-2;
+            padding: 15px 18px;
+            resize: none;
+            outline: none;
+            
+        }
+        button{
+            margin-top: 1rem;
+        }
+
+        .errorMessage{
+            // padding-left: 18px;
+            color: $color-theme;
+            font-size: 0.8em;
+            
+        }
+        .error{
+            color: $color-theme;
+            border-color: $color-theme;
+        }
+    }
+}
+
+
+
+
+
+@include md{
+.contact-form{
+    margin-top: 2rem;
+    .container{
+    }
+
+    h3{
+        margin: 1rem 0.5rem; 
+    }
+    form{
+        margin: 0.5rem 0.5rem;       
+        .inputs{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        input{
+            width: 330px;
+            padding: 15px 18px;
+            border: 1px solid $color-gray-2;
+            outline: none;
+        }
+
+        .textarea{
+            width: 735px;
+            height: 140px;
+            font-family: $font-poppins;
+            border: 1px solid $color-gray-2;
+            padding: 15px 18px;
+            resize: none;
+            outline: none;
+            
+        }
+        button{
+            margin-top: 1rem;
+        }
+
+        .errorMessage{
+            // padding-left: 18px;
+            color: $color-theme;
+            font-size: 0.8em;
+            
+        }
+        .error{
+            color: $color-theme;
+            border-color: $color-theme;
+        }
+    }
+}
+}
+@include xl{
+.contact-form{
+    margin-top: 2rem;
+    .container{
         width: 1110px;
     }
 
@@ -51,6 +157,44 @@
         }
     }
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // form{

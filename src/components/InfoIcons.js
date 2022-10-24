@@ -5,31 +5,31 @@ import DeliveryTruck from '../assets/images/icons/delivery-truck.svg'
 
 const InfoIcons = () => {
   return (
-    <section class="info-icons">
-        <div class="container">
-            <div class="info-container">
-                <div class="icon-circle">
+    <section className="info-icons">
+        <div className="container">
+            <div className="info-container">
+                <div className="icon-circle">
                     <img src={CustomerSupport} alt="Free Shipping" />
                  </div>
                 <h3>Customer Support</h3>
                 <p>Village did removed enjoyed explain talking.</p>
             </div>
-            <div class="info-container">
-                <div class="icon-circle">
+            <div className="info-container">
+                <div className="icon-circle">
                     <img src={SecuredPayment} alt="" />
                 </div>
                 <h3>Secured Payment</h3>
                 <p>Village did removed enjoyed explain talking.</p>
             </div>
-            <div class="info-container">
-                <div class="icon-circle">
+            <div className="info-container">
+                <div className="icon-circle">
                     <img src={DeliveryTruck} alt="" />
                 </div>
                 <h3>Free Home Delivery</h3>
                 <p>Village did removed enjoyed explain talking.</p>
             </div>
-            <div class="info-container">
-                <div class="icon-circle">
+            <div className="info-container">
+                <div className="icon-circle">
                     <img src={DeliveryTruck} alt="" />
                 </div>
                 <h3>30 Days Reuters</h3>
