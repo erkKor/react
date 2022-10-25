@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 
 const ContactForm = () => {
     const [contactForm, setContactForm] = useState({name: '', email: '', comment: ''})
@@ -44,10 +44,54 @@ const ContactForm = () => {
         setFormErrors(validate(contactForm))
     }
 
+
+    // const handleOnKeyUp = (e) => {
+    //     // if(e.target.value.length < 2) {
+    //     //     setFormErrors(current => {
+    //     //         return {...current, [e.target.id]: 'fel'}
+    //     //     })
+    //     // }
+    //     const {id, value} = e.target;
+    //     // console.log(id, value)
+    //     let errorMsg = '';
+
+    //     if(id === 'name') {
+    //         if(value.length < 2) {
+    //             errorMsg = 'Your name must be longer'
+    //         } else {
+    //             errorMsg = ''
+    //         }
+    //     }
+        
+    //     setFormErrors(previuosErrors => {
+    //         // console.log(previuosErrors)
+    //         return {
+    //             ...previuosErrors,
+    //             [id]: errorMsg
+    //         }
+    //     })
+
+    // }
+
+    // formErrors = {
+    //     name: 'Your name must be longer',
+    //     email: '',
+    //     comments: ''
+    // }
+
+    // const[counter, setCounter] = useState(0)
+
+    // const addToCount = () => {
+    //     setCounter(nisse => nisse + 1)
+    //     setCounter(previousCountValue => previousCountValue + 1)
+    //     // setCounter(counter + 1)
+    // }
+
   return (
     <section className="contact-form">
         <div className="container">
-
+            {/* <h1>{counter}</h1>
+            <button onClick={addToCount}>+</button> */}
             {
                 submitted ? 
                 (<div>

@@ -1839,4 +1839,21 @@ header a {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 25px;
+  cursor: pointer;
+}
+.product-details .tab-menu {
+  list-style: none;
+  display: flex;
+  border-bottom: 1px solid gray;
+  padding: 0;
+}
+.product-details .tab-menu .tab-item {
+  margin-right: 1rem;
+}
+.product-details .tab-menu .tab-item button {
+  background: transparent;
+  border: none;
+}
+.product-details .tab-content {
+  border: 1px solid gray;
 }
