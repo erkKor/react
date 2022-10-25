@@ -1841,19 +1841,89 @@ header a {
   font-size: 25px;
   cursor: pointer;
 }
-.product-details .tab-menu {
-  list-style: none;
+.product-details .container-tab {
   display: flex;
-  border-bottom: 1px solid gray;
-  padding: 0;
+  flex-direction: column;
+  position: relative;
+  width: 550px;
+  height: 300px;
+  margin-top: 2rem;
+  word-break: break-all;
 }
-.product-details .tab-menu .tab-item {
-  margin-right: 1rem;
+.product-details .bloc-tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(97, 99, 101, 0.2);
 }
-.product-details .tab-menu .tab-item button {
-  background: transparent;
+.product-details .tabs {
+  width: 50%;
+  cursor: pointer;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.product-details .active-tabs {
+  background: white;
+  color: #FF7373;
+}
+.product-details .active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 36%;
+  transform: translateX(-50%);
+  width: calc(70% + 2px);
+  height: 1px;
+  background: #FF7373;
+}
+.product-details .active-tabs:nth-child(2)::before {
+  left: 26%;
+  width: calc(58% + 2px);
+}
+.product-details .active-tabs:nth-child(3)::before {
+  left: 50%;
+  width: calc(100% + 2px);
+}
+.product-details .active-tabs:last-child::before {
+  left: 79%;
+  width: calc(50% + 2px);
+}
+.product-details button {
   border: none;
+  background-color: white;
+  text-align: start;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
-.product-details .tab-content {
-  border: 1px solid gray;
+.product-details #review {
+  text-align: end;
+}
+.product-details .content-tabs {
+  flex-grow: 1;
+}
+.product-details .content {
+  background: white;
+  width: 1110px;
+  height: 100%;
+  display: none;
+}
+.product-details .content h2 {
+  padding: 0px 0 5px 0px;
+}
+.product-details .content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.product-details .content p {
+  width: 100%;
+  height: 100%;
+  color: #616365;
+}
+.product-details .active-content {
+  display: block;
 }
