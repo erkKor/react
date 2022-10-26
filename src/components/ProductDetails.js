@@ -4,6 +4,7 @@ import SizeButton from './items/SizeButton'
 import Button from './items/Button'
 import SelectList from './items/SelectList'
 import Tab from './items/Tab'
+import ExternalLinkIcon from './items/ExternalLinkIcon'
 
 const ProductDetails = () => {
   return (
@@ -36,13 +37,13 @@ const ProductDetails = () => {
                     <p>
                     Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. (read more) 
                     </p>
-                    <div className='getdown'></div>
                     <div className="button-choices">
                         <div className="button-row">
                             <h3>Size:</h3>
                             <SizeButton />
                         </div>
                         <div className="button-row">
+                            <h3>Color:</h3>
                             <SelectList />
                         </div>
                         <div className="button-row">
@@ -50,11 +51,21 @@ const ProductDetails = () => {
                             <QuantityButton />
                             <button className="button-theme" type="submit">ADD TO CART</button>
                         </div>
+                        <div className="button-row">
+                            <h3>Share:</h3>
+                            <span className="social-media">
+                                <ExternalLinkIcon link="https://facebook.com" icon="fa-brands fa-facebook-f"/>
+                                <ExternalLinkIcon link="https://instagram.com" icon="fa-brands fa-instagram"/>
+                                <ExternalLinkIcon link="https://twitter.com" icon="fa-brands fa-twitter"/>
+                                <ExternalLinkIcon link="https://google.com" icon="fa-brands fa-google"/>
+                                <ExternalLinkIcon link="https://linkedin.com" icon="fa-brands fa-linkedin"/>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div>
-                <Tab/>
+                {/* <Tab/> */}
             </div>
         </div>
     </section>
