@@ -12,9 +12,10 @@ const ProductsView = () => {
   <>
     <Navbar headerType="header-light"/>
     <Breadcrumb />
-    {/* <ProductDetails />
+    <ProductDetails />
+    {/* <Carousel />
     <Footer /> */}
-    <Carousel />
+    
   </>
   )
 }
