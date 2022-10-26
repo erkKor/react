@@ -95,6 +95,7 @@ const NewTab = () => {
         </div>
       </div>
     </div>
+    
   )
 }
 
