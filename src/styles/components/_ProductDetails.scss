@@ -26,6 +26,21 @@
             }
         }
         .product-shop-choices{
+
+            .product-id-brand{
+                display: flex;
+                font-size: 13px;
+                font-weight: 500;
+                color:$color-gray-20;
+                margin-bottom: 0.5rem;
+                p:last-child{
+                    margin-left: 1rem;
+                }
+            }
+
+            .stars{
+                color:$color-theme;
+            }
             h2{
                 margin: 0;
                 max-width: 350px;
@@ -33,6 +48,22 @@
             p{
                 margin: 0;
                 max-width: 350px;
+
+                a{
+                    color:$color-theme;
+                    text-decoration: none;
+
+                    &:hover{
+                        color:$color-dark;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .product-prices{
+                font-weight: 600;
+                font-size: 18px;
+                margin: 1rem 0;
             }
         }
     }
@@ -553,6 +584,12 @@
             }
             p{
                 margin: 0;
+                max-width: none;
+            }
+
+            .product-content{
+                margin: 1rem 0;
+                color:$color-gray-30;
             }
         }
     }

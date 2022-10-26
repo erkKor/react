@@ -1747,6 +1747,19 @@ header a {
   grid-column: 1/-1;
   background-color: #BBBBBB;
 }
+.product-details .top-part .product-shop-choices .product-id-brand {
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7E7F80;
+  margin-bottom: 0.5rem;
+}
+.product-details .top-part .product-shop-choices .product-id-brand p:last-child {
+  margin-left: 1rem;
+}
+.product-details .top-part .product-shop-choices .stars {
+  color: #FF7373;
+}
 .product-details .top-part .product-shop-choices h2 {
   margin: 0;
   max-width: 350px;
@@ -1754,6 +1767,19 @@ header a {
 .product-details .top-part .product-shop-choices p {
   margin: 0;
   max-width: 350px;
+}
+.product-details .top-part .product-shop-choices p a {
+  color: #FF7373;
+  text-decoration: none;
+}
+.product-details .top-part .product-shop-choices p a:hover {
+  color: #222529;
+  text-decoration: underline;
+}
+.product-details .top-part .product-shop-choices .product-prices {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 1rem 0;
 }
 .product-details .button-choices h3 {
   font-weight: 400;
@@ -2194,6 +2220,11 @@ header a {
   }
   .product-details .top-part .product-shop-choices p {
     margin: 0;
+    max-width: none;
+  }
+  .product-details .top-part .product-shop-choices .product-content {
+    margin: 1rem 0;
+    color: #616365;
   }
   .product-details .button-choices h3 {
     font-weight: 500;

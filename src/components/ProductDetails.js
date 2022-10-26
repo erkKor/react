@@ -34,9 +34,13 @@ const ProductDetails = () => {
                         <div className="original-price"></div>
                         <div className="discount-price">€35.00</div>
                     </div>
-                    <p>
-                    Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. (read more) 
-                    </p>
+                    <div class="product-content">
+                        <p>
+                        Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. 
+                        Unwilling departure education is be dashwoods or an. 
+                        Use off agreeable law unwilling sir deficient curiosity instantly. (<a href='/'>read more</a>) 
+                        </p>
+                    </div>
                     <div className="button-choices">
                         <div className="button-row">
                             <h3>Size:</h3>
