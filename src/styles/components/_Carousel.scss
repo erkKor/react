@@ -1,66 +1,88 @@
-.item{
-    background-color: $color-gray-0;
-    height: 325px;
-    width: 255px;
-    margin: 0 0.5rem;
-    padding: 0;
-}
-
-
 .carousel{
-    width: 1110px;
+    width: auto;
     margin: auto;
     margin-top: 2rem;
 
     .card{
+        width: 90%;
+    }
+    
+    h3{
+        margin: 0.6rem 1rem;
+    }
+    .left-button{
+        position: absolute;
+        top:-35px;
+        right:35px;
+        right:60px;
+        font-size: 12px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
+        cursor: pointer;
+        &:hover{
+            background-color: $color-dark;
+            color: white;  
+            box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
+        }
+    }
+    
+    .right-button{
+        position: absolute;
+        top:-35px;
+        right: 24px;
+        font-size: 12px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
+        cursor: pointer;
+        &:hover{
+            background-color: $color-dark;
+            color: white;  
+            box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
+        }
+    }
+    
+      .alice-carousel {
+        width: auto !important;
+      }
+    
+      .item{
+        background-color: $color-gray-0;
+        height: 325px;
         width: 255px;
+        margin: 0 0.5rem;
+        padding: 0;
+    }
+    .alice-carousel__stage{
+        padding: 0 1rem !important;
     }
     
 }
 
-.left-button{
-    position: absolute;
-    top:-35px;
-    right:35px;
-    right:60px;
-    font-size: 12px;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
-    cursor: pointer;
-    &:hover{
-        background-color: $color-dark;
-        color: white;  
-        box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
-    }
-}
+@include xl{
+.carousel{
+    width: 1110px;
 
-.right-button{
-    position: absolute;
-    top:-35px;
-    right: 24px;
-    font-size: 12px;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
-    cursor: pointer;
-    &:hover{
-        background-color: $color-dark;
-        color: white;  
-        box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
+    h3{
+        margin: 0.6rem 0;
     }
-}
-
-  .alice-carousel {
+    .alice-carousel__stage{
+        padding: 0 !important;
+    }
+    .alice-carousel {
     width: 1110px !important;
-  }
+    }
+
+}
+}

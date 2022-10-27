@@ -2244,24 +2244,18 @@ header a {
     display: block;
   }
 }
-.item {
-  background-color: #F5F5F5;
-  height: 325px;
-  width: 255px;
-  margin: 0 0.5rem;
-  padding: 0;
-}
-
 .carousel {
-  width: 1110px;
+  width: auto;
   margin: auto;
   margin-top: 2rem;
 }
 .carousel .card {
-  width: 255px;
+  width: 90%;
 }
-
-.left-button {
+.carousel h3 {
+  margin: 0.6rem 1rem;
+}
+.carousel .left-button {
   position: absolute;
   top: -35px;
   right: 35px;
@@ -2277,13 +2271,12 @@ header a {
   box-shadow: 0px 0px 8px -3px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
-.left-button:hover {
+.carousel .left-button:hover {
   background-color: #222529;
   color: white;
   box-shadow: 0px 0px 8px -3px rgba(0, 0, 0, 0.75);
 }
-
-.right-button {
+.carousel .right-button {
   position: absolute;
   top: -35px;
   right: 24px;
@@ -2298,12 +2291,36 @@ header a {
   box-shadow: 0px 0px 8px -3px rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
-.right-button:hover {
+.carousel .right-button:hover {
   background-color: #222529;
   color: white;
   box-shadow: 0px 0px 8px -3px rgba(0, 0, 0, 0.75);
 }
+.carousel .alice-carousel {
+  width: auto !important;
+}
+.carousel .item {
+  background-color: #F5F5F5;
+  height: 325px;
+  width: 255px;
+  margin: 0 0.5rem;
+  padding: 0;
+}
+.carousel .alice-carousel__stage {
+  padding: 0 1rem !important;
+}
 
-.alice-carousel {
-  width: 1110px !important;
+@media (min-width: 1200px) {
+  .carousel {
+    width: 1110px;
+  }
+  .carousel h3 {
+    margin: 0.6rem 0;
+  }
+  .carousel .alice-carousel__stage {
+    padding: 0 !important;
+  }
+  .carousel .alice-carousel {
+    width: 1110px !important;
+  }
 }

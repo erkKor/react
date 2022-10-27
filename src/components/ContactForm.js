@@ -7,7 +7,8 @@ const ContactForm = () => {
 
     const validate = (values) => {
         const errors = {}
-        const regex_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        const regex_email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        // const regex_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
         if(!values.name)
             errors.name = "You must enter a name"
@@ -45,30 +46,29 @@ const ContactForm = () => {
     }
 
 
-    const handleOnKeyUp = (e) => {
-        // if(e.target.value.length < 2) {
-        //     setFormErrors(current => {
-        //         return {...current, [e.target.id]: 'fel'}
-        //     })
-        // }
-        const {id, value} = e.target;
-        let errorMsg = '';
+    function handleKeyPress(e) {
+        var key = e.key;
+        var regex = /[a-zA-Z]|\./;
 
-        if(id === 'name') {
-            if(value.length < 2) {
-                errorMsg = 'Your name must be longer'
-            } else {
-                errorMsg = ''
-            }
-        }
+        const {id, value} = e.target;
+        // console.log(id, value)
+        let errorMsg = 'dess';
         
-        // setFormErrors(previuosErrors => {
-        //     // console.log(previuosErrors)
-        //     return {
-        //         ...previuosErrors,
-        //         [id]: errorMsg
-        //     }
-        // })
+        if( !regex.test(key) ) {
+            e.preventDefault();
+        }
+        else {
+            console.log();
+            console.log( "You pressed a key: " + key );
+        }
+
+        setFormErrors(previuosErrors => {
+            // console.log(previuosErrors)
+            return {
+                ...previuosErrors,
+                [id]: errorMsg
+            }
+        })
     }
 
   return (
@@ -87,7 +87,7 @@ const ContactForm = () => {
                 <form onSubmit={handleSubmit} noValidate>
                     <div className="inputs">
                         <div>
-                            <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} onKeyUp={handleOnKeyUp}/>
+                            <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} onKeyPress={(e) => handleKeyPress(e)}/>
                             <div id="nameErrorMessage" className="errorMessage">{formErrors.name}</div>
                         </div>
                         <div>

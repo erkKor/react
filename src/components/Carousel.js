@@ -4,7 +4,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import OriginalCard from './items/OriginalCard';
 
 const responsive = {
-  0: { items: 1 },
+  380: { items: 1 },
   568: { items: 2 },
   1024: { items: 4 },
 };
