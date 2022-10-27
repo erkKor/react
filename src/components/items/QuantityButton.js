@@ -16,11 +16,10 @@ const QuantityButton = () => {
     }
 
   return (
-    <div className='qty-btn'>
-        <button type='button' onClick={handleDecrement}>-</button>
-        {/* <input type='text' placeholder= max="10"/> */}
+    <div className="qty-btn-container">
+        <button type="button" onClick={handleDecrement}>-</button>
         <div className="input">{quantity}</div>
-        <button type='button'  onClick={handleIncrement}>+</button>
+        <button type="button"  onClick={handleIncrement}>+</button>
     </div>
   )
 }

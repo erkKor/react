@@ -1724,7 +1724,6 @@ header a {
   }
 }
 .product-details .container {
-  width: 360px;
   width: 92%;
   margin: 0 1rem;
 }
@@ -1741,11 +1740,11 @@ header a {
   gap: 15px;
 }
 .product-details .top-part .product-image .image-squares {
-  background-color: #BBBBBB;
+  background-color: #F5F5F5;
 }
 .product-details .top-part .product-image #main-image {
   grid-column: 1/-1;
-  background-color: #BBBBBB;
+  background-color: #F5F5F5;
 }
 .product-details .top-part .product-shop-choices .product-id-brand {
   display: flex;
@@ -1781,13 +1780,22 @@ header a {
   font-size: 18px;
   margin: 1rem 0;
 }
+.product-details .top-part .product-shop-choices .product-content {
+  margin: 1rem 0;
+  color: #616365;
+}
 .product-details .button-choices h3 {
-  font-weight: 400;
+  font-weight: 500;
   margin-right: 2rem;
 }
 .product-details .button-choices .button-row {
-  display: grid;
-  grid-template-columns: 30px 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.product-details .button-choices .button-row .break {
+  flex-basis: 100%;
+  height: 0;
 }
 .product-details .button-choices .button-theme {
   height: 47px;
@@ -1807,13 +1815,22 @@ header a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  margin: 0 0.5rem;
+  margin: 0 0.4rem;
+  transition: 0.2s ease-in-out;
 }
-.product-details .radioCont {
+.product-details .button-choices .social-media a:first-child {
+  margin: 0;
+  margin-right: 0.4rem;
+}
+.product-details .button-choices .social-media a:hover {
+  background-color: #222529;
+  color: #FFFFFF;
+}
+.product-details .size-btn-container {
   display: flex;
   height: 40px;
 }
-.product-details .radioCont .radio-sizeBtn {
+.product-details .size-btn-container .radio-sizebtn {
   display: block;
   position: relative;
   padding-left: 20px;
@@ -1825,20 +1842,20 @@ header a {
           user-select: none;
   margin: 0 1rem;
 }
-.product-details .radioCont .radio-sizeBtn:hover input ~ .checkmark {
+.product-details .size-btn-container .radio-sizebtn:hover input ~ .overlay {
   background-color: #222529;
   color: white;
 }
-.product-details .radioCont .radio-sizeBtn input:checked ~ .checkmark {
+.product-details .size-btn-container .radio-sizebtn input:checked ~ .overlay {
   background-color: #222529;
   color: white;
 }
-.product-details .radioCont .radio-sizeBtn input {
+.product-details .size-btn-container .radio-sizebtn input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-.product-details .radioCont .radio-sizeBtn .checkmark {
+.product-details .size-btn-container .radio-sizebtn .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1849,17 +1866,56 @@ header a {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s ease-in-out;
 }
-.product-details .radioCont .radio-sizeBtn .checkmark p {
+.product-details .size-btn-container .radio-sizebtn .overlay p {
   font-size: 16px;
   font-weight: 500;
 }
-.product-details .qty-btn {
+.product-details .color-select-container {
+  position: relative;
+  display: flex;
+  width: 220px;
+  height: 3em;
+  line-height: 3;
+  background: #5c6664;
+  overflow: hidden;
+  font-size: 14px;
+}
+.product-details .color-select-container::after {
+  position: absolute;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  content: "\f078";
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+.product-details .color-select-container select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 1px solid black !important;
+  background: white;
+  flex: 1;
+  padding: 0 0.5em;
+  color: #222529;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  color: #616365;
+}
+.product-details .qty-btn-container {
   display: flex;
   width: 130px;
   margin-left: 1rem;
 }
-.product-details .qty-btn .input {
+.product-details .qty-btn-container .input {
   width: 60px;
   height: 45px;
   border-top: 1px solid #222529;
@@ -1871,7 +1927,7 @@ header a {
   align-items: center;
   justify-content: center;
 }
-.product-details .qty-btn button {
+.product-details .qty-btn-container button {
   border: 1px solid #222529;
   background-color: white;
   width: 35px;
@@ -1880,6 +1936,11 @@ header a {
   font-weight: 600;
   font-size: 25px;
   cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.product-details .qty-btn-container button:hover {
+  background-color: #222529;
+  color: #FFFFFF;
 }
 .product-details .container-tab {
   display: flex;
@@ -1964,177 +2025,26 @@ header a {
 .product-details .container-tab .content-tabs .active-content {
   display: block;
 }
-.product-details #review {
+.product-details .container-tab #review {
   text-align: end;
-}
-.product-details select::-ms-expand {
-  display: none;
-}
-.product-details .select {
-  position: relative;
-  display: flex;
-  width: 220px;
-  height: 3em;
-  line-height: 3;
-  background: #5c6664;
-  overflow: hidden;
-  font-size: 14px;
-  margin-left: 2rem;
-}
-.product-details .select::after {
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 400;
-  content: "\f078";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0 1em;
-  cursor: pointer;
-  pointer-events: none;
-  transition: 0.25s all ease;
-}
-.product-details .select select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 1px solid black !important;
-  background: white;
-  flex: 1;
-  padding: 0 0.5em;
-  color: #222529;
-  cursor: pointer;
-  font-size: 1em;
-  font-family: "Poppins", sans-serif;
-  color: #616365;
-}
-.product-details .carousel {
-  background-color: red;
-}
-.product-details .carousel .container {
-  width: 1110px;
 }
 
 @media (min-width: 768px) {
   .product-details .container {
-    width: 92%;
     margin: auto;
   }
-  .product-details .getdown {
-    margin-top: 1rem;
-  }
   .product-details .top-part {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
   }
   .product-details .top-part .product-image {
-    color: red;
-    display: grid;
     height: 500px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3fr 1fr;
     gap: 20px;
-  }
-  .product-details .top-part .product-image .image-squares {
-    background-color: #F5F5F5;
-  }
-  .product-details .top-part .product-image #main-image {
-    grid-column: 1/-1;
-    background-color: #F5F5F5;
   }
   .product-details .top-part .product-shop-choices {
     width: 300px;
   }
-  .product-details .top-part .product-shop-choices h2 {
-    margin: 0;
-  }
-  .product-details .top-part .product-shop-choices p {
-    margin: 0;
-  }
-  .product-details .button-choices h3 {
-    font-weight: 400;
-  }
-  .product-details .button-choices .button-row {
-    display: grid;
-    grid-template-columns: 30px 1fr;
-  }
-  .product-details .button-choices .button-theme {
-    height: 47px;
-    margin: 0.5rem 0;
-  }
-  .product-details .radioCont {
-    display: flex;
-    height: 40px;
-  }
-  .product-details .radioCont .radio-sizeBtn {
-    display: block;
-    position: relative;
-    padding-left: 20px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    margin: 0 1rem;
-  }
-  .product-details .radioCont .radio-sizeBtn:hover input ~ .checkmark {
-    background-color: #222529;
-    color: white;
-  }
-  .product-details .radioCont .radio-sizeBtn input:checked ~ .checkmark {
-    background-color: #222529;
-    color: white;
-  }
-  .product-details .radioCont .radio-sizeBtn input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  .product-details .radioCont .radio-sizeBtn .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 40px;
-    width: 40px;
-    background-color: #fff;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .product-details .radioCont .radio-sizeBtn .checkmark p {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  .product-details .qty-btn {
-    display: flex;
-    width: 130px;
-    margin-left: 1rem;
-  }
-  .product-details .qty-btn .input {
-    width: 60px;
-    height: 45px;
-    border-top: 1px solid #222529;
-    border-bottom: 1px solid #222529;
-    font-family: "Poppins", sans-serif;
-    color: #222529;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .product-details .qty-btn button {
-    border: 1px solid #222529;
-    background-color: white;
-    width: 35px;
-    height: 46.99px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    cursor: pointer;
+  .product-details .color-select-container {
+    width: 200px;
   }
   .product-details .container-tab {
     display: flex;
@@ -2219,175 +2129,33 @@ header a {
   .product-details .container-tab .content-tabs .active-content {
     display: block;
   }
-  .product-details #review {
+  .product-details .container-tab #review {
     text-align: end;
   }
 }
 @media (min-width: 1200px) {
   .product-details .container {
     width: 1110px;
-    margin: auto;
-  }
-  .product-details .getdown {
-    margin-top: 1rem;
-  }
-  .product-details .top-part {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
   }
   .product-details .top-part .product-image {
-    display: grid;
     height: 600px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3fr 1fr;
     gap: 30px;
-  }
-  .product-details .top-part .product-image .image-squares {
-    background-color: #F5F5F5;
-  }
-  .product-details .top-part .product-image #main-image {
-    grid-column: 1/-1;
-    background-color: #F5F5F5;
   }
   .product-details .top-part .product-shop-choices {
     width: auto;
   }
-  .product-details .top-part .product-shop-choices h2 {
-    margin: 0;
-  }
   .product-details .top-part .product-shop-choices p {
-    margin: 0;
     max-width: none;
   }
-  .product-details .top-part .product-shop-choices .product-content {
-    margin: 1rem 0;
-    color: #616365;
-  }
-  .product-details .button-choices h3 {
-    font-weight: 500;
-  }
   .product-details .button-choices .button-row {
-    display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .product-details .button-choices .button-row .break {
+    flex-basis: 0%;
   }
   .product-details .button-choices .button-theme {
-    height: 47px;
     margin-top: 0.5rem;
     margin-left: 1.5rem;
-  }
-  .product-details .radioCont {
-    display: flex;
-    height: 40px;
-  }
-  .product-details .radioCont .radio-sizeBtn {
-    display: block;
-    position: relative;
-    padding-left: 20px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    margin: 0 1rem;
-  }
-  .product-details .radioCont .radio-sizeBtn:hover input ~ .checkmark {
-    background-color: #222529;
-    color: white;
-  }
-  .product-details .radioCont .radio-sizeBtn input:checked ~ .checkmark {
-    background-color: #222529;
-    color: white;
-  }
-  .product-details .radioCont .radio-sizeBtn input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  .product-details .radioCont .radio-sizeBtn .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 40px;
-    width: 40px;
-    background-color: #fff;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .product-details .radioCont .radio-sizeBtn .checkmark p {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  .product-details .qty-btn {
-    display: flex;
-    width: 130px;
-    margin-left: 1rem;
-  }
-  .product-details .qty-btn .input {
-    width: 60px;
-    height: 45px;
-    border-top: 1px solid #222529;
-    border-bottom: 1px solid #222529;
-    font-family: "Poppins", sans-serif;
-    color: #222529;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .product-details .qty-btn button {
-    border: 1px solid #222529;
-    background-color: white;
-    width: 35px;
-    height: 46.99px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  .product-details select::-ms-expand {
-    display: none;
-  }
-  .product-details .select {
-    position: relative;
-    display: flex;
-    width: 220px;
-    height: 3em;
-    line-height: 3;
-    background: #5c6664;
-    overflow: hidden;
-    font-size: 14px;
-  }
-  .product-details .select::after {
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 400;
-    content: "\f078";
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 1em;
-    cursor: pointer;
-    pointer-events: none;
-    transition: 0.25s all ease;
-  }
-  .product-details .select select {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    outline: 0;
-    box-shadow: none;
-    border: 1px solid black !important;
-    background: white;
-    flex: 1;
-    padding: 0 0.5em;
-    color: #222529;
-    cursor: pointer;
-    font-size: 1em;
-    font-family: "Poppins", sans-serif;
-    color: #616365;
   }
   .product-details .container-tab {
     display: flex;
@@ -2397,6 +2165,9 @@ header a {
     height: 300px;
     margin-top: 3rem;
     word-break: break-all;
+  }
+  .product-details .container-tab #review {
+    text-align: end;
   }
   .product-details .container-tab .bloc-tabs {
     display: flex;
@@ -2471,9 +2242,6 @@ header a {
   }
   .product-details .container-tab .content-tabs .active-content {
     display: block;
-  }
-  .product-details #review {
-    text-align: end;
   }
 }
 .item {

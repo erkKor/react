@@ -2,28 +2,28 @@ import React from 'react'
 
 const SizeButton = () => {
   return (
-    <div className="radioCont">
-      <label className="radio-sizeBtn">
+    <div className="size-btn-container">
+      <label className="radio-sizebtn">
         <input type="radio" name="radio" />
-        <span className="checkmark">
+        <span className="overlay">
           <p>S</p>
         </span>
       </label>
-      <label className="radio-sizeBtn">
+      <label className="radio-sizebtn">
         <input type="radio" name="radio" />
-        <span className="checkmark">
+        <span className="overlay">
           <p>M</p>
         </span>
       </label>
-      <label className="radio-sizeBtn">
+      <label className="radio-sizebtn">
         <input type="radio" name="radio" />
-        <span className="checkmark">
+        <span className="overlay">
           <p>L</p>
         </span>
       </label>
-      <label className="radio-sizeBtn">
+      <label className="radio-sizebtn">
         <input type="radio" name="radio" />
-        <span className="checkmark">
+        <span className="overlay">
           <p>XL</p>
         </span>
       </label>

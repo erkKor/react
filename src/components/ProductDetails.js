@@ -53,6 +53,7 @@ const ProductDetails = () => {
                         <div className="button-row">
                             <h3>Qty:</h3>
                             <QuantityButton />
+                            <div className="break"></div>
                             <button className="button-theme" type="submit">ADD TO CART</button>
                         </div>
                         <div className="button-row">
