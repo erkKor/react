@@ -44,6 +44,33 @@ const ContactForm = () => {
         setFormErrors(validate(contactForm))
     }
 
+
+    const handleOnKeyUp = (e) => {
+        // if(e.target.value.length < 2) {
+        //     setFormErrors(current => {
+        //         return {...current, [e.target.id]: 'fel'}
+        //     })
+        // }
+        const {id, value} = e.target;
+        let errorMsg = '';
+
+        if(id === 'name') {
+            if(value.length < 2) {
+                errorMsg = 'Your name must be longer'
+            } else {
+                errorMsg = ''
+            }
+        }
+        
+        // setFormErrors(previuosErrors => {
+        //     // console.log(previuosErrors)
+        //     return {
+        //         ...previuosErrors,
+        //         [id]: errorMsg
+        //     }
+        // })
+    }
+
   return (
     <section className="contact-form">
         <div className="container">
@@ -60,7 +87,7 @@ const ContactForm = () => {
                 <form onSubmit={handleSubmit} noValidate>
                     <div className="inputs">
                         <div>
-                            <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} />
+                            <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} onKeyUp={handleOnKeyUp}/>
                             <div id="nameErrorMessage" className="errorMessage">{formErrors.name}</div>
                         </div>
                         <div>

@@ -34,7 +34,7 @@ const ProductDetails = () => {
                         <div className="original-price"></div>
                         <div className="discount-price">€35.00</div>
                     </div>
-                    <div class="product-content">
+                    <div className="product-content">
                         <p>
                         Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. 
                         Unwilling departure education is be dashwoods or an. 

@@ -45,33 +45,32 @@ const ContactForm = () => {
     }
 
 
-    // const handleOnKeyUp = (e) => {
-    //     // if(e.target.value.length < 2) {
-    //     //     setFormErrors(current => {
-    //     //         return {...current, [e.target.id]: 'fel'}
-    //     //     })
-    //     // }
-    //     const {id, value} = e.target;
-    //     // console.log(id, value)
-    //     let errorMsg = '';
+    const handleOnKeyUp = (e) => {
+        // if(e.target.value.length < 2) {
+        //     setFormErrors(current => {
+        //         return {...current, [e.target.id]: 'fel'}
+        //     })
+        // }
+        const {id, value} = e.target;
+        // console.log(id, value)
+        let errorMsg = '';
 
-    //     if(id === 'name') {
-    //         if(value.length < 2) {
-    //             errorMsg = 'Your name must be longer'
-    //         } else {
-    //             errorMsg = ''
-    //         }
-    //     }
+        if(id === 'name') {
+            if(value.length < 2) {
+                errorMsg = 'Your name must be longer'
+            } else {
+                errorMsg = ''
+            }
+        }
         
-    //     setFormErrors(previuosErrors => {
-    //         // console.log(previuosErrors)
-    //         return {
-    //             ...previuosErrors,
-    //             [id]: errorMsg
-    //         }
-    //     })
-
-    // }
+        setFormErrors(previuosErrors => {
+            // console.log(previuosErrors)
+            return {
+                ...previuosErrors,
+                [id]: errorMsg
+            }
+        })
+    }
 
     // formErrors = {
     //     name: 'Your name must be longer',

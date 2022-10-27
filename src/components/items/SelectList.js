@@ -3,7 +3,7 @@ import React from 'react'
 const SelectList = () => {
 
   return (
-    <div class="select">
+    <div className="select">
       <select name="format" id="format">
           <option selected disabled>Choose an Option</option>
           <option value="red">Red</option>
