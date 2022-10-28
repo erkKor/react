@@ -46,29 +46,53 @@ const ContactForm = () => {
     }
 
 
-    function handleKeyPress(e) {
-        var key = e.key;
-        var regex = /[a-zA-Z]|\./;
+    const handleKeyUp = (e) => {
+        const id = e.target.id;
+        const value = e.target.value;
+        const error = {};
 
-        const {id, value} = e.target;
-        // console.log(id, value)
-        let errorMsg = 'dess';
+        const regName = /^([a-zA-Z]-?){2,20}$/
+        const regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+        switch (id){
+            case 'name':  
+                if (value.match(regName)){
+                    e.target.classList.remove("errorField")
+                    setFormErrors(error)
+                    // console.log(formErrors)
+                }
+                else {
+                    error.name ="Your name must contain atleast 2 letters"
+                    e.target.classList.add("errorField")
+                    setFormErrors(error)
+                }
+                break;
+                
+            case 'email':
+                if (value.match(regEmail)){
+                    e.target.classList.remove("errorField")
+                    setFormErrors(error)
+                }
+                else{
+                    error.email = "You must enter a valid email adress eg(name@domain.com)"
+                    e.target.classList.add("errorField")
+                    setFormErrors(error)
+                    
+                }
+                break;
+            case 'comment':
+                if (value.length >= 5){
+                    e.target.classList.remove("errorField")
+                    setFormErrors(error)
+                }
+                else{
+                    error.comment = "Your comment must contain atleast 5 characters"
+                    setFormErrors(error)
+                    e.target.classList.add("errorField")
+                }
+                break;
+        }
         
-        if( !regex.test(key) ) {
-            e.preventDefault();
-        }
-        else {
-            console.log();
-            console.log( "You pressed a key: " + key );
-        }
-
-        setFormErrors(previuosErrors => {
-            // console.log(previuosErrors)
-            return {
-                ...previuosErrors,
-                [id]: errorMsg
-            }
-        })
     }
 
   return (
@@ -87,16 +111,16 @@ const ContactForm = () => {
                 <form onSubmit={handleSubmit} noValidate>
                     <div className="inputs">
                         <div>
-                            <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} onKeyPress={(e) => handleKeyPress(e)}/>
+                            <input id="name" type="text" placeholder="Your Name" value={contactForm.name} onChange={handleChange} onKeyUp={handleKeyUp}/>
                             <div id="nameErrorMessage" className="errorMessage">{formErrors.name}</div>
                         </div>
                         <div>
-                            <input id="email" className="" type="email" placeholder="Your Email" value={contactForm.email} onChange={handleChange}/>
+                            <input id="email" className="" type="email" placeholder="Your Email" value={contactForm.email} onChange={handleChange} onKeyUp={handleKeyUp}/>
                             <div id="emailErrorMessage" className="errorMessage">{formErrors.email}</div>
                         </div>
                     </div>
                     <div>
-                        <textarea id="comment" className="textarea" name="" cols="30" rows="10" placeholder="Comments" value={contactForm.comment} onChange={handleChange}></textarea>
+                        <textarea id="comment" className="textarea" name="" cols="30" rows="10" placeholder="Comments" value={contactForm.comment} onChange={handleChange} onKeyUp={handleKeyUp}></textarea>
                         <div id="commentErrorMessage" className="errorMessage">{formErrors.comment}</div>
                     </div>
                     <button className="button-theme" type="submit">Post Comments</button>

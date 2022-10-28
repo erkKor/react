@@ -1627,9 +1627,9 @@ header a {
   color: #FF7373;
   font-size: 0.8em;
 }
-.contact-form form .error {
+.contact-form form .errorField {
   color: #FF7373;
-  border-color: #FF7373;
+  border-color: #FF7373 !important;
 }
 
 @media (min-width: 768px) {
@@ -1668,10 +1668,6 @@ header a {
   .contact-form form .errorMessage {
     color: #FF7373;
     font-size: 0.8em;
-  }
-  .contact-form form .error {
-    color: #FF7373;
-    border-color: #FF7373;
   }
 }
 @media (min-width: 1200px) {
@@ -1717,10 +1713,6 @@ header a {
   .contact-form form .errorMessage {
     color: #FF7373;
     font-size: 0.8em;
-  }
-  .contact-form form .error {
-    color: #FF7373;
-    border-color: #FF7373;
   }
 }
 .product-details .container {

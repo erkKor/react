@@ -42,9 +42,9 @@
             font-size: 0.8em;
             
         }
-        .error{
+        .errorField{
             color: $color-theme;
-            border-color: $color-theme;
+            border-color: $color-theme !important; 
         }
     }
 }
@@ -56,9 +56,6 @@
 @include md{
 .contact-form{
     margin-top: 2rem;
-    .container{
-    }
-
     h3{
         margin: 1rem 0.5rem; 
     }
@@ -95,10 +92,6 @@
             color: $color-theme;
             font-size: 0.8em;
             
-        }
-        .error{
-            color: $color-theme;
-            border-color: $color-theme;
         }
     }
 }
@@ -139,7 +132,6 @@
             padding: 15px 18px;
             resize: none;
             outline: none;
-            
         }
         button{
             margin-top: 1rem;
@@ -151,10 +143,7 @@
             font-size: 0.8em;
             
         }
-        .error{
-            color: $color-theme;
-            border-color: $color-theme;
-        }
+        
     }
 }
 }
