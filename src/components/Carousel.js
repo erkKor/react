@@ -35,10 +35,10 @@ const Carousel = () => {
         controlsStrategy="alternate"
         disableDotsControls="false"
         renderPrevButton={() => {
-          return <span className="left-button"><i class="fa-regular fa-chevron-left"></i></span>
+          return <span className="left-button"><i className="fa-regular fa-chevron-left"></i></span>
         }}
         renderNextButton={() => {
-          return <span className="right-button"><i class="fa-regular fa-chevron-right"></i></span>
+          return <span className="right-button"><i className="fa-regular fa-chevron-right"></i></span>
         }}
     />
     </section>

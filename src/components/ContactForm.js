@@ -41,8 +41,21 @@ const ContactForm = () => {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        setFormErrors(validate(contactForm))
+        const {id, value} = e.target
+
+        // let json = JSON.stringify({name, email, comments})
+
+        fetch('https://win22-webapi.azurewebsites.net/api/contactform',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            // body: json
+        })
+        .then(res => console.log(res))
+
+        // e.preventDefault()
+        // setFormErrors(validate(contactForm))
     }
 
 
@@ -80,6 +93,7 @@ const ContactForm = () => {
                     
                 }
                 break;
+
             case 'comment':
                 if (value.length >= 5){
                     e.target.classList.remove("errorField")
@@ -98,7 +112,6 @@ const ContactForm = () => {
   return (
     <section className="contact-form">
         <div className="container">
-
             {
                 submitted ? 
                 (<div>
