@@ -12,7 +12,7 @@ import TrippleColumnProducts from '../components/TrippleColumnProducts'
 import InfoIcons from '../components/InfoIcons'
 import Footer from '../components/Footer'
 
-const HomeView = ({items = []}) => {
+const HomeView = () => {
   window.top.document.title = 'Fixxo.'
     
   // const [featuredProducts, setFeaturedProducts] = useState([
@@ -55,7 +55,7 @@ const HomeView = ({items = []}) => {
       <Navbar headerType="header-gray"/>
       <Showcase />
       <ShowcaseCardBigSmall />
-      <FeaturedProducts products={items}/> 
+      <FeaturedProducts /> 
       <ShowcaseCardDouble />
       <OurSpeciality />
       <BigSquareWCardsLeft products={cardProducts}/>

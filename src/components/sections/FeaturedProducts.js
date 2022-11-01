@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from '../items/Card'
+import { ProductContext } from '../../contexts/contexts'
 
 
-const FeaturedProducts = ({products}) => {
+const FeaturedProducts = () => {
+
+  const products = useContext(ProductContext)
+
   return (
     <section className="featured-products">
         <div className="container">
@@ -11,7 +15,7 @@ const FeaturedProducts = ({products}) => {
             </div>
             <div className="card-grid">
                 {
-                  products.map(product => <Card key={product.id} product={product} />)
+                  products.featuredProducts.map(product => <Card key={product.articleNumber} product={product} />)
                 }
             </div>
         </div>

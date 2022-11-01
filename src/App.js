@@ -1,7 +1,7 @@
-import React, { useState, createContext } from 'react'
+import React, {useEffect, useState} from 'react'
 import "./styles/style.min.css"
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {ProductContext} from '../src/contexts/contexts'
 
 import HomeView from "./views/HomeView";
 import ProductsView from "./views/ProductsView";
@@ -16,27 +16,34 @@ import NotFoundView from "./views/NotFoundView";
 
 
 function App() {
+  const [products, setProducts] = useState({
+    allProducts: [],
+    featuredProducts: [], 
+  })
 
-  const ProductContext = createContext() 
-  const [featuredProducts, setFeaturedProducts] = useState([
-    { id: 1, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 2, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-    { id: 3, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-    { id: 4, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 5, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 6, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 7, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 8, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" }
-  ])
+  useEffect(() => {
+    const fetchAllProducts = async () =>{
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
+      setProducts({...products, allProducts: await result.json()})
+    }
+    fetchAllProducts();
+
+    const fetchFeaturedProducts = async () =>{
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
+      setProducts({...products, featuredProducts: await result.json()})
+    }
+    fetchFeaturedProducts();
+
+  }, [setProducts])
 
   return (
     <BrowserRouter>
-      <ProductContext.Provider value={featuredProducts}>
+      <ProductContext.Provider value={products}>
         <Routes>
-          <Route path="/" element={<HomeView items={featuredProducts}/>}/>
+          <Route path="/" element={<HomeView />}/>
           <Route path="/Products" element={<ProductsView/>}/>
           <Route path="/Products/:id" element={<ProductDetailsView />}/>
-          <Route path="/Categories" element={<CategoriesView items={featuredProducts}/>}/>
+          <Route path="/Categories" element={<CategoriesView items={products}/>}/>
           <Route path="/Contacts" element={<ContactView />}/>
           <Route path="/Search" element={<SearchView />}/>
           <Route path="/Compare" element={<CompareView />}/>
