@@ -17,14 +17,14 @@ import NotFoundView from "./views/NotFoundView";
 
 function App() {
   const [products, setProducts] = useState({
-    allProducts: [],
-    featuredProducts: [], 
+    all: [],
+    featuredProducts: []
   })
 
   useEffect(() => {
     const fetchAllProducts = async () =>{
       let result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
-      setProducts({...products, allProducts: await result.json()})
+      setProducts({...products, all: await result.json()})
     }
     fetchAllProducts();
 
@@ -43,7 +43,7 @@ function App() {
           <Route path="/" element={<HomeView />}/>
           <Route path="/Products" element={<ProductsView/>}/>
           <Route path="/Products/:id" element={<ProductDetailsView />}/>
-          <Route path="/Categories" element={<CategoriesView items={products}/>}/>
+          <Route path="/Categories" element={<CategoriesView />}/>
           <Route path="/Contacts" element={<ContactView />}/>
           <Route path="/Search" element={<SearchView />}/>
           <Route path="/Compare" element={<CompareView />}/>

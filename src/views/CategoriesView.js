@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from '../components/Navbar'
 import FeaturedProducts from '../components/sections/FeaturedProducts'
+import { ProductContext } from '../contexts/contexts'
 
-const CategoriesView = ({items = []}) => {
+const CategoriesView = () => {
+  const productContext = useContext(ProductContext)
+
   return (
     <>
     <Navbar headerType="header-light"/>
-    <FeaturedProducts products={items}/> 
+    <FeaturedProducts items={productContext.all}/> 
       </>
   )
 }

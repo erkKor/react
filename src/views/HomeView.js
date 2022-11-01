@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Showcase from '../components/Showcase'
 import ShowcaseCardBigSmall from '../components/ShowcaseCardBigSmall'
@@ -11,9 +11,11 @@ import SaleBanner from '../components/sections/SaleBanner'
 import TrippleColumnProducts from '../components/TrippleColumnProducts'
 import InfoIcons from '../components/InfoIcons'
 import Footer from '../components/Footer'
+import { ProductContext } from '../contexts/contexts'
 
 const HomeView = () => {
   window.top.document.title = 'Fixxo.'
+  const productContext = useContext(ProductContext)
     
   // const [featuredProducts, setFeaturedProducts] = useState([
   //   { id: 1, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
@@ -55,7 +57,7 @@ const HomeView = () => {
       <Navbar headerType="header-gray"/>
       <Showcase />
       <ShowcaseCardBigSmall />
-      <FeaturedProducts /> 
+      <FeaturedProducts items={productContext.featuredProducts}/> 
       <ShowcaseCardDouble />
       <OurSpeciality />
       <BigSquareWCardsLeft products={cardProducts}/>

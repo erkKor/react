@@ -24,7 +24,7 @@ const Card = ({product}) => {
         </ul>
         <div className="card-background">
         <img src={product.imageName} alt={product.name}/>
-        <NavLink to={`/products/${product.id}`}>
+        <NavLink to={`/products/${product.articleNumber}`}>
             <Button to="/products" theme='button-theme' themeBorder='button-theme-border' btnText="SHOP NOW"/>
         </NavLink>
         </div>
