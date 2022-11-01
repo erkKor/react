@@ -10,7 +10,6 @@ html, body {
 
 body {
   margin: 0;
-  width: 100vw;
 }
 
 .container {
@@ -1874,6 +1873,7 @@ header a {
   background: #5c6664;
   overflow: hidden;
   font-size: 14px;
+  margin-left: 2px;
 }
 .product-details .color-select-container::after {
   position: absolute;
@@ -1906,7 +1906,7 @@ header a {
 .product-details .qty-btn-container {
   display: flex;
   width: 130px;
-  margin-left: 1rem;
+  margin-left: 1.25rem;
 }
 .product-details .qty-btn-container .input {
   width: 60px;

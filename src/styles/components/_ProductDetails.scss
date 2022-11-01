@@ -179,6 +179,7 @@
         background: #5c6664;
         overflow: hidden;
         font-size: 14px;
+        margin-left: 2px;
 
         &::after{
             position: absolute;
@@ -211,7 +212,7 @@
     .qty-btn-container{
         display: flex;
         width: 130px;
-        margin-left: 1rem;
+        margin-left: 1.25rem;
         .input{
             width: 60px;
             height: 45px;
