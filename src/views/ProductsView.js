@@ -16,7 +16,7 @@ const ProductsView = () => {
     <Breadcrumb />
     <ProductDetails />
     <Carousel />
-    {/* <Footer /> */}
+    <Footer />
     
   </>
   )

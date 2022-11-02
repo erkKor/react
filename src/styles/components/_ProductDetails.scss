@@ -3,6 +3,7 @@
         width: 92%;
         margin: 0 1rem;
     }
+
     .top-part{
         display: grid;
         grid-template-columns: 1fr;
@@ -76,13 +77,13 @@
         h3{
             font-weight: 500;
             margin-right: 2rem;
+            font-size: 16px;
         }
         .button-row{
-            // display: grid;
-            // grid-template-columns: 30px 1fr;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            margin-bottom: 0.6rem;
             .break{
                 flex-basis: 100%;
                 height: 0;
@@ -91,7 +92,7 @@
 
         .button-theme{
             height: 47px;
-            margin: 0.5rem 0;
+            margin-top: 1.1rem;
         }
 
         .social-media{
@@ -118,6 +119,9 @@
                     color:$color-white;
                 }
             }
+        }
+        #social-media{
+            margin-bottom: 0;
         }
     }
 
@@ -167,9 +171,6 @@
         }
     }
 
-//  select::-ms-expand {
-//     display: none;
-//  }
     .color-select-container{
         position: relative;
         display: flex;
@@ -179,7 +180,7 @@
         background: #5c6664;
         overflow: hidden;
         font-size: 14px;
-        margin-left: 2px;
+        margin-left: 3.5px;
 
         &::after{
             position: absolute;
@@ -212,7 +213,7 @@
     .qty-btn-container{
         display: flex;
         width: 130px;
-        margin-left: 1.25rem;
+        margin-left: 1.20rem;
         .input{
             width: 60px;
             height: 45px;
@@ -246,18 +247,14 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        width: 550px;
+        width: auto;
         height: 300px;
-        // background: #f1f1f1;
-        // margin: 100px auto 0;
-        margin-top: 3rem;
+        margin-top: 1.5rem;
         word-break: break-all;
-        // border: 1px solid rgba(0, 0, 0, 0.274);
         
         .bloc-tabs{
             display: flex;
             border-bottom: 1px solid rgba(97,99,101,0.2);
-
             button{
                 border: none;
                 background-color: white;
@@ -266,17 +263,13 @@
                 font-family: $font-poppins;
             }
             .tabs{
-                // padding: 15px;
-                // text-align: center;
                 width: 50%;
-                // background: rgba(128, 128, 128, 0.075);
                 cursor: pointer;
-                // border-bottom: 1px solid rgba(0, 0, 0, 0.274);
                 box-sizing: content-box;
                 position: relative;
                 outline: none;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 12px;
                 white-space: nowrap;
             }
 
@@ -288,69 +281,59 @@
                     display: block;
                     position: absolute;
                     bottom: -1px;
-                    left: 36%;
+                    left: 45%;
                     transform: translateX(-50%);
-                    width: calc(70% + 2px);
+                    width: calc(87% + 2px);
                     height: 1px;
                     background: $color-theme;
                 }
                 &:nth-child(2){
                     &::before{
-                    left: 32%;
-                    width: calc(64% + 2px);
+                    left: 42%;
+                    width: calc(82% + 2px);
                     }
                 }
                 &:nth-child(3){
                     &::before{
-                    left: 50%;
+                    left: 51%;
                     width: calc(100% + 2px);
             
                     }
                 }
                 &:last-child{
                     &::before{
-                    left: 76%;
-                    width: calc(51% + 2px);
+                    left: 50%;
+                    width: calc(67% + 2px);
             
                     }
                 }
             }
         }
-
         .content-tabs {
-            flex-grow : 1;
-
-        .content {
-            background: white;
-            width: 1110px;
-            height: 100%;
-            display: none;
-
-            h2{
-                padding: 0px 0 5px 0px;
-            }
-
-            hr{
-                width: 100px;
-                height: 2px;
-                background: #222;
-                margin-bottom: 5px;
-            }
-
-            p{
+            // flex-grow : 1;
+            .content {
+                background: white;
                 width: 100%;
-                height: 100%;
-                color:$color-gray-30;
+                // height: 100%;
+                display: none;
+                h2{
+                    padding: 0px 0 5px 0px;
+                }
+                p{
+                    width: 100%;
+                    // height: 100%;
+                    color:$color-gray-30;
+                    font-size: 13px;
+                }
             }
-        }
 
-        .active-content {
-        display: block;
-        }
+            .active-content {
+                display: block;
+            }
         }
 
         #review{
-            text-align: end;
+            text-align: center;
         }
     }
 }
@@ -364,13 +347,22 @@
     }
     .top-part{
         grid-template-columns: 1fr 1fr;
-
         .product-image{
-            height: 500px;
+            height: 580px;
             gap: 20px;
         }
         .product-shop-choices{
             width: 300px;
+
+            #social-media{
+                flex-wrap: nowrap;
+            }
+        }
+    }
+    
+    .button-choices{
+        .button-row{
+            margin-top: 1.1rem;
         }
     }
 
@@ -379,117 +371,39 @@
     }
 
     .container-tab {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 550px;
-        height: 300px;
-        // background: #f1f1f1;
-        // margin: 100px auto 0;
-        margin-top: 3rem;
-        word-break: break-all;
-        // border: 1px solid rgba(0, 0, 0, 0.274);
-        
+        margin-top: 1.5rem;
         .bloc-tabs{
-            display: flex;
-            border-bottom: 1px solid rgba(97,99,101,0.2);
-
-            button{
-                border: none;
-                background-color: white;
-                text-align: start;
-                padding: 0;
-                font-family: $font-poppins;
-            }
             .tabs{
-                // padding: 15px;
-                // text-align: center;
-                width: 50%;
-                // background: rgba(128, 128, 128, 0.075);
-                cursor: pointer;
-                // border-bottom: 1px solid rgba(0, 0, 0, 0.274);
-                box-sizing: content-box;
-                position: relative;
-                outline: none;
-                font-weight: 500;
                 font-size: 16px;
-                white-space: nowrap;
             }
 
             .active-tabs{
-                background: white;
-                color:$color-theme;
                 &::before{
                 content: "";
-                    display: block;
-                    position: absolute;
-                    bottom: -1px;
-                    left: 36%;
-                    transform: translateX(-50%);
-                    width: calc(70% + 2px);
-                    height: 1px;
-                    background: $color-theme;
+                    left: 24%;
+                    width: calc(48% + 2px);
                 }
                 &:nth-child(2){
                     &::before{
-                    left: 32%;
-                    width: calc(64% + 2px);
+                    left: 22%;
+                    width: calc(45% + 2px);
                     }
                 }
                 &:nth-child(3){
                     &::before{
-                    left: 50%;
-                    width: calc(100% + 2px);
-            
+                    left: 43%;
+                    width: calc(86% + 2px);
                     }
                 }
                 &:last-child{
                     &::before{
-                    left: 76%;
-                    width: calc(51% + 2px);
-            
+                    left: 50%;
+                    width: calc(36% + 2px);
                     }
                 }
             }
         }
-
-        .content-tabs {
-            flex-grow : 1;
-
-        .content {
-            background: white;
-            width: 1110px;
-            height: 100%;
-            display: none;
-
-            h2{
-                padding: 0px 0 5px 0px;
-            }
-
-            hr{
-                width: 100px;
-                height: 2px;
-                background: #222;
-                margin-bottom: 5px;
-            }
-
-            p{
-                width: 100%;
-                height: 100%;
-                color:$color-gray-30;
-            }
-        }
-
-        .active-content {
-        display: block;
-        }
-        }
-        #review{
-            text-align: end;
-        }
     }
-    
-
 }   
 }
 
@@ -523,54 +437,24 @@
             margin-top: 0.5rem;
             margin-left: 1.5rem;
         }
+
+        #social-media{
+            display: flex !important;
+        }
     }
 
     .container-tab {
-        display: flex;
-        flex-direction: column;
-        position: relative;
         width: 550px;
-        height: 300px;
         margin-top: 3rem;
-        word-break: break-all;
         #review{
             text-align: end;
         }
         .bloc-tabs{
-            display: flex;
-            border-bottom: 1px solid rgba(97,99,101,0.2);
-
-            button{
-                border: none;
-                background-color: white;
-                text-align: start;
-                padding: 0;
-                font-family: $font-poppins;
-            }
-            .tabs{
-                width: 50%;
-                cursor: pointer;
-                box-sizing: content-box;
-                position: relative;
-                outline: none;
-                font-weight: 500;
-                font-size: 16px;
-                white-space: nowrap;
-            }
-
             .active-tabs{
-                background: white;
-                color:$color-theme;
                 &::before{
                 content: "";
-                    display: block;
-                    position: absolute;
-                    bottom: -1px;
                     left: 36%;
-                    transform: translateX(-50%);
                     width: calc(70% + 2px);
-                    height: 1px;
-                    background: $color-theme;
                 }
                 &:nth-child(2){
                     &::before{
@@ -596,36 +480,136 @@
         }
 
         .content-tabs {
-            flex-grow : 1;
-
             .content {
-                background: white;
                 width: 1110px;
-                height: 100%;
-                display: none;
-
-                h2{
-                    padding: 0px 0 5px 0px;
-                }
-
-                hr{
-                    width: 100px;
-                    height: 2px;
-                    background: #222;
-                    margin-bottom: 5px;
-                }
-
                 p{
-                    width: 100%;
-                    height: 100%;
-                    color:$color-gray-30;
+                    font-size: 16px;
                 }
-            }
-
-            .active-content {
-                display: block;
             }
         }
     }
 }   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// .container-tab {
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     width: 550px;
+//     height: 300px;
+//     // background: #f1f1f1;
+//     // margin: 100px auto 0;
+//     margin-top: 3rem;
+//     word-break: break-all;
+//     // border: 1px solid rgba(0, 0, 0, 0.274);
+    
+//     .bloc-tabs{
+//         display: flex;
+//         border-bottom: 1px solid rgba(97,99,101,0.2);
+
+//         button{
+//             border: none;
+//             background-color: white;
+//             text-align: start;
+//             padding: 0;
+//             font-family: $font-poppins;
+//         }
+//         .tabs{
+//             // padding: 15px;
+//             // text-align: center;
+//             width: 50%;
+//             // background: rgba(128, 128, 128, 0.075);
+//             cursor: pointer;
+//             // border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+//             box-sizing: content-box;
+//             position: relative;
+//             outline: none;
+//             font-weight: 500;
+//             font-size: 16px;
+//             white-space: nowrap;
+//         }
+
+//         .active-tabs{
+//             background: white;
+//             color:$color-theme;
+//             &::before{
+//             content: "";
+//                 display: block;
+//                 position: absolute;
+//                 bottom: -1px;
+//                 left: 36%;
+//                 transform: translateX(-50%);
+//                 width: calc(70% + 2px);
+//                 height: 1px;
+//                 background: $color-theme;
+//             }
+//             &:nth-child(2){
+//                 &::before{
+//                 left: 32%;
+//                 width: calc(64% + 2px);
+//                 }
+//             }
+//             &:nth-child(3){
+//                 &::before{
+//                 left: 50%;
+//                 width: calc(100% + 2px);
+        
+//                 }
+//             }
+//             &:last-child{
+//                 &::before{
+//                 left: 76%;
+//                 width: calc(51% + 2px);
+        
+//                 }
+//             }
+//         }
+//     }
+
+//     .content-tabs {
+//         flex-grow : 1;
+
+//     .content {
+//         background: white;
+//         width: 1110px;
+//         height: 100%;
+//         display: none;
+
+//         h2{
+//             padding: 0px 0 5px 0px;
+//         }
+
+//         hr{
+//             width: 100px;
+//             height: 2px;
+//             background: #222;
+//             margin-bottom: 5px;
+//         }
+
+//         p{
+//             width: 100%;
+//             height: 100%;
+//             color:$color-gray-30;
+//         }
+//     }
+
+//     .active-content {
+//     display: block;
+//     }
+//     }
+
+//     #review{
+//         text-align: end;
+//     }
+// }

@@ -56,7 +56,7 @@ const ProductDetails = () => {
                             <div className="break"></div>
                             <button className="button-theme" type="submit">ADD TO CART</button>
                         </div>
-                        <div className="button-row">
+                        <div className="button-row" id="social-media">
                             <h3>Share:</h3>
                             <span className="social-media">
                                 <ExternalLinkIcon link="https://facebook.com" icon="fa-brands fa-facebook-f"/>
@@ -69,9 +69,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                <Tab/>
-            </div>
+            <Tab/>
         </div>
     </section>
   )

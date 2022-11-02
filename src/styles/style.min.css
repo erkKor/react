@@ -1162,11 +1162,13 @@ header a {
 .product-details .button-choices h3 {
   font-weight: 500;
   margin-right: 2rem;
+  font-size: 16px;
 }
 .product-details .button-choices .button-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 0.6rem;
 }
 .product-details .button-choices .button-row .break {
   flex-basis: 100%;
@@ -1174,7 +1176,7 @@ header a {
 }
 .product-details .button-choices .button-theme {
   height: 47px;
-  margin: 0.5rem 0;
+  margin-top: 1.1rem;
 }
 .product-details .button-choices .social-media {
   display: flex;
@@ -1200,6 +1202,9 @@ header a {
 .product-details .button-choices .social-media a:hover {
   background-color: #222529;
   color: #FFFFFF;
+}
+.product-details .button-choices #social-media {
+  margin-bottom: 0;
 }
 .product-details .size-btn-container {
   display: flex;
@@ -1256,7 +1261,7 @@ header a {
   background: #5c6664;
   overflow: hidden;
   font-size: 14px;
-  margin-left: 2px;
+  margin-left: 3.5px;
 }
 .product-details .color-select-container::after {
   position: absolute;
@@ -1289,7 +1294,7 @@ header a {
 .product-details .qty-btn-container {
   display: flex;
   width: 130px;
-  margin-left: 1.25rem;
+  margin-left: 1.2rem;
 }
 .product-details .qty-btn-container .input {
   width: 60px;
@@ -1322,9 +1327,9 @@ header a {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 550px;
+  width: auto;
   height: 300px;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   word-break: break-all;
 }
 .product-details .container-tab .bloc-tabs {
@@ -1345,7 +1350,7 @@ header a {
   position: relative;
   outline: none;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   white-space: nowrap;
 }
 .product-details .container-tab .bloc-tabs .active-tabs {
@@ -1357,52 +1362,42 @@ header a {
   display: block;
   position: absolute;
   bottom: -1px;
-  left: 36%;
+  left: 45%;
   transform: translateX(-50%);
-  width: calc(70% + 2px);
+  width: calc(87% + 2px);
   height: 1px;
   background: #FF7373;
 }
 .product-details .container-tab .bloc-tabs .active-tabs:nth-child(2)::before {
-  left: 32%;
-  width: calc(64% + 2px);
+  left: 42%;
+  width: calc(82% + 2px);
 }
 .product-details .container-tab .bloc-tabs .active-tabs:nth-child(3)::before {
-  left: 50%;
+  left: 51%;
   width: calc(100% + 2px);
 }
 .product-details .container-tab .bloc-tabs .active-tabs:last-child::before {
-  left: 76%;
-  width: calc(51% + 2px);
-}
-.product-details .container-tab .content-tabs {
-  flex-grow: 1;
+  left: 50%;
+  width: calc(67% + 2px);
 }
 .product-details .container-tab .content-tabs .content {
   background: white;
-  width: 1110px;
-  height: 100%;
+  width: 100%;
   display: none;
 }
 .product-details .container-tab .content-tabs .content h2 {
   padding: 0px 0 5px 0px;
 }
-.product-details .container-tab .content-tabs .content hr {
-  width: 100px;
-  height: 2px;
-  background: #222;
-  margin-bottom: 5px;
-}
 .product-details .container-tab .content-tabs .content p {
   width: 100%;
-  height: 100%;
   color: #616365;
+  font-size: 13px;
 }
 .product-details .container-tab .content-tabs .active-content {
   display: block;
 }
 .product-details .container-tab #review {
-  text-align: end;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -1413,100 +1408,43 @@ header a {
     grid-template-columns: 1fr 1fr;
   }
   .product-details .top-part .product-image {
-    height: 500px;
+    height: 580px;
     gap: 20px;
   }
   .product-details .top-part .product-shop-choices {
     width: 300px;
   }
+  .product-details .top-part .product-shop-choices #social-media {
+    flex-wrap: nowrap;
+  }
+  .product-details .button-choices .button-row {
+    margin-top: 1.1rem;
+  }
   .product-details .color-select-container {
     width: 200px;
   }
   .product-details .container-tab {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 550px;
-    height: 300px;
-    margin-top: 3rem;
-    word-break: break-all;
-  }
-  .product-details .container-tab .bloc-tabs {
-    display: flex;
-    border-bottom: 1px solid rgba(97, 99, 101, 0.2);
-  }
-  .product-details .container-tab .bloc-tabs button {
-    border: none;
-    background-color: white;
-    text-align: start;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
+    margin-top: 1.5rem;
   }
   .product-details .container-tab .bloc-tabs .tabs {
-    width: 50%;
-    cursor: pointer;
-    box-sizing: content-box;
-    position: relative;
-    outline: none;
-    font-weight: 500;
     font-size: 16px;
-    white-space: nowrap;
-  }
-  .product-details .container-tab .bloc-tabs .active-tabs {
-    background: white;
-    color: #FF7373;
   }
   .product-details .container-tab .bloc-tabs .active-tabs::before {
     content: "";
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    left: 36%;
-    transform: translateX(-50%);
-    width: calc(70% + 2px);
-    height: 1px;
-    background: #FF7373;
+    left: 24%;
+    width: calc(48% + 2px);
   }
   .product-details .container-tab .bloc-tabs .active-tabs:nth-child(2)::before {
-    left: 32%;
-    width: calc(64% + 2px);
+    left: 22%;
+    width: calc(45% + 2px);
   }
   .product-details .container-tab .bloc-tabs .active-tabs:nth-child(3)::before {
-    left: 50%;
-    width: calc(100% + 2px);
+    left: 43%;
+    width: calc(86% + 2px);
   }
   .product-details .container-tab .bloc-tabs .active-tabs:last-child::before {
-    left: 76%;
-    width: calc(51% + 2px);
-  }
-  .product-details .container-tab .content-tabs {
-    flex-grow: 1;
-  }
-  .product-details .container-tab .content-tabs .content {
-    background: white;
-    width: 1110px;
-    height: 100%;
-    display: none;
-  }
-  .product-details .container-tab .content-tabs .content h2 {
-    padding: 0px 0 5px 0px;
-  }
-  .product-details .container-tab .content-tabs .content hr {
-    width: 100px;
-    height: 2px;
-    background: #222;
-    margin-bottom: 5px;
-  }
-  .product-details .container-tab .content-tabs .content p {
-    width: 100%;
-    height: 100%;
-    color: #616365;
-  }
-  .product-details .container-tab .content-tabs .active-content {
-    display: block;
-  }
-  .product-details .container-tab #review {
-    text-align: end;
+    left: 50%;
+    width: calc(36% + 2px);
   }
 }
 @media (min-width: 1200px) {
@@ -1533,53 +1471,20 @@ header a {
     margin-top: 0.5rem;
     margin-left: 1.5rem;
   }
+  .product-details .button-choices #social-media {
+    display: flex !important;
+  }
   .product-details .container-tab {
-    display: flex;
-    flex-direction: column;
-    position: relative;
     width: 550px;
-    height: 300px;
     margin-top: 3rem;
-    word-break: break-all;
   }
   .product-details .container-tab #review {
     text-align: end;
   }
-  .product-details .container-tab .bloc-tabs {
-    display: flex;
-    border-bottom: 1px solid rgba(97, 99, 101, 0.2);
-  }
-  .product-details .container-tab .bloc-tabs button {
-    border: none;
-    background-color: white;
-    text-align: start;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-  }
-  .product-details .container-tab .bloc-tabs .tabs {
-    width: 50%;
-    cursor: pointer;
-    box-sizing: content-box;
-    position: relative;
-    outline: none;
-    font-weight: 500;
-    font-size: 16px;
-    white-space: nowrap;
-  }
-  .product-details .container-tab .bloc-tabs .active-tabs {
-    background: white;
-    color: #FF7373;
-  }
   .product-details .container-tab .bloc-tabs .active-tabs::before {
     content: "";
-    display: block;
-    position: absolute;
-    bottom: -1px;
     left: 36%;
-    transform: translateX(-50%);
     width: calc(70% + 2px);
-    height: 1px;
-    background: #FF7373;
   }
   .product-details .container-tab .bloc-tabs .active-tabs:nth-child(2)::before {
     left: 32%;
@@ -1593,37 +1498,16 @@ header a {
     left: 76%;
     width: calc(51% + 2px);
   }
-  .product-details .container-tab .content-tabs {
-    flex-grow: 1;
-  }
   .product-details .container-tab .content-tabs .content {
-    background: white;
     width: 1110px;
-    height: 100%;
-    display: none;
-  }
-  .product-details .container-tab .content-tabs .content h2 {
-    padding: 0px 0 5px 0px;
-  }
-  .product-details .container-tab .content-tabs .content hr {
-    width: 100px;
-    height: 2px;
-    background: #222;
-    margin-bottom: 5px;
   }
   .product-details .container-tab .content-tabs .content p {
-    width: 100%;
-    height: 100%;
-    color: #616365;
-  }
-  .product-details .container-tab .content-tabs .active-content {
-    display: block;
+    font-size: 16px;
   }
 }
 .carousel {
   width: auto;
   margin: auto;
-  margin-top: 2rem;
 }
 .carousel .card {
   width: 90%;
