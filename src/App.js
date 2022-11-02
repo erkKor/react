@@ -18,7 +18,8 @@ import NotFoundView from "./views/NotFoundView";
 function App() {
   const [products, setProducts] = useState({
     all: [],
-    featuredProducts: []
+    featuredProducts: [],
+    squareProducts: [],
   })
 
   useEffect(() => {
@@ -33,6 +34,12 @@ function App() {
       setProducts({...products, featuredProducts: await result.json()})
     }
     fetchFeaturedProducts();
+
+    const fetchSquareProducts = async () =>{
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setProducts({...products, squareProducts: await result.json()})
+    }
+    fetchSquareProducts();
 
   }, [setProducts])
 
@@ -57,11 +64,3 @@ function App() {
 }
 
 export default App;
-
-
-/* 
-  import Logo from '../assets/images/logo.svg'
-  <img src={Logo} />
-
-  <div style={{"height": "300px"}}></div>
-*/

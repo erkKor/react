@@ -70,7 +70,7 @@ const ProductDetails = () => {
                 </div>
             </div>
             <div>
-                {/* <Tab/> */}
+                <Tab/>
             </div>
         </div>
     </section>

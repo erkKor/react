@@ -5,13 +5,8 @@
 //Components
 @import "../styles/components/Navbar";
 @import "../styles/components/Showcase";
-@import "../styles/components/ShowcaseCardBigSmall";
 @import "../styles/components/FeaturedProducts";
-@import "../styles/components/ShowcaseCardDouble";
-@import "../styles/components/OurSpeciality";
-@import "../styles/components/BigSquareWCards";
 @import "../styles/components/SaleBanner";
-@import "../styles/components/TrippleColumnProducts";
 @import "../styles/components/InfoIcons";
 @import "../styles/components/Footer";
 @import "../styles/components/Breadcrumb";
@@ -19,4 +14,11 @@
 @import "../styles/components/ContactForm";
 @import "../styles/components/ProductDetails";
 @import "../styles/components/Carousel";
+@import "../styles/components/SaleText";
 
+//Sections
+@import "../styles/sections/BigSquareWCards";
+@import "../styles/sections/ShowcaseCardBigSmall";
+@import "../styles/sections/ShowcaseCardDouble";
+@import "../styles/sections/OurSpeciality";
+@import "../styles/sections/TrippleColumnProducts";

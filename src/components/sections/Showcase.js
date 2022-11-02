@@ -1,7 +1,7 @@
 import React from 'react'
-import GirlOnChair from '../assets/images/placeholders/girl-on-chair.png'
-import SittingPerson from '../assets/images/placeholders/sitting-person.png'
-import Button from './items/Button'
+import GirlOnChair from '../../assets/images/placeholders/girl-on-chair.png'
+import SittingPerson from '../../assets/images/placeholders/sitting-person.png'
+import Button from '../items/Button'
 
 const Showcase = () => {
   return (

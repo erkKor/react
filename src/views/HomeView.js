@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import Navbar from '../components/Navbar'
-import Showcase from '../components/Showcase'
-import ShowcaseCardBigSmall from '../components/ShowcaseCardBigSmall'
+import Showcase from '../components/sections/Showcase'
+import ShowcaseCardBigSmall from '../components/sections/ShowcaseCardBigSmall'
 import FeaturedProducts from '../components/sections/FeaturedProducts'
 import ShowcaseCardDouble from '../components/sections/ShowcaseCardDouble'
 import OurSpeciality from '../components/sections/OurSpeciality'
@@ -57,10 +57,10 @@ const HomeView = () => {
       <Navbar headerType="header-gray"/>
       <Showcase />
       <ShowcaseCardBigSmall />
-      <FeaturedProducts items={productContext.featuredProducts}/> 
+      <FeaturedProducts title="Featured Products" items={productContext.featuredProducts}/> 
       <ShowcaseCardDouble />
       <OurSpeciality />
-      <BigSquareWCardsLeft products={cardProducts}/>
+      <BigSquareWCardsLeft items={productContext.squareProducts}/>
       <BigSquareWCardsRight products={cardProducts}/> 
       <SaleBanner />
       <TrippleColumnProducts 

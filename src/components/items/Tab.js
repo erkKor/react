@@ -38,9 +38,7 @@ const NewTab = () => {
       </div>
 
       <div className="content-tabs">
-        <div
-          className={toggleState === 1 ? "content  active-content" : "content"}
-        >
+        <div className={toggleState === 1 ? "content  active-content" : "content"}>
           <p>
             Way extensive and dejection get delivered deficient sincerity gentleman age. Too end instrument possession contrasted motionless. 
             Calling offence six joy feeling. Coming merits and was talent enough far. Sir joy northward sportsmen education. 
@@ -59,22 +57,16 @@ const NewTab = () => {
           </p>
         </div>
 
-        <div
-          className={toggleState === 2 ? "content  active-content" : "content"}
-        >
-          <h2>Content 2</h2>
-          <hr />
+        <div className={toggleState === 2 ? "content  active-content" : "content"}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            voluptatum qui adipisci.
+          Meant balls it if up doubt small purse. Required his you put the outlived answered position. 
+          An pleasure exertion if believed provided to. All led out world these music while asked. 
+          Paid mind even sons does he door no. Attended overcame repeated it is perceive marianne in. 
+          In am think on style child of. Servants moreover in sensible he it ye possible.
           </p>
         </div>
 
-        <div
-          className={toggleState === 3 ? "content  active-content" : "content"}
-        >
-          <h2>Content 3</h2>
-          <hr />
+        <div className={toggleState === 3 ? "content  active-content" : "content"}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
             nostrum rerum laudantium totam unde adipisci incidunt modi alias!
@@ -84,13 +76,9 @@ const NewTab = () => {
             aperiam voluptatem atque. Beatae rerum dolores sunt.
           </p>
         </div>
-        <div
-          className={toggleState === 4 ? "content  active-content" : "content"}
-        >
-          <h2>Content 4</h2>
-          <hr />
+        <div className={toggleState === 4 ? "content  active-content" : "content"}>
           <p>
-            Cont 4
+            Reviews go here
           </p>
         </div>
       </div>

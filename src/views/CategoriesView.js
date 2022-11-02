@@ -9,7 +9,7 @@ const CategoriesView = () => {
   return (
     <>
     <Navbar headerType="header-light"/>
-    <FeaturedProducts items={productContext.all}/> 
+    <FeaturedProducts title="All Products" items={productContext.all}/> 
       </>
   )
 }

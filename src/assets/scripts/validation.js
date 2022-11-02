@@ -53,9 +53,9 @@ export const validate = (e, form = null) => {
 
 const validate_name = (value) => {
     if (!value)
-        return 'A name is required'
+        return 'Name is required'
     else if (value.length < 2)
-        return 'Must be a valid name'
+        return 'Your name must contain atleast 2 characters'
     else
         return null
 }
@@ -66,7 +66,7 @@ const validate_email = (value) => {
     if (!value)
         return 'An email address is required'
     else if (!regex_email.test(value))
-        return 'Must be a valid email address'
+        return 'Must be a valid email address example(email@domain.com)'
     else
         return null
 }
