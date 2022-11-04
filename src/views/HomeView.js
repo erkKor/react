@@ -11,63 +11,26 @@ import SaleBanner from '../components/sections/SaleBanner'
 import TrippleColumnProducts from '../components/TrippleColumnProducts'
 import InfoIcons from '../components/InfoIcons'
 import Footer from '../components/Footer'
-import { ProductContext } from '../contexts/contexts'
+import { FeaturedContext, SquareContext, TrippleContext } from '../contexts/contexts'
 
 const HomeView = () => {
   window.top.document.title = 'Fixxo.'
-  const productContext = useContext(ProductContext)
-    
-  // const [featuredProducts, setFeaturedProducts] = useState([
-  //   { id: 1, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-  //   { id: 2, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-  //   { id: 3, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-  //   { id: 4, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-  //   { id: 5, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-  //   { id: 6, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-  //   { id: 7, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-  //   { id: 8, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" }
-  // ])
-  const [cardProducts, setCardProducts] = useState([
-    { id: 9, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 10, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-    { id: 11, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-    { id: 12, name: "Modern Black Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-  
-  ])
-
-  const [latestProducts, setLatestProducts] = useState([
-    { id: 13, name: "Green Sylvester ", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 14, name: "Green Sylvester ", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-    { id: 15, name: "Green Sylvester ", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-  ])
-  const [bestSellersProducts, setBestSellersProducts] = useState([
-    { id: 16, name: "Blue Not Nice Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 17, name: "Blue Not Nice Blouse", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-    { id: 18, name: "Blue Not Nice Blouse", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-  ])
-  const [topReactedProducts, setTopReactedProducts] = useState([
-    { id: 19, name: "Red Very Nice Hat", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" },
-    { id: 20, name: "Red Very Nice Hat", category: "Fashion", price:"€35.00", rating: 4, img : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-    { id: 21, name: "Red Very Nice Hat", category: "Fashion", price:"€35.00", rating: 4, img: "https://images.pexels.com/photos/1126935/pexels-photo-1126935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"},
-  ])
-
+  const featured = useContext(FeaturedContext)
+  const square = useContext(SquareContext)
+  const tripple = useContext(TrippleContext)
 
   return (
     <>
       <Navbar headerType="header-gray"/>
       <Showcase />
       <ShowcaseCardBigSmall />
-      <FeaturedProducts title="Featured Products" items={productContext.featuredProducts}/> 
+      <FeaturedProducts title="Featured Products" items={featured}/> 
       <ShowcaseCardDouble />
       <OurSpeciality />
-      <BigSquareWCardsLeft items={productContext.squareProducts}/>
-      <BigSquareWCardsRight products={cardProducts}/> 
+      <BigSquareWCardsLeft items={square}/>
+      <BigSquareWCardsRight items={square}/> 
       <SaleBanner />
-      <TrippleColumnProducts 
-        productsOne={latestProducts} 
-        productsTwo={bestSellersProducts} 
-        productsThree={topReactedProducts}
-      />
+      <TrippleColumnProducts items={tripple}/>
       <InfoIcons />
       <Footer />
     </>

@@ -6,7 +6,7 @@ const SmallCard = ({product}) => {
   return (
     <div className="small-card">
         <div className="card-background">
-        <NavLink to={`/products/${product.id}`}>
+        <NavLink to={`/products/${product.articleNumber}`}>
             <Button to="/products" theme='button-theme' themeBorder='button-theme-border' btnText="SHOP NOW"/>
         </NavLink>
         </div>

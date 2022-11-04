@@ -1,16 +1,15 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import Footer from '../components/Footer'
+import Breadcrumb from '../components/items/Breadcrumb'
 import Navbar from '../components/Navbar'
-import FeaturedProducts from '../components/sections/FeaturedProducts'
-import { ProductContext } from '../contexts/contexts'
 
 const CategoriesView = () => {
-  const productContext = useContext(ProductContext)
-
   return (
     <>
     <Navbar headerType="header-light"/>
-    <FeaturedProducts title="All Products" items={productContext.all}/> 
-      </>
+    <Breadcrumb currentPage="Categories"/>
+    <Footer />
+    </>
   )
 }
 

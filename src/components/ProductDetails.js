@@ -6,7 +6,7 @@ import SelectList from './items/SelectList'
 import Tab from './items/Tab'
 import ExternalLinkIcon from './items/ExternalLinkIcon'
 
-const ProductDetails = () => {
+const ProductDetails = ({products}) => {
   return (
     <section className='product-details'>
         <div className='container'>
@@ -18,7 +18,7 @@ const ProductDetails = () => {
                     <div className='image-squares'></div>
                 </div>
                 <div className='product-shop-choices'>
-                    <h2>Modern Black Blouse</h2>
+                    <h2>{products.name}</h2>
                     <div className="product-id-brand"> 
                         <p>SKU: 12345670</p>
                         <p>BRAND: The Northland</p>
@@ -32,7 +32,7 @@ const ProductDetails = () => {
                     </div>
                     <div className="product-prices"> 
                         <div className="original-price"></div>
-                        <div className="discount-price">€35.00</div>
+                        <div className="discount-price">{products.price}</div>
                     </div>
                     <div className="product-content">
                         <p>

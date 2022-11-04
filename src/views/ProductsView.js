@@ -1,23 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from '../components/Navbar'
-import Breadcrumb from '../components/items/Breadcrumb'
 import Footer from '../components/Footer'
-import ProductDetails from '../components/ProductDetails'
-import SizeButton from '../components/items/SizeButton'
-import Carousel from '../components/Carousel'
-import SaleText from '../components/items/SaleText'
-
+import FeaturedProducts from '../components/sections/FeaturedProducts'
+import { ProductContext} from '../contexts/contexts'
+import Breadcrumb from '../components/items/Breadcrumb'
 
 const ProductsView = () => {
+  const products = useContext(ProductContext)
   return (
   <>
     <Navbar headerType="header-light"/>
-    <SaleText />
     <Breadcrumb currentPage="Products"/>
-    <ProductDetails />
-    <Carousel />
+    <FeaturedProducts title="All Products" items={products}/> 
     <Footer />
-    
   </>
   )
 }

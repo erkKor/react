@@ -1,13 +1,13 @@
 import React from 'react'
 import Card from '../items/Card'
 
-const BigSquareWCardsRight = ({products}) => {
+const BigSquareWCardsRight = ({items = []}) => {
   return (
     <section className="big-square-cards" id="bigSquareRight">
         <div className="container">
         <div className="card-grid">
                 {
-                  products.map(product => <Card key={product.id} product={product} />)
+                  items.map(product => <Card key={product.articleNumber} product={product} />)
                 }
             </div>
             <div className="big-square">
