@@ -19,7 +19,7 @@ function App() {
   const [products, setProducts] = useState({
     all: [],
     featuredProducts: [],
-    squareProducts: [],
+    squareProducts: []
   })
 
   useEffect(() => {
@@ -40,6 +40,16 @@ function App() {
       setProducts({...products, squareProducts: await result.json()})
     }
     fetchSquareProducts();
+
+
+
+    const fetchProductDetails = async () =>{
+      let result = await fetch(`https://win22-webapi.azurewebsites.net/api/products/`)
+      setProducts({...products, productDetails: await result.json()})
+    }
+    fetchProductDetails();
+
+
 
   }, [setProducts])
 

@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Map from '../components/items/Map'
 import ContactFormErik from '../components/ContactFormErik'
 import ContactForm from '../components/ContactForm'
+import Footer from '../components/Footer'
 
 const ContactView = () => {
   window.top.document.title = 'Contacts | Fixxo.'
@@ -11,9 +12,10 @@ const ContactView = () => {
     <>
       <Navbar headerType="header-light"/>
       <Breadcrumb currentPage="Contacts"/>
-      {/* <Map /> */}
+      <Map />
       {/* <ContactFormErik /> */}
       <ContactForm />
+      <Footer />
     </>
   )
 }

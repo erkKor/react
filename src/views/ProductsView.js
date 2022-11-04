@@ -13,7 +13,7 @@ const ProductsView = () => {
   <>
     <Navbar headerType="header-light"/>
     <SaleText />
-    <Breadcrumb />
+    <Breadcrumb currentPage="Products"/>
     <ProductDetails />
     <Carousel />
     <Footer />

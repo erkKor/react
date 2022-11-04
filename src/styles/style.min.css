@@ -947,12 +947,23 @@ header a {
   text-decoration: none;
 }
 
+.map {
+  margin-top: 1.5rem;
+}
 .map .google-map {
   border: 0;
   width: 100%;
-  height: 390px;
+  height: 250px;
 }
 
+@media (min-width: 768px) {
+  .map {
+    margin-top: 0;
+  }
+  .map .google-map {
+    height: 390px;
+  }
+}
 .contact-form {
   margin-top: 2rem;
 }
