@@ -1,26 +1,18 @@
 import React from 'react'
 import Button from './Button'
 import { NavLink } from 'react-router-dom'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
+import { currencyFormatter } from '../../utilities/CurrencyFormater'
 
 const Card = ({product}) => {
-  
-    const addToWishlist = (e) =>{
-        console.log(`${e} added to wishlist`)
-    }
-    const addToCompare = (e) =>{
-        console.log("added to compare")
-    }
-    const addToCart = (e) =>{
-        console.log("added to cart")
-    }
-  
-  
+    const {incrementQuantity} = useShoppingCart()
+
     return (
     <div className="card">
         <ul className="card-menu">
-            <li><button onClick={addToWishlist}><i className="fa-light fa-heart"></i></button></li>
-            <li><button onClick={addToCompare}><i className="fa-light  fa-code-compare rotate-icon"></i></button></li>
-            <li><button onClick={addToCart}><i className="fa-light fa-bag-shopping"></i></button></li>
+            <li><button><i className="fa-light fa-heart"></i></button></li>
+            <li><button><i className="fa-light  fa-code-compare rotate-icon"></i></button></li>
+            <li><button onClick={() => incrementQuantity({articleNumber: product.articleNumber, product: product})}><i className="fa-light fa-bag-shopping"></i></button></li>
         </ul>
         <div className="card-background">
         <img src={product.imageName} alt={product.name}/>
@@ -40,7 +32,7 @@ const Card = ({product}) => {
             </div>
             <div className="card-prices"> 
                 <div className="original-price"></div>
-                <div className="discount-price">{product.price}</div>
+                <div className="discount-price">{currencyFormatter(product.price)}</div>
             </div>
         </div>
     </div>

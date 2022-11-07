@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { useShoppingCart } from '../contexts/ShoppingCartContext'
 import MenuIcon from './items/MenuIcon'
 
 const Navbar = ({headerType}) => {
     const [showMenu, setShowMenu] = useState(false)
+    const {cartQuantity} = useShoppingCart()
 
     const toggleMenu = () =>{
-
         setShowMenu(!showMenu)
     }
 
@@ -27,8 +28,15 @@ const Navbar = ({headerType}) => {
                 <MenuIcon hideOnMobile={true} link="/compare" icon="fa-light  fa-code-compare rotate-icon rotate-icon"/>
                 <MenuIcon hideOnMobile={true} link="/wishlist" icon="fa-light fa-heart" badge="badge" badgeNumber="1"/>
                 <MenuIcon link="/shoppingcart" icon="fa-light fa-bag-shopping" badge="badge" badgeNumber="3"/>
+
+
+                <button className="icon-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+                    <i className="fa-light fa-bag-shopping"></i>
+                    <span className="badge">{cartQuantity}</span>
+                </button>
+
+
                 <button onClick={toggleMenu} id="" className="icon-link btn-icon-link">
-                    {/* <i className="fa-light fa-bars"></i> */}
                     <i className="fa-light fa-bars-staggered"></i>
                 </button>
             </div>

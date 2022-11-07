@@ -1,0 +1,49 @@
+.shoppingcart{
+    width: 100% !important;
+
+    .shoppingcart-item{
+        margin: 30px 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .item-image{
+            height: 65px;
+            width: 65px;
+            margin-right: 20px;
+            background-color: $color-gray-1;
+
+            img{
+                height: 65px;
+                width: 65px;
+            }
+        }
+
+        .item-info {
+            flex: 3;
+            
+            .item-info-name{
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            span{
+                padding: 0 15px;
+                
+                background-color: #f1f1f1;
+            }
+
+        }
+    }
+
+    
+
+}
+
+
+@include md{
+    .shoppingcart{
+        width: 500px !important;
+    }
+    
+}

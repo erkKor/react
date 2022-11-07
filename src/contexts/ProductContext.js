@@ -24,12 +24,22 @@ export const ProductProvider = ({children}) => {
         setFeatured(await res.json())
     }
 
+    const getSquareProducts = async (take = 0) =>{
+        const res = await fetch (url + `?take=${take}`)
+        setSquare(await res.json())
+    }
+
+    const getTrippleProducts = async (take = 0) =>{
+        const res = await fetch (url + `?take=${take}`)
+        setTripple(await res.json())
+    }
+
     const getProduct = async (articleNumber) => {
         const res = await fetch(url + `/${articleNumber}`)
         setProduct(await res.json())
     }
 
-    return <ProductContext.Provider value={{product, products, featured, getProducts, getFeaturedProducts, getProduct}}>
+    return <ProductContext.Provider value={{product, products, featured, square, tripple, getProducts, getFeaturedProducts, getProduct, getSquareProducts, getTrippleProducts}}>
         {children}
     </ProductContext.Provider>
 }
