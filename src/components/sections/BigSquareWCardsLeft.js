@@ -4,7 +4,7 @@ import Card from '../items/Card'
 const BigSquareWCardsLeft = ({items = []}) => {
   return (
     <section className="big-square-cards">
-        <div className="container">
+        <div className="_container">
             <div className="big-square">
                 <h1>2 FOR USD $29</h1>
                 <button className="button-theme-white">FLASH SALE

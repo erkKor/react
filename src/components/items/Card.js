@@ -15,10 +15,10 @@ const Card = ({product}) => {
             <li><button onClick={() => incrementQuantity({articleNumber: product.articleNumber, product: product})}><i className="fa-light fa-bag-shopping"></i></button></li>
         </ul>
         <div className="_card-background">
-        <img src={product.imageName} alt={product.name}/>
-        <NavLink to={`/products/${product.articleNumber}`}>
-            <Button to="/products" theme='button-theme' themeBorder='button-theme-border' btnText="SHOP NOW"/>
-        </NavLink>
+            <img src={product.imageName} alt={product.name}/>
+            <NavLink to={`/products/${product.articleNumber}`}>
+                <Button to="/products" theme='button-theme' themeBorder='button-theme-border'/>
+            </NavLink>
         </div>
         <div className="_card-body">
             <p>{product.category}</p>

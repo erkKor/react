@@ -1,6 +1,6 @@
 .big-square-cards{
     margin-top: 2rem;
-    .container{
+    ._container{
         display: block;
     }
     .big-square{
@@ -17,6 +17,7 @@
         h1{
             margin: 0;
             margin-bottom: 1rem;
+            font-weight: bold;
         }
         .button-theme-white{
             @include buttonSmall;
@@ -32,8 +33,8 @@
         margin:0 2rem;
     }
 
-    .card{
-        .card-background{
+    ._card{
+        ._card-background{
             img{
                 width: 100%;
             }
@@ -47,18 +48,11 @@
                 transition: 0.3s ease-in-out;
             }
         }
-
-        .card-body{
-            align-items: flex-start;
-            .discount-price{
-                margin-left:-5px;
-            }
-        }
     }
 }
 
 #bigSquareRight{
-    .container{
+    ._container{
         justify-content: flex-end;
     }
 }
@@ -66,7 +60,7 @@
 
 @include md{
 .big-square-cards{
-    .container{
+    ._container{
         display: flex;
     }
     .big-square{
@@ -75,6 +69,7 @@
         font-size: 32px;
         h1{
             padding: 0 2rem;
+            font-size: 32px;
         }
         .button-theme-white{
             @include buttonRegular;
@@ -85,6 +80,15 @@
         grid-template-columns: repeat(2, 200px);
         grid-template-rows: repeat(2, 325px);
         gap:1.5rem;
+    }
+
+    ._card{
+        ._card-body{
+            align-items: flex-start;
+            .discount-price{
+                margin-left:-5px;
+            }
+        }
     }
 }
     
@@ -101,15 +105,15 @@
         grid-template-rows: repeat(2, 325px);
     }
 
-    .card{
+    ._card{
         &:hover{
-            .card-background{
+            ._card-background{
                 .button-theme{
                     bottom:0;
                 }
             } 
         }
-        .card-background{
+        ._card-background{
             .button-theme{
                 bottom: -60px;
             }

@@ -4,7 +4,7 @@ import SmallCard from './items/SmallCard'
 const TrippleColumnProducts = ({items = []}) => {
   return (
     <section className="three-row-products">
-        <div className="container">
+        <div className="_container">
             <div className="product-column">
                 <h2>Latest Product</h2>
                 {

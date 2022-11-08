@@ -6,7 +6,7 @@ import DeliveryTruck from '../assets/images/icons/delivery-truck.svg'
 const InfoIcons = () => {
   return (
     <section className="info-icons">
-        <div className="container">
+        <div className="_container">
             <div className="info-container">
                 <div className="icon-circle">
                     <img src={CustomerSupport} alt="Free Shipping" />

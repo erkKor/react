@@ -4,7 +4,7 @@ import Card from '../items/Card'
 const BigSquareWCardsRight = ({items = []}) => {
   return (
     <section className="big-square-cards" id="bigSquareRight">
-        <div className="container">
+        <div className="_container">
         <div className="card-grid">
                 {
                   items.map(product => <Card key={product.articleNumber} product={product} />)

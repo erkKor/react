@@ -4,7 +4,7 @@ import ExternalLinkIcon from './items/ExternalLinkIcon'
 const Footer = () => {
   return (
     <footer className="footer">
-        <div className="container">
+        <div className="_container">
             <span className="social-media">
                <ExternalLinkIcon link="https://facebook.com" icon="fa-brands fa-facebook-f"/>
                <ExternalLinkIcon link="https://instagram.com" icon="fa-brands fa-instagram"/>

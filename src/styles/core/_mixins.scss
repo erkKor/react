@@ -4,10 +4,7 @@
     font-size: 12px;
     &:hover{
     .button-theme-border::before,.button-theme-border::after{
-        width: 86%;
-        height: 64%;
-
-        width:calc(100% - 16px);
+        width:calc(100% - 14px);
         height: calc(100% - 16px);
     }
     }
@@ -19,14 +16,15 @@
         transition: 0.3s linear;
     }
 }
+
 @mixin  buttonRegular{
     height: 60px;
     width: 188px;
     font-size: 13.33px;
     &:hover{
         .button-theme-border::before,.button-theme-border::after{
-            width: 91%;
-            height: 73%;
+            width:calc(100% - 14px);
+            height: calc(100% - 14px);
         }
     }
     .button-theme-border::before,.button-theme-border::after{
