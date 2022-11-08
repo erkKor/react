@@ -10,12 +10,6 @@ const responsive = {
 };
 
 const items = [
-  // <div className="item" data-value="1">1</div>,
-  // <div className="item" data-value="2">2</div>,
-  // <div className="item" data-value="3">3</div>,
-  // <div className="item" data-value="4">4</div>,
-  // <div className="item" data-value="5">5</div>,
-  // <div className="item" data-value="6">6</div>,
   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€35.00" orgPrice=""/>,
   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice="€35.00"/>,
   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€20.00" orgPrice=""/>,

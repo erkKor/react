@@ -7,6 +7,8 @@
     }
     h3{
         margin: 0.6rem 1rem;
+        font-weight: bold;
+        font-size: 20px;
     }
     .left-button{
         position: absolute;
@@ -82,5 +84,9 @@
     width: 1110px !important;
     }
 
+    .alice-carousel__stage-item{
+        width: 255px !important;
+        margin-right: 1.5rem;
+    }
 }
 }

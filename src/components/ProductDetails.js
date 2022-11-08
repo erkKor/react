@@ -1,21 +1,31 @@
 import React from 'react'
 import QuantityButton from './items/QuantityButton'
 import SizeButton from './items/SizeButton'
-import Button from './items/Button'
 import SelectList from './items/SelectList'
 import Tab from './items/Tab'
 import ExternalLinkIcon from './items/ExternalLinkIcon'
+import { useShoppingCart } from '../contexts/ShoppingCartContext'
+import { currencyFormatter } from '../utilities/CurrencyFormater'
 
 const ProductDetails = ({products}) => {
+    const {incrementQuantity} = useShoppingCart()
   return (
     <section className='product-details'>
         <div className='container'>
             <div className='top-part'>
                 <div className='product-image'>
-                    <div id="main-image" className='image-squares'></div>
-                    <div className='image-squares'></div>
-                    <div className='image-squares'></div>
-                    <div className='image-squares'></div>
+                    <div id="main-image" className='image-squares'>
+                        <img src={products.imageName} alt={products.name}/>
+                    </div>
+                    <div className='image-squares'>
+                        <img src={products.imageName} alt={products.name}/>
+                    </div>
+                    <div className='image-squares'>
+                        <img src={products.imageName} alt={products.name}/>
+                    </div>
+                    <div className='image-squares'>
+                        <img src={products.imageName} alt={products.name}/>
+                    </div>
                 </div>
                 <div className='product-shop-choices'>
                     <h2>{products.name}</h2>
@@ -32,7 +42,7 @@ const ProductDetails = ({products}) => {
                     </div>
                     <div className="product-prices"> 
                         <div className="original-price"></div>
-                        <div className="discount-price">{products.price}</div>
+                        <div className="discount-price">{currencyFormatter(products.price)}</div>
                     </div>
                     <div className="product-content">
                         <p>
@@ -54,7 +64,7 @@ const ProductDetails = ({products}) => {
                             <h3>Qty:</h3>
                             <QuantityButton />
                             <div className="break"></div>
-                            <button className="button-theme" type="submit">ADD TO CART</button>
+                            <button className="button-theme" type="submit" onClick={() => incrementQuantity({articleNumber: products.articleNumber, product: products})}>ADD TO CART</button>
                         </div>
                         <div className="button-row" id="social-media">
                             <h3>Share:</h3>

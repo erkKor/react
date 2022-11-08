@@ -24,7 +24,7 @@ const ProductDetailsView = () => {
     <>
       <Navbar />
       <SaleText />
-      <Breadcrumb currentPage="Product details"/>
+      <Breadcrumb currentPage="Products"/>
       <ProductDetails products={product}/>
       <Carousel />
       <Footer />

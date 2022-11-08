@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, {useEffect} from 'react'
 import Navbar from '../components/Navbar'
 import Showcase from '../components/sections/Showcase'
 import ShowcaseCardBigSmall from '../components/sections/ShowcaseCardBigSmall'
@@ -11,9 +11,7 @@ import SaleBanner from '../components/sections/SaleBanner'
 import TrippleColumnProducts from '../components/TrippleColumnProducts'
 import InfoIcons from '../components/InfoIcons'
 import Footer from '../components/Footer'
-import { FeaturedContext, SquareContext, TrippleContext } from '../contexts/contexts'
 import { useProductContext } from '../contexts/ProductContext'
-
 
 const HomeView = () => {
   window.top.document.title = 'Fixxo.'
@@ -27,14 +25,6 @@ const HomeView = () => {
     getSquareProducts(4)
     getTrippleProducts(3)
   }, [])
-
-
-
-  // const featured = useContext(FeaturedContext)
-  // const square = useContext(SquareContext)
-  // const tripple = useContext(TrippleContext)
-
-  
 
   return (
     <>

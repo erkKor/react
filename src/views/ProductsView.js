@@ -1,12 +1,18 @@
-import React, { useContext } from 'react'
+import React, {useEffect} from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import FeaturedProducts from '../components/sections/FeaturedProducts'
-import { ProductContext} from '../contexts/contexts'
 import Breadcrumb from '../components/items/Breadcrumb'
+import { useProductContext } from '../contexts/ProductContext'
+
 
 const ProductsView = () => {
-  const products = useContext(ProductContext)
+  const {products, getProducts} = useProductContext()
+  
+  useEffect(() => {
+    getProducts()
+  }, [])
+
   return (
   <>
     <Navbar headerType="header-light"/>

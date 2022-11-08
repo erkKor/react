@@ -21,7 +21,7 @@ const ShoppingCartItem = ({item}) => {
       </div>
       <div className="item-price">
         <div>{currencyFormatter(item.product.price * item.quantity)}</div>
-        <button onClick={() => removeItem(item.articleNumber)}><i className="fa-light fa-trash"></i></button>
+        <button onClick={() => removeItem(item.articleNumber)}><i className="fa-regular fa-trash"></i></button>
       </div>
     </div>
   )
