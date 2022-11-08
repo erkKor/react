@@ -60,7 +60,7 @@ const ContactForm = () => {
 
   return (
     <section className="contact-form mt-5">
-      <div className="container">
+      <div className="_container">
         {
           submitted ? (
           <div className="submit-succes" role="alert">

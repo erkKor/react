@@ -910,11 +910,13 @@ header a:active, header a:hover {
 .contact-form {
   margin-top: 2rem;
 }
-.contact-form .container {
+.contact-form ._container {
   width: auto;
 }
 .contact-form h3 {
   margin: 1rem 0.5rem;
+  font-size: 18px;
+  font-weight: bold;
 }
 .contact-form form {
   margin: 0.5rem 0.5rem;
@@ -1011,7 +1013,7 @@ header a:active, header a:hover {
   .contact-form {
     margin-top: 2rem;
   }
-  .contact-form .container {
+  .contact-form ._container {
     width: 1110px;
   }
   .contact-form h3 {
@@ -1021,13 +1023,12 @@ header a:active, header a:hover {
     margin: 0.5rem 0.5rem;
   }
   .contact-form form .inputs {
-    width: 1132px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.5rem;
   }
   .contact-form form input {
-    width: 515px;
+    width: 530px;
     padding: 15px 18px;
     border: 1px solid #CDCED0;
     outline: none;

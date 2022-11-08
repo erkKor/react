@@ -1,11 +1,12 @@
 .contact-form{
     margin-top: 2rem;
-    .container{
+    ._container{
         width: auto;
     }
-
     h3{
         margin: 1rem 0.5rem;
+        font-size: 18px;
+        font-weight: bold;
     }
     form{
         margin: 0.5rem 0.5rem;
@@ -37,7 +38,6 @@
         }
 
         .errorMessage{
-            // padding-left: 18px;
             color: $color-theme;
             font-size: 0.8em;
             
@@ -66,8 +66,6 @@
         text-align: center;
     }
 }
-
-
 
 
 
@@ -106,7 +104,6 @@
         }
 
         .errorMessage{
-            // padding-left: 18px;
             color: $color-theme;
             font-size: 0.8em;
             
@@ -117,7 +114,7 @@
 @include xl{
 .contact-form{
     margin-top: 2rem;
-    .container{
+    ._container{
         width: 1110px;
     }
 
@@ -127,13 +124,12 @@
     form{
         margin: 0.5rem 0.5rem;       
         .inputs{
-            width: 1132px;
             display: flex;
             justify-content: space-between;
             margin-bottom: 1.5rem;
         }
         input{
-            width: 515px;
+            width: 530px;
             padding: 15px 18px;
             border: 1px solid $color-gray-2;
             outline: none;
@@ -156,10 +152,8 @@
         }
 
         .errorMessage{
-            // padding-left: 18px;
             color: $color-theme;
             font-size: 0.8em;
-            
         }
         
     }
