@@ -22,7 +22,7 @@ const ProductDetailsView = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar headerType="header-light"/>
       <SaleText />
       <Breadcrumb currentPage="Products"/>
       <ProductDetails products={product}/>

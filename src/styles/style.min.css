@@ -1475,7 +1475,7 @@ header a:active, header a:hover {
   width: auto;
   margin: auto;
 }
-.carousel .card {
+.carousel ._card {
   width: 90%;
 }
 .carousel h3 {
@@ -1550,10 +1550,6 @@ header a:active, header a:hover {
   }
   .carousel .alice-carousel {
     width: 1110px !important;
-  }
-  .carousel .alice-carousel__stage-item {
-    width: 255px !important;
-    margin-right: 1.5rem;
   }
 }
 .sale-text {

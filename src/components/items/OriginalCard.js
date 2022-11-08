@@ -2,13 +2,12 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Button from './Button'
 
-
 const OriginalCard = ({discPrice, orgPrice, productName, productCategory}) => {
   return (
     <div className="_card">
         <ul className="_card-menu">
             <li><button><i className="fa-light fa-heart"></i></button></li>
-            <li><button><i className="fa-light  fa-code-compare rotate-icon"></i></button></li>
+            <li><button><i className="fa-light fa-code-compare rotate-icon"></i></button></li>
             <li><button><i className="fa-light fa-bag-shopping"></i></button></li>
         </ul>
         <div className="_card-background">

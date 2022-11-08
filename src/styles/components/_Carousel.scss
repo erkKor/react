@@ -2,7 +2,7 @@
     width: auto;
     margin: auto;
 
-    .card{
+    ._card{
         width: 90%;
     }
     h3{
@@ -83,10 +83,10 @@
     .alice-carousel {
     width: 1110px !important;
     }
-
+    
     .alice-carousel__stage-item{
-        width: 255px !important;
-        margin-right: 1.5rem;
+        // width: 255px !important;
+        // margin-right: 1.5rem;
     }
 }
 }
