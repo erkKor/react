@@ -8,19 +8,19 @@ const Card = ({product}) => {
     const {incrementQuantity} = useShoppingCart()
 
     return (
-    <div className="card">
-        <ul className="card-menu">
+    <div className="_card">
+        <ul className="_card-menu">
             <li><button><i className="fa-light fa-heart"></i></button></li>
             <li><button><i className="fa-light  fa-code-compare rotate-icon"></i></button></li>
             <li><button onClick={() => incrementQuantity({articleNumber: product.articleNumber, product: product})}><i className="fa-light fa-bag-shopping"></i></button></li>
         </ul>
-        <div className="card-background">
+        <div className="_card-background">
         <img src={product.imageName} alt={product.name}/>
         <NavLink to={`/products/${product.articleNumber}`}>
             <Button to="/products" theme='button-theme' themeBorder='button-theme-border' btnText="SHOP NOW"/>
         </NavLink>
         </div>
-        <div className="card-body">
+        <div className="_card-body">
             <p>{product.category}</p>
             <h3>{product.name}</h3>
             <div className="stars">
@@ -30,7 +30,7 @@ const Card = ({product}) => {
                 <i className="fa-sharp fa-solid fa-star"></i>
                 <i className="fa-sharp fa-solid fa-star"></i>
             </div>
-            <div className="card-prices"> 
+            <div className="_card-prices"> 
                 <div className="original-price"></div>
                 <div className="discount-price">{currencyFormatter(product.price)}</div>
             </div>

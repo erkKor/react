@@ -6,7 +6,7 @@ import Button from '../items/Button'
 const Showcase = () => {
   return (
     <section className="showcase">
-        <div className="container">
+        <div className="_container">
             <img src={GirlOnChair} alt="" className="img1" />
             <div className="showcase-text">
                 <h1>SALE UP<span>To 50% Off</span></h1>

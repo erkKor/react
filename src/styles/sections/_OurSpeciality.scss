@@ -1,6 +1,6 @@
 .our-speciality{
     margin-top: 3rem;
-    .container{
+    ._container{
         background-color: $color-gray-0;
     }
     .section-title{
@@ -71,7 +71,7 @@
 @include md{
 .our-speciality{
 
-    .container{
+    ._container{
         height: 250px;
     }
     .section-title{
@@ -107,7 +107,7 @@
 
 @include xl{
 .our-speciality{
-    .container{
+    ._container{
         height: 400px;
     }
     .section-title{
@@ -122,10 +122,11 @@
             width:490px;
             margin: 0 1rem;
             .card-content{
-                padding-left: 2rem;            
+                padding-left: 2rem;     
+                width: 230px;       
             }
             .gray-square{
-                width: 260px;
+                width: 255px;
             }
         }
     }

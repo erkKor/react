@@ -9,20 +9,20 @@ html,body {
 body{
 margin: 0;
 }
-.container{
+._container{
     margin: 0 1rem;
 }
 
-.card{
+._card{
     width: 100%;
     position: relative;
     overflow: hidden;
 
     &:hover{
-        .card-menu{
+        ._card-menu{
             right:10px;
         }
-        .card-background{
+        ._card-background{
             background-color: $color-gray-21;
             .button-theme{
                 bottom:0;
@@ -30,7 +30,7 @@ margin: 0;
         } 
     }
     
-    .card-menu{
+    ._card-menu{
         position: absolute;
         right:-50px;
         margin: 0;
@@ -82,7 +82,7 @@ margin: 0;
         }
     }
 
-    .card-background{
+    ._card-background{
         background-color: $color-gray-0;
         height: 210px;
         position: relative;
@@ -112,7 +112,7 @@ margin: 0;
         }
     }
 
-    .card-body{
+    ._card-body{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -126,11 +126,12 @@ margin: 0;
         h3{
             margin: 0;
             font-size: $font-size-16;
+            font-weight: 600;
         }
         .stars{
             color:$color-theme;
         }
-        .card-prices{
+        ._card-prices{
             display: flex;
             align-items: center;
             .original-price{
@@ -412,7 +413,7 @@ margin: 0;
 }
 
 @include ul{
-    .container {
+    ._container {
         margin: auto;
         width: 1680px;
     }

@@ -13,7 +13,7 @@ const Navbar = ({headerType}) => {
 
   return (
     <header className={headerType}>
-        <nav className="container">
+        <nav className="_container">
             <div className="brand">
                 <NavLink>Fixxo.</NavLink>
             </div>

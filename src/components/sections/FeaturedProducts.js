@@ -4,7 +4,7 @@ import Card from '../items/Card'
 const FeaturedProducts = ({title,items = []}) => {
   return (
     <section className="featured-products">
-        <div className="container">
+        <div className="_container">
             <div className="section-title">
                 <h3>{title}</h3>
             </div>

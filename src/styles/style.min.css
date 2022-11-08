@@ -12,32 +12,32 @@ body {
   margin: 0;
 }
 
-.container {
+._container {
   margin: 0 1rem;
 }
 
-.card {
+._card {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.card:hover .card-menu {
+._card:hover ._card-menu {
   right: 10px;
 }
-.card:hover .card-background {
+._card:hover ._card-background {
   background-color: #707070;
 }
-.card:hover .card-background .button-theme {
+._card:hover ._card-background .button-theme {
   bottom: 0;
 }
-.card .card-menu {
+._card ._card-menu {
   position: absolute;
   right: -50px;
   margin: 0;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
-.card .card-menu button {
+._card ._card-menu button {
   background-color: white;
   height: 36px;
   width: 36px;
@@ -54,12 +54,12 @@ body {
   transition: 0.3s ease-in-out;
   font-size: 1.2rem;
 }
-.card .card-menu button:hover {
+._card ._card-menu button:hover {
   background-color: #222529;
   color: white;
   cursor: pointer;
 }
-.card .card-menu a {
+._card ._card-menu a {
   background-color: white;
   height: 36px;
   width: 36px;
@@ -73,26 +73,26 @@ body {
   color: #222529;
   transition: 0.3s ease-in-out;
 }
-.card .card-menu a:hover {
+._card ._card-menu a:hover {
   background-color: #222529;
   color: white;
 }
-.card .card-menu li {
+._card ._card-menu li {
   list-style: none;
 }
-.card .card-background {
+._card ._card-background {
   background-color: #F5F5F5;
   height: 210px;
   position: relative;
   overflow: hidden;
   transition: 0.3s ease-in-out;
 }
-.card .card-background img {
+._card ._card-background img {
   height: 210px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card .card-background .button-theme {
+._card ._card-background .button-theme {
   z-index: 1;
   bottom: -60px;
   position: absolute;
@@ -100,39 +100,40 @@ body {
   height: 50px;
   transition: 0.3s ease-in-out;
 }
-.card .card-background .button-theme:hover .button-theme-border::before, .card .card-background .button-theme:hover .button-theme-border::after {
+._card ._card-background .button-theme:hover .button-theme-border::before, ._card ._card-background .button-theme:hover .button-theme-border::after {
   width: calc(100% - 16px);
   height: calc(100% - 16px);
 }
-.card .card-body {
+._card ._card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.card .card-body p {
+._card ._card-body p {
   margin: 0;
   margin-top: 0.5rem;
   color: #616365;
   font-size: 0.813rem;
   font-weight: 500;
 }
-.card .card-body h3 {
+._card ._card-body h3 {
   margin: 0;
   font-size: 1rem;
+  font-weight: 600;
 }
-.card .card-body .stars {
+._card ._card-body .stars {
   color: #FF7373;
 }
-.card .card-body .card-prices {
+._card ._card-body ._card-prices {
   display: flex;
   align-items: center;
 }
-.card .card-body .card-prices .original-price {
+._card ._card-body ._card-prices .original-price {
   margin-right: 0.5rem;
   text-decoration: line-through;
   color: #616365;
 }
-.card .card-body .card-prices .discount-price {
+._card ._card-body ._card-prices .discount-price {
   font-weight: 600;
   font-size: 18px;
 }
@@ -388,7 +389,7 @@ body {
 }
 
 @media (min-width: 1600px) {
-  .container {
+  ._container {
     margin: auto;
     width: 1680px;
   }
@@ -412,49 +413,49 @@ header.header-gray {
 header.header-light {
   background-color: white;
 }
-header .container {
+header ._container {
   display: grid;
   align-content: center;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "brand links" "categories categories";
   margin: 0.5rem 0.5rem;
 }
-header .container .brand {
+header ._container .brand {
   grid-area: brand;
 }
-header .container .brand a {
+header ._container .brand a {
   font-size: 2rem;
   font-weight: bold;
 }
-header .container .brand button {
+header ._container .brand button {
   border: none;
   background-color: transparent;
   font-size: 1.5rem;
   padding: 0;
   padding-right: 0.4rem;
 }
-header .container .menu-categories {
+header ._container .menu-categories {
   grid-area: categories;
   display: none;
   margin: 0.5rem 1rem;
 }
-header .container .menu-categories .active {
+header ._container .menu-categories .active {
   color: #FF7373;
 }
-header .container .menu-categories a {
+header ._container .menu-categories a {
   padding: 0.5rem 0;
   transition: 0.3s ease-in-out;
 }
-header .container .menu-categories a:hover {
+header ._container .menu-categories a:hover {
   color: #FF7373;
 }
-header .container .icon-links {
+header ._container .icon-links {
   grid-area: links;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-header .container .icon-links .icon-link {
+header ._container .icon-links .icon-link {
   position: relative;
   display: flex;
   align-items: center;
@@ -466,7 +467,7 @@ header .container .icon-links .icon-link {
   box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
   transition: 0.3s ease-in-out;
 }
-header .container .icon-links .btn-icon-link {
+header ._container .icon-links .btn-icon-link {
   color: #222529;
   margin: 0 0.3rem;
   font-size: 1.2rem;
@@ -488,30 +489,30 @@ header a {
     border: none;
     position: relative;
   }
-  header .container {
+  header ._container {
     height: auto;
     margin: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  header .container .menu-categories {
+  header ._container .menu-categories {
     display: block;
   }
-  header .container .menu-categories a {
+  header ._container .menu-categories a {
     padding: 0 0.3rem;
   }
-  header .container .icon-links .icon-link:hover {
+  header ._container .icon-links .icon-link:hover {
     background-color: #222529;
     color: white;
     box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.75);
   }
-  header .container .icon-links .active {
+  header ._container .icon-links .active {
     background-color: #222529;
     color: white;
     box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.75);
   }
-  header .container .icon-links .btn-icon-link {
+  header ._container .icon-links .btn-icon-link {
     display: none;
   }
   header a {
@@ -519,7 +520,7 @@ header a {
   }
 }
 @media (min-width: 1600px) {
-  header .container {
+  header ._container {
     height: auto;
     margin: auto;
   }
@@ -530,7 +531,7 @@ header a {
   background: linear-gradient(90deg, rgb(230, 230, 230) 0%, rgb(245, 245, 245) 100%);
   overflow: hidden;
 }
-.showcase .container {
+.showcase ._container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -584,7 +585,7 @@ header a {
   .showcase {
     padding-top: 0;
   }
-  .showcase .container {
+  .showcase ._container {
     padding: 0;
   }
   .showcase .showcase-text {
@@ -681,10 +682,10 @@ header a {
 .featured-products .section-title h3 {
   margin: 0;
 }
-.featured-products .card .card-background img {
+.featured-products ._card ._card-background img {
   width: 100%;
 }
-.featured-products .card .card-background .button-theme {
+.featured-products ._card ._card-background .button-theme {
   z-index: 1;
   bottom: 0;
   left: 0;
@@ -721,8 +722,10 @@ header a {
   }
   .featured-products .section-title h3 {
     margin: 0;
+    font-size: 20px;
+    font-weight: bold;
   }
-  .featured-products .card .card-background .button-theme {
+  .featured-products ._card ._card-background .button-theme {
     z-index: 1;
     bottom: -60px;
     position: absolute;
@@ -730,7 +733,7 @@ header a {
     height: 50px;
     transition: 0.3s ease-in-out;
   }
-  .featured-products .card:hover .card-background .button-theme {
+  .featured-products ._card:hover ._card-background .button-theme {
     bottom: 0;
   }
 }
@@ -1848,7 +1851,7 @@ header a {
 }
 
 @media (min-width: 768px) {
-  .showcasecard-big-small .container {
+  .showcasecard-big-small ._container {
     display: flex;
     height: 290px;
   }
@@ -1886,7 +1889,7 @@ header a {
   .showcasecard-big-small {
     width: 100%;
   }
-  .showcasecard-big-small .container {
+  .showcasecard-big-small ._container {
     height: 560px;
   }
   .showcasecard-big-small .big-card {
@@ -2004,7 +2007,7 @@ header a {
 }
 
 @media (min-width: 768px) {
-  .double-showcase-card .container {
+  .double-showcase-card ._container {
     display: flex;
     height: 200px;
     gap: 1.5rem;
@@ -2052,7 +2055,7 @@ header a {
   }
 }
 @media (min-width: 1600px) {
-  .double-showcase-card .container {
+  .double-showcase-card ._container {
     height: 400px;
   }
   .double-showcase-card .left-card {
@@ -2121,7 +2124,7 @@ header a {
 .our-speciality {
   margin-top: 3rem;
 }
-.our-speciality .container {
+.our-speciality ._container {
   background-color: #F5F5F5;
 }
 .our-speciality .section-title {
@@ -2186,7 +2189,7 @@ header a {
 }
 
 @media (min-width: 768px) {
-  .our-speciality .container {
+  .our-speciality ._container {
     height: 250px;
   }
   .our-speciality .section-title {
@@ -2216,7 +2219,7 @@ header a {
   }
 }
 @media (min-width: 1200px) {
-  .our-speciality .container {
+  .our-speciality ._container {
     height: 400px;
   }
   .our-speciality .section-title {
@@ -2234,9 +2237,10 @@ header a {
   }
   .our-speciality .wide-cards .wide-card .card-content {
     padding-left: 2rem;
+    width: 230px;
   }
   .our-speciality .wide-cards .wide-card .gray-square {
-    width: 260px;
+    width: 255px;
   }
   .our-speciality h3 {
     font-size: 20px;

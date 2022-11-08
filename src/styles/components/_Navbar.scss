@@ -12,7 +12,7 @@ header{
         background-color: white;
     }
     
-    .container{
+    ._container{
         display: grid;
         align-content: center;
         grid-template-columns: 1fr 1fr;
@@ -93,7 +93,7 @@ header{
     padding: 0.5rem 0;
     border: none;
     position: relative;
-    .container{
+    ._container{
         height:auto;
         margin: 0 1rem;
         display: flex;
@@ -133,7 +133,7 @@ header{
 
 @include ul{
 header{
-    .container{
+    ._container{
         height: auto;
         margin: auto;
     }

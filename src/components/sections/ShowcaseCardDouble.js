@@ -3,7 +3,7 @@ import React from 'react'
 const ShowcaseCardDouble = () => {
   return (
     <section className="double-showcase-card">
-        <div className="container">
+        <div className="_container">
             <div className="left-card">
                 <div className="card-content">
                     <h2>Pamela Reif's <span>Top Picks</span></h2>

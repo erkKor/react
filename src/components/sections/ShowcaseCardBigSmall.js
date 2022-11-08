@@ -3,7 +3,7 @@ import React from 'react'
 const ShowcaseCardBigSmall = () => {
   return (
     <section className="showcasecard-big-small">
-        <div className="container">
+        <div className="_container">
             <div className="big-card">
                 <h2>Winter Clearance <span>Up to 70% Off!</span></h2>
                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem apriam eaque ipsa quae ab illo inventore.</p>

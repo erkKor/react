@@ -52,7 +52,7 @@
 
 @include md{
 .showcasecard-big-small{
-    .container{
+    ._container{
         display: flex;
         height: 290px; 
     }
@@ -93,7 +93,7 @@
 @include ul{
 .showcasecard-big-small{
     width: 100%;
-    .container{
+    ._container{
         height: 560px; 
     }
     

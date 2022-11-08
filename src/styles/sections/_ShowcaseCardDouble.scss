@@ -52,7 +52,7 @@
 
 @include md{
 .double-showcase-card{
-    .container{
+    ._container{
         display: flex;
         height: 200px;
         gap:1.5rem;
@@ -104,7 +104,7 @@
 
 @include ul{
 .double-showcase-card{
-    .container{
+    ._container{
         height: 400px;
     }
     .left-card{
