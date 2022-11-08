@@ -18,8 +18,8 @@ const QuantityButton = () => {
   return (
     <div className="qty-btn-container">
         <button type="button" onClick={handleDecrement}>-</button>
-        <div className="input">{quantity}</div>
-        <button type="button"  onClick={handleIncrement}>+</button>
+        <div className="input" data-testid="quantity">{quantity}</div>
+        <button type="button" onClick={handleIncrement}>+</button>
     </div>
   )
 }

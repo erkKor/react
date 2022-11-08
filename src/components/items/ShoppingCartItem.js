@@ -2,6 +2,7 @@ import React from 'react'
 import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import { currencyFormatter } from '../../utilities/CurrencyFormater'
 
+
 const ShoppingCartItem = ({item}) => {
   const {incrementQuantity, decrementQuantity, removeItem} = useShoppingCart()
 
