@@ -2,6 +2,7 @@ import React from 'react'
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import OriginalCard from './items/OriginalCard';
+import Card from './items/Card';
 
 const responsive = {
   380: { items: 1 },
@@ -10,22 +11,22 @@ const responsive = {
   1024: { items: 4 },
 };
 
-const items = [
-  <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€35.00" orgPrice=""/>,
-  <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice="€35.00"/>,
-  <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€20.00" orgPrice=""/>,
-  <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€22.00" orgPrice="€25.00"/>,
-  <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice=""/>,
-  <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice=""/>,
-];
+// const items = [
+//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€35.00" orgPrice=""/>,
+//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice="€35.00"/>,
+//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€20.00" orgPrice=""/>,
+//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€22.00" orgPrice="€25.00"/>,
+//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice=""/>,
+//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice=""/>,
+// ];
 
-const Carousel = () => {
+const Carousel = ({items = []}) => {
   return (
     <section className="carousel">
     <h3>Related Products</h3>
     <AliceCarousel
         mouseTracking
-        items={items}
+        items={ items.map(product => <Card key={product.articleNumber} product={product} />)}
         responsive={responsive}
         controlsStrategy="alternate"
         disableDotsControls="false"
