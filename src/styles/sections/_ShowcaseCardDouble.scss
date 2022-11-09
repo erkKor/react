@@ -8,6 +8,9 @@
         display: flex;
         align-items: center;
         padding: 0 1rem;
+        img{
+            display: none;
+        }
         .card-content{
             position:  relative;
             display: flex;
@@ -21,6 +24,9 @@
         color: $color-dark;
         display: flex;
         padding: 0 1rem;
+        img{
+            display: none;
+        }
         .card-content{
             width: 100%;
             display: flex;
@@ -63,6 +69,7 @@
         flex-direction: column;
         justify-content:flex-start;
         padding: 0;
+        
         .card-content{
             width: auto;
             display: block;
@@ -102,16 +109,36 @@
 }
 }
 
-@include ul{
+@include lg{
+    .double-showcase-card{
+        .left-card{
+            
+        }
+        .right-card{
+            
+        }
+    }
+}
+
+
+@include xl{
 .double-showcase-card{
     ._container{
         height: 400px;
     }
     .left-card{
-        background-image: url(/src/assets/images/placeholders/pamela-reif.png);
+        // background-image: url(/src/assets/images/placeholders/pamela-reif.png);
+        // background-image: url(/src/assets/images/placeholders/pamela-reif.png);
         background-size: 100% 100%;
         width: 800px;
-        align-items: flex-end;
+        align-items: flex-start;
+        flex-direction: row;
+
+        img{
+            display: block;
+            width: 400px;
+            height: 100%;
+        }
         .card-content{
             h2{
                 margin-top: 5rem;
@@ -122,12 +149,20 @@
         }
     }
     .right-card{
-        background-image: url(/src/assets/images/placeholders/be-conscious.png);
+        // background-image: url(/src/assets/images/placeholders/be-conscious.png);
         background-size: 100% 100%;
         width: 800px;
+        padding: 0;
+
+        img{
+            display: block;
+            width: 400px;
+            height: 100%;
+        }
         .card-content{
             padding-left: 4rem;
             display: block;
+            width: 400px;
             h2{
                 margin-top: 5rem;
                 

@@ -7,9 +7,13 @@
         flex-direction: column;
         justify-content:center;
         align-items: center;
+        text-align: center;
         padding: 1rem 0;
         p{
             padding-bottom: 1rem;
+        }
+        img{
+            display: none;     
         }
     }
 
@@ -21,6 +25,9 @@
         justify-content:space-evenly;
         align-items: center;
         padding: 1rem 0;
+        img{
+            display: none;     
+        }
         h2{
             font-size: 1.4rem;
             padding-bottom: 0.5rem;
@@ -58,14 +65,17 @@
         height: 290px; 
     }
     .big-card{
+        // background-image: url(/src/assets/images/placeholders/light-brown-ph.png);
         background-image: url(/src/assets/images/placeholders/light-brown-ph.png);
         background-size: 100% 100%;
         width: 1045px;
         align-items: flex-start;
+        text-align: start;
         padding-left: 2rem;
     }
 
     .small-card{
+        // background-image: url(/src/assets/images/placeholders/standing-guy.png);
         background-image: url(/src/assets/images/placeholders/standing-guy.png);
         background-size: 100% 100%;
         width: 635px;
@@ -74,6 +84,10 @@
         align-items: flex-start;
         padding: 0;
         padding-left: 2rem;
+
+        img{
+            display: none;     
+        }
         h2{
             font-size: 1.8rem;
             margin-top: 5.5rem;
@@ -91,7 +105,7 @@
 }
 }
 
-@include ul{
+@include xl{
 .showcasecard-big-small{
     width: 100%;
     ._container{
@@ -100,6 +114,17 @@
     
     .big-card{
         padding-left: 4rem;
+        display: flex;
+        flex-direction: row;
+        background-image: none;
+        .content{
+            margin-top: 8rem;
+        }
+
+        img{
+            display: block;  
+            height: 543px;   
+        }
         p{
             max-width: 450px;
         }
@@ -108,6 +133,17 @@
     .small-card{
         height: 560px;
         padding-left: 4rem;
+        display: flex;
+        flex-direction: row;
+        background-image: none;
+        .content{
+            margin-top: 8rem;
+        }
+
+        img{
+            display: block; 
+            height: 543px;
+        }
         h2{
             font-size: 2.8rem;
         }

@@ -717,6 +717,8 @@ header a:active, header a:hover {
   align-items: center;
   color: white;
   width: 1110px;
+  background-image: url(/src/assets/images/placeholders/9.png);
+  background-position: center;
 }
 .big-sale-banner h3 {
   font-size: 2rem;
@@ -1752,6 +1754,7 @@ header a:active, header a:hover {
   .big-square-cards .big-square {
     width: 49%;
     font-size: 40px;
+    background-image: url(/src/assets/images/placeholders/7.png);
   }
   .big-square-cards .card-grid {
     grid-template-columns: repeat(2, 255px);
@@ -1762,6 +1765,9 @@ header a:active, header a:hover {
   }
   .big-square-cards ._card ._card-background .button-theme {
     bottom: -60px;
+  }
+  #bigSquareRight .big-square {
+    background-image: url(/src/assets/images/placeholders/8.png);
   }
 }
 .showcasecard-big-small {
@@ -1774,10 +1780,14 @@ header a:active, header a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 1rem 0;
 }
 .showcasecard-big-small .big-card p {
   padding-bottom: 1rem;
+}
+.showcasecard-big-small .big-card img {
+  display: none;
 }
 .showcasecard-big-small .small-card {
   background-color: #E7E7E7;
@@ -1787,6 +1797,9 @@ header a:active, header a:hover {
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem 0;
+}
+.showcasecard-big-small .small-card img {
+  display: none;
 }
 .showcasecard-big-small .small-card h2 {
   font-size: 1.4rem;
@@ -1836,6 +1849,7 @@ header a:active, header a:hover {
     background-size: 100% 100%;
     width: 1045px;
     align-items: flex-start;
+    text-align: start;
     padding-left: 2rem;
   }
   .showcasecard-big-small .small-card {
@@ -1847,6 +1861,9 @@ header a:active, header a:hover {
     align-items: flex-start;
     padding: 0;
     padding-left: 2rem;
+  }
+  .showcasecard-big-small .small-card img {
+    display: none;
   }
   .showcasecard-big-small .small-card h2 {
     font-size: 1.8rem;
@@ -1861,7 +1878,7 @@ header a:active, header a:hover {
     padding: 0;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .showcasecard-big-small {
     width: 100%;
   }
@@ -1870,6 +1887,16 @@ header a:active, header a:hover {
   }
   .showcasecard-big-small .big-card {
     padding-left: 4rem;
+    display: flex;
+    flex-direction: row;
+    background-image: none;
+  }
+  .showcasecard-big-small .big-card .content {
+    margin-top: 8rem;
+  }
+  .showcasecard-big-small .big-card img {
+    display: block;
+    height: 543px;
   }
   .showcasecard-big-small .big-card p {
     max-width: 450px;
@@ -1877,6 +1904,16 @@ header a:active, header a:hover {
   .showcasecard-big-small .small-card {
     height: 560px;
     padding-left: 4rem;
+    display: flex;
+    flex-direction: row;
+    background-image: none;
+  }
+  .showcasecard-big-small .small-card .content {
+    margin-top: 8rem;
+  }
+  .showcasecard-big-small .small-card img {
+    display: block;
+    height: 543px;
   }
   .showcasecard-big-small .small-card h2 {
     font-size: 2.8rem;
@@ -1913,6 +1950,9 @@ header a:active, header a:hover {
   align-items: center;
   padding: 0 1rem;
 }
+.double-showcase-card .left-card img {
+  display: none;
+}
 .double-showcase-card .left-card .card-content {
   position: relative;
   display: flex;
@@ -1925,6 +1965,9 @@ header a:active, header a:hover {
   color: #222529;
   display: flex;
   padding: 0 1rem;
+}
+.double-showcase-card .right-card img {
+  display: none;
 }
 .double-showcase-card .right-card .card-content {
   width: 100%;
@@ -2026,15 +2069,20 @@ header a:active, header a:hover {
     font-size: 2rem;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .double-showcase-card ._container {
     height: 400px;
   }
   .double-showcase-card .left-card {
-    background-image: url(/src/assets/images/placeholders/pamela-reif.png);
     background-size: 100% 100%;
     width: 800px;
-    align-items: flex-end;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .double-showcase-card .left-card img {
+    display: block;
+    width: 400px;
+    height: 100%;
   }
   .double-showcase-card .left-card .card-content h2 {
     margin-top: 5rem;
@@ -2043,13 +2091,19 @@ header a:active, header a:hover {
     margin-top: 2rem;
   }
   .double-showcase-card .right-card {
-    background-image: url(/src/assets/images/placeholders/be-conscious.png);
     background-size: 100% 100%;
     width: 800px;
+    padding: 0;
+  }
+  .double-showcase-card .right-card img {
+    display: block;
+    width: 400px;
+    height: 100%;
   }
   .double-showcase-card .right-card .card-content {
     padding-left: 4rem;
     display: block;
+    width: 400px;
   }
   .double-showcase-card .right-card .card-content h2 {
     margin-top: 5rem;

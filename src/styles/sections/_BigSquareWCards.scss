@@ -98,6 +98,7 @@
     .big-square{
         width: 49%;
         font-size: 40px;
+        background-image: url(/src/assets/images/placeholders/7.png);
     }
 
     .card-grid{
@@ -118,6 +119,14 @@
                 bottom: -60px;
             }
         }
+    }
+
+    
+}
+
+#bigSquareRight{
+    .big-square{
+        background-image: url(/src/assets/images/placeholders/8.png);
     }
 }
 }
