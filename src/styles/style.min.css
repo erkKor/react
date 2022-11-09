@@ -1851,24 +1851,41 @@ header a:active, header a:hover {
     align-items: flex-start;
     text-align: start;
     padding-left: 2rem;
+    position: relative;
+  }
+  .showcasecard-big-small .big-card .content {
+    z-index: 1;
+    height: 290px;
+  }
+  .showcasecard-big-small .big-card .content p {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+  }
+  .showcasecard-big-small .big-card img {
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 272px;
   }
   .showcasecard-big-small .small-card {
-    background-image: url(/src/assets/images/placeholders/standing-guy.png);
     background-size: 100% 100%;
     width: 635px;
     height: 290px;
     justify-content: center;
     align-items: flex-start;
+    flex-direction: row;
     padding: 0;
     padding-left: 2rem;
   }
   .showcasecard-big-small .small-card img {
-    display: none;
+    display: block;
+    height: 290px;
   }
   .showcasecard-big-small .small-card h2 {
     font-size: 1.8rem;
-    margin-top: 5.5rem;
-    margin-bottom: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
   }
   .showcasecard-big-small .small-card h2 span {
     display: block;
@@ -1893,13 +1910,17 @@ header a:active, header a:hover {
   }
   .showcasecard-big-small .big-card .content {
     margin-top: 8rem;
+    height: 100%;
+  }
+  .showcasecard-big-small .big-card .content p {
+    width: 450px;
+    height: auto;
+    overflow: visible;
   }
   .showcasecard-big-small .big-card img {
+    position: relative;
     display: block;
     height: 543px;
-  }
-  .showcasecard-big-small .big-card p {
-    max-width: 450px;
   }
   .showcasecard-big-small .small-card {
     height: 560px;
@@ -1909,7 +1930,7 @@ header a:active, header a:hover {
     background-image: none;
   }
   .showcasecard-big-small .small-card .content {
-    margin-top: 8rem;
+    margin-top: 7.5rem;
   }
   .showcasecard-big-small .small-card img {
     display: block;

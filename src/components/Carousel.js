@@ -6,6 +6,7 @@ import OriginalCard from './items/OriginalCard';
 const responsive = {
   380: { items: 1 },
   568: { items: 2 },
+  767: { items: 3 },
   1024: { items: 4 },
 };
 
