@@ -1,7 +1,8 @@
 .big-square-cards{
     margin-top: 2rem;
     ._container{
-        display: block;
+        display: flex;
+        flex-direction: column-reverse;
     }
     .big-square{
         display: flex;
@@ -51,17 +52,27 @@
     }
 }
 
-#bigSquareRight{
-    ._container{
-        justify-content: flex-end;
-    }
-}
+// #bigSquareLeft{
+//     ._container{
+//         // display: flex;
+//         flex-direction: column-reverse;
+//     }
+// }
+
+// #bigSquareRight{
+//     ._container{
+//         // justify-content: flex-end;
+//         // display: flex;
+//         flex-direction: column-reverse;
+//     }
+// }
 
 
 @include md{
 .big-square-cards{
     ._container{
         display: flex;
+        justify-content: flex-end;
     }
     .big-square{
         height: 674px;
@@ -91,14 +102,27 @@
         }
     }
 }
-    
+
+    #bigSquareLeft{
+        ._container{
+            flex-direction: row-reverse;
+        }
+    }
+
+    #bigSquareRight{
+        ._container{
+            flex-direction: row;
+        }
+    }
 }
+
+
 @include xl{
 .big-square-cards{
     .big-square{
         width: 49%;
         font-size: 40px;
-        background-image: url(/src/assets/images/placeholders/7.png);
+        // background-image: url(/src/assets/images/placeholders/7.png);
     }
 
     .card-grid{
@@ -120,13 +144,16 @@
             }
         }
     }
-
-    
 }
 
-#bigSquareRight{
-    .big-square{
-        background-image: url(/src/assets/images/placeholders/8.png);
+    #bigSquareLeft{
+        .big-square{
+            background-image: url(/src/assets/images/placeholders/7.png);
+        }
     }
-}
+    #bigSquareRight{
+        .big-square{
+            background-image: url(/src/assets/images/placeholders/8.png);
+        }
+    }
 }

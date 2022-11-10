@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from './Button'
 import { NavLink } from 'react-router-dom'
+import { useShoppingCart } from '../../contexts/ShoppingCartContext'
+import { currencyFormatter } from '../../utilities/CurrencyFormater'
 
 const SmallCard = ({product}) => {
   return (
@@ -23,7 +25,7 @@ const SmallCard = ({product}) => {
             </div>
             <div className="_card-prices"> 
                 <div className="original-price"></div>
-                <div className="discount-price">{product.price}</div>
+                <div className="discount-price">{currencyFormatter(product.price)}</div>
             </div>
         </div>
     </div>

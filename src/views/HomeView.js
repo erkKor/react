@@ -6,7 +6,7 @@ import FeaturedProducts from '../components/sections/FeaturedProducts'
 import ShowcaseCardDouble from '../components/sections/ShowcaseCardDouble'
 import OurSpeciality from '../components/sections/OurSpeciality'
 import BigSquareWCardsLeft from '../components/sections/BigSquareWCardsLeft'
-import BigSquareWCardsRight from '../components/sections/BigSquareWCardsRight'
+import BigSquareWCards from '../components/sections/BigSquareWCards'
 import SaleBanner from '../components/sections/SaleBanner'
 import TrippleColumnProducts from '../components/TrippleColumnProducts'
 import InfoIcons from '../components/InfoIcons'
@@ -34,8 +34,10 @@ const HomeView = () => {
       <FeaturedProducts title="Featured Products" items={featured}/> 
       <ShowcaseCardDouble />
       <OurSpeciality />
-      <BigSquareWCardsLeft items={square}/>
-      <BigSquareWCardsRight items={square}/> 
+      {/* <BigSquareWCardsLeft items={square}/> */}
+      <BigSquareWCards items={square} id="bigSquareLeft" offer="2 FOR USD $29"/> 
+      <BigSquareWCards items={square} id="bigSquareRight" offer="2 FOR USD $49"/> 
+      
       <SaleBanner />
       <TrippleColumnProducts items={tripple}/>
       <InfoIcons />

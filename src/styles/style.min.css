@@ -176,8 +176,8 @@ body {
   transition: 0.3s ease-in-out;
 }
 .small-card ._card-background .button-theme:hover .button-theme-border::before, .small-card ._card-background .button-theme:hover .button-theme-border::after {
-  width: calc(100% - 16px);
-  height: calc(100% - 16px);
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
 }
 .small-card ._card-body {
   display: flex;
@@ -353,6 +353,10 @@ body {
 
 .d-grid {
   display: grid !important;
+}
+
+.offcanvas-body {
+  flex-grow: 0;
 }
 
 @media (min-width: 1600px) {
@@ -647,6 +651,7 @@ header a:active, header a:hover {
 }
 .featured-products .section-title h3 {
   margin: 0;
+  font-weight: bold;
 }
 .featured-products ._card ._card-background img {
   width: 100%;
@@ -1639,6 +1644,10 @@ header a:active, header a:hover {
   margin-top: 0.4rem;
   margin-left: 1rem;
 }
+.shoppingcart .checkout {
+  display: flex;
+  justify-content: center;
+}
 
 @media (min-width: 768px) {
   .shoppingcart {
@@ -1649,7 +1658,8 @@ header a:active, header a:hover {
   margin-top: 2rem;
 }
 .big-square-cards ._container {
-  display: block;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .big-square-cards .big-square {
   display: flex;
@@ -1705,13 +1715,10 @@ header a:active, header a:hover {
   transition: 0.3s ease-in-out;
 }
 
-#bigSquareRight ._container {
-  justify-content: flex-end;
-}
-
 @media (min-width: 768px) {
   .big-square-cards ._container {
     display: flex;
+    justify-content: flex-end;
   }
   .big-square-cards .big-square {
     height: 674px;
@@ -1749,12 +1756,17 @@ header a:active, header a:hover {
   .big-square-cards ._card ._card-body .discount-price {
     margin-left: -5px;
   }
+  #bigSquareLeft ._container {
+    flex-direction: row-reverse;
+  }
+  #bigSquareRight ._container {
+    flex-direction: row;
+  }
 }
 @media (min-width: 1200px) {
   .big-square-cards .big-square {
     width: 49%;
     font-size: 40px;
-    background-image: url(/src/assets/images/placeholders/7.png);
   }
   .big-square-cards .card-grid {
     grid-template-columns: repeat(2, 255px);
@@ -1765,6 +1777,9 @@ header a:active, header a:hover {
   }
   .big-square-cards ._card ._card-background .button-theme {
     bottom: -60px;
+  }
+  #bigSquareLeft .big-square {
+    background-image: url(/src/assets/images/placeholders/7.png);
   }
   #bigSquareRight .big-square {
     background-image: url(/src/assets/images/placeholders/8.png);
@@ -1845,7 +1860,6 @@ header a:active, header a:hover {
     height: 290px;
   }
   .showcasecard-big-small .big-card {
-    background-image: url(/src/assets/images/placeholders/light-brown-ph.png);
     background-size: 100% 100%;
     width: 1045px;
     align-items: flex-start;
@@ -1866,7 +1880,7 @@ header a:active, header a:hover {
     display: block;
     position: absolute;
     right: 0;
-    height: 272px;
+    height: 285px;
   }
   .showcasecard-big-small .small-card {
     background-size: 100% 100%;
@@ -2312,6 +2326,12 @@ header a:active, header a:hover {
 .three-row-products .product-column {
   margin-bottom: 3rem;
   padding: 0 1rem;
+}
+.three-row-products .product-column h3 {
+  font-weight: 600;
+}
+.three-row-products .product-column ._card-prices {
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {

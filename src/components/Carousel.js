@@ -1,7 +1,6 @@
 import React from 'react'
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import OriginalCard from './items/OriginalCard';
 import Card from './items/Card';
 
 const responsive = {
@@ -10,15 +9,6 @@ const responsive = {
   767: { items: 3 },
   1024: { items: 4 },
 };
-
-// const items = [
-//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€35.00" orgPrice=""/>,
-//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice="€35.00"/>,
-//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€20.00" orgPrice=""/>,
-//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€22.00" orgPrice="€25.00"/>,
-//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice=""/>,
-//   <OriginalCard productName="Modern Black Blouse" productCategory="Category" discPrice="€25.00" orgPrice=""/>,
-// ];
 
 const Carousel = ({items = []}) => {
   return (

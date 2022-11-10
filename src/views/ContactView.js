@@ -2,7 +2,6 @@ import React from 'react'
 import Breadcrumb from '../components/items/Breadcrumb'
 import Navbar from '../components/Navbar'
 import Map from '../components/items/Map'
-import ContactFormErik from '../components/ContactFormErik'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 
@@ -13,7 +12,6 @@ const ContactView = () => {
       <Navbar headerType="header-light"/>
       <Breadcrumb currentPage="Contacts"/>
       <Map />
-      {/* <ContactFormErik /> */}
       <ContactForm />
       <Footer />
     </>
