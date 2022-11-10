@@ -10,28 +10,22 @@
     }
     form{
         margin: 0.5rem 0.5rem;
-        .inputs{
-            width:auto;
-            display: block;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
+
         input{
             margin: 0.5rem 0;
-            width: 290px;
+            width: 100%;
             padding: 15px 18px;
             border: 1px solid $color-gray-2;
             outline: none;
         }
         textarea{
             height: 140px;
-            width: 290px;
+            width: 100%;
             font-family: $font-poppins;
             border: 1px solid $color-gray-2;
             padding: 15px 18px;
             resize: none;
             outline: none;
-            
         }
         button{
             margin-top: 1rem;
@@ -46,7 +40,6 @@
             color: $color-theme;
             border-color: $color-theme !important; 
         }
-
     }
 
     .submit-succes{
@@ -67,158 +60,28 @@
     }
 }
 
-
-
 @include md{
 .contact-form{
-    margin-top: 2rem;
-    h3{
-        margin: 1rem 0.5rem; 
-    }
     form{
-        margin: 0.5rem 0.5rem;       
-        .inputs{
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-        input{
-            width: 330px;
-            padding: 15px 18px;
-            border: 1px solid $color-gray-2;
-            outline: none;
-        }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;  
 
-        textarea{
-            width: 735px;
-            height: 140px;
-            font-family: $font-poppins;
-            border: 1px solid $color-gray-2;
-            padding: 15px 18px;
-            resize: none;
-            outline: none;
-            
+        .textarea-container{
+            grid-column: 1 / -1;
         }
+        
         button{
-            margin-top: 1rem;
-        }
-
-        .errorMessage{
-            color: $color-theme;
-            font-size: 0.8em;
-            
+            grid-column: 2 / 1;
         }
     }
 }
 }
+
 @include xl{
 .contact-form{
-    margin-top: 2rem;
     ._container{
         width: 1110px;
     }
-
-    h3{
-        margin: 1rem 0.5rem; 
-    }
-    form{
-        margin: 0.5rem 0.5rem;       
-        .inputs{
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1.5rem;
-        }
-        input{
-            width: 530px;
-            padding: 15px 18px;
-            border: 1px solid $color-gray-2;
-            outline: none;
-        }
-
-        .commentsDiv{
-            width: 1100px;
-        }
-        textarea{
-            height: 140px;
-            width: 100%;
-            font-family: $font-poppins;
-            border: 1px solid $color-gray-2;
-            padding: 15px 18px;
-            resize: none;
-            outline: none;
-        }
-        button{
-            margin-top: 1rem;
-        }
-
-        .errorMessage{
-            color: $color-theme;
-            font-size: 0.8em;
-        }
-        
-    }
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// form{
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     gap:1rem;
-//     margin: 0.5rem 0.5rem;       
-
-//     input{
-//         padding: 15px 18px;
-//         border: 1px solid $color-gray-2;
-//         width: 93%;
-//     }
-
-//     .commentsDiv{
-//         width: 1100px;
-//     }
-//     textarea{
-//         font-family: $font-poppins;
-//         border: 1px solid $color-gray-2;
-//         height: 140px;
-//         padding: 15px 18px;
-//         resize: none;
-//         grid-area: comments;
-//         width: 100%;
-//         grid-column: 2 / -1;
-//     }
-
-//     button{
-//         grid-column: 1 / -1;
-//     }
-
-//     .errorMessage{
-//         margin-top: 5px;
-//         color: $color-theme;
-//         font-size: 0.8em;
-//     }
-//     .error{
-//         color: $color-theme;
-//         border-color: $color-theme;
-//     }
-// }

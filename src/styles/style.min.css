@@ -928,22 +928,16 @@ header a:active, header a:hover {
 .contact-form form {
   margin: 0.5rem 0.5rem;
 }
-.contact-form form .inputs {
-  width: auto;
-  display: block;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
 .contact-form form input {
   margin: 0.5rem 0;
-  width: 290px;
+  width: 100%;
   padding: 15px 18px;
   border: 1px solid #CDCED0;
   outline: none;
 }
 .contact-form form textarea {
   height: 140px;
-  width: 290px;
+  width: 100%;
   font-family: "Poppins", sans-serif;
   border: 1px solid #CDCED0;
   padding: 15px 18px;
@@ -979,85 +973,21 @@ header a:active, header a:hover {
 }
 
 @media (min-width: 768px) {
-  .contact-form {
-    margin-top: 2rem;
-  }
-  .contact-form h3 {
-    margin: 1rem 0.5rem;
-  }
   .contact-form form {
-    margin: 0.5rem 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
-  .contact-form form .inputs {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-  }
-  .contact-form form input {
-    width: 330px;
-    padding: 15px 18px;
-    border: 1px solid #CDCED0;
-    outline: none;
-  }
-  .contact-form form textarea {
-    width: 735px;
-    height: 140px;
-    font-family: "Poppins", sans-serif;
-    border: 1px solid #CDCED0;
-    padding: 15px 18px;
-    resize: none;
-    outline: none;
+  .contact-form form .textarea-container {
+    grid-column: 1/-1;
   }
   .contact-form form button {
-    margin-top: 1rem;
-  }
-  .contact-form form .errorMessage {
-    color: #FF7373;
-    font-size: 0.8em;
+    grid-column: 2/1;
   }
 }
 @media (min-width: 1200px) {
-  .contact-form {
-    margin-top: 2rem;
-  }
   .contact-form ._container {
     width: 1110px;
-  }
-  .contact-form h3 {
-    margin: 1rem 0.5rem;
-  }
-  .contact-form form {
-    margin: 0.5rem 0.5rem;
-  }
-  .contact-form form .inputs {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-  }
-  .contact-form form input {
-    width: 530px;
-    padding: 15px 18px;
-    border: 1px solid #CDCED0;
-    outline: none;
-  }
-  .contact-form form .commentsDiv {
-    width: 1100px;
-  }
-  .contact-form form textarea {
-    height: 140px;
-    width: 100%;
-    font-family: "Poppins", sans-serif;
-    border: 1px solid #CDCED0;
-    padding: 15px 18px;
-    resize: none;
-    outline: none;
-  }
-  .contact-form form button {
-    margin-top: 1rem;
-  }
-  .contact-form form .errorMessage {
-    color: #FF7373;
-    font-size: 0.8em;
   }
 }
 .product-details {

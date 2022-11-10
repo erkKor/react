@@ -80,7 +80,6 @@ const ContactForm = () => {
         
         <h3>Come in Contact with Us</h3>
         <form onSubmit={handleSubmit} noValidate>
-          <div className="inputs">
             <div>
               <input id="name" className={(errors.name ? 'errorField': '')} value={name} onChange={handleChange} type="text" placeholder="Your Name" />
               <div className="errorMessage">{errors.name}</div>
@@ -89,9 +88,8 @@ const ContactForm = () => {
               <input id="email" className={(errors.email ? 'errorField': '')} value={email} onChange={handleChange} type="email" placeholder="Your Mail" />
               <div className="errorMessage">{errors.email}</div>
             </div>
-          </div>
-          <div className="">
-            <textarea id="comments" className= {(errors.comments ? 'errorField': '')} style={(errors.comments ? {border: '1px solid #FF7373'}: {} )} value={comments} onChange={handleChange} placeholder="Comments"></textarea>
+          <div className="textarea-container">
+            <textarea id="comments" className= {(errors.comments ? 'errorField': '')} value={comments} onChange={handleChange} placeholder="Comments"></textarea>
             <div className="errorMessage">{errors.comments}</div>
           </div>
           <button className="button-theme" type="submit">Post Comments</button>
