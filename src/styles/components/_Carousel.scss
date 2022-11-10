@@ -4,6 +4,9 @@
 
     ._card{
         width: 90%;
+        img{
+            width: 100%;
+        }
     }
     h3{
         margin: 0.6rem 1rem;
@@ -31,7 +34,6 @@
             box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
         }
     }
-    
     .right-button{
         position: absolute;
         top:-35px;
@@ -52,22 +54,9 @@
             box-shadow: 0px 0px 8px -3px rgba(0,0,0,0.75);
         }
     }
-    
-      .alice-carousel {
-        width: auto !important;
-      }
-    
-      .item{
-        background-color: $color-gray-0;
-        height: 325px;
-        width: 255px;
-        margin: 0 0.5rem;
-        padding: 0;
-    }
     .alice-carousel__stage{
         padding: 0 1rem !important;
-    }
-    
+    } 
 }
 
 @include xl{
@@ -79,14 +68,6 @@
     }
     .alice-carousel__stage{
         padding: 0 !important;
-    }
-    .alice-carousel {
-    width: 1110px !important;
-    }
-    
-    .alice-carousel__stage-item{
-        // width: 255px !important;
-        // margin-right: 1.5rem;
     }
 }
 }
