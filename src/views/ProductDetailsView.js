@@ -12,7 +12,7 @@ import { useProductContext } from '../contexts/ProductContext'
 const ProductDetailsView = () => {
     const {id} = useParams()
     const [product, setProducts] = useState({})
-    const {featured, getFeaturedProducts} = useProductContext()
+    const {products, getProducts} = useProductContext()
 
     useEffect(() => {
         const fetchData = async () =>{
@@ -20,8 +20,10 @@ const ProductDetailsView = () => {
           setProducts(await result.json())
         }
         fetchData()
-        getFeaturedProducts(8)
+        getProducts()
     },[])
+
+    let carousel = products.slice(9,17)
 
   return (
     <>
@@ -29,7 +31,7 @@ const ProductDetailsView = () => {
       <SaleText />
       <Breadcrumb currentPage="Products"/>
       <ProductDetails products={product}/>
-      <Carousel items={featured}/>
+      <Carousel items={carousel}/>
       <Footer />
     </>
   )

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import "./styles/style.min.css"
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { ProductProvider } from './contexts/ProductContext'
@@ -12,7 +12,6 @@ import ContactView from "./views/ContactView";
 import SearchView from "./views/SearchView"
 import CompareView from "./views/CompareView"
 import WishlistView from "./views/WishlistView"
-import ShoppingCartView from "./views/ShoppingCartView"
 import NotFoundView from "./views/NotFoundView";
 
 function App() {
@@ -29,7 +28,6 @@ function App() {
         <Route path="/Search" element={<SearchView />}/>
         <Route path="/Compare" element={<CompareView />}/>
         <Route path="/Wishlist" element={<WishlistView />}/>
-        <Route path="/ShoppingCart" element={<ShoppingCartView />}/>
         <Route path="*" element={<NotFoundView />}/>
       </Routes>
       </ProductProvider>

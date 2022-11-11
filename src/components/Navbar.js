@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useShoppingCart } from '../contexts/ShoppingCartContext'
 import MenuIcon from './items/MenuIcon'
@@ -6,10 +6,22 @@ import MenuIcon from './items/MenuIcon'
 const Navbar = ({headerType}) => {
     const [showMenu, setShowMenu] = useState(false)
     const {cartQuantity} = useShoppingCart()
+    const ref = useRef(null);
+
+    useEffect (() => {
+        if (cartQuantity === 0){
+            const hide = ref.current
+            hide.className = "hidden-badge"
+        } else if (cartQuantity !== 0){
+            const hide = ref.current
+            hide.className = "badge"
+        }
+    })
 
     const toggleMenu = () =>{
         setShowMenu(!showMenu)
     }
+    
 
   return (
     <header className={headerType}>
@@ -27,10 +39,9 @@ const Navbar = ({headerType}) => {
                 <MenuIcon link="/search" icon="fa-light fa-magnifying-glass"/>
                 <MenuIcon hideOnMobile={true} link="/compare" icon="fa-light  fa-code-compare rotate-icon rotate-icon"/>
                 <MenuIcon hideOnMobile={true} link="/wishlist" icon="fa-light fa-heart" badge="badge" badgeNumber="1"/>
-                {/* <MenuIcon link="/shoppingcart" icon="fa-light fa-bag-shopping" badge="badge" badgeNumber="3"/> */}
                 <button className="icon-link btn-icon-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
                     <i className="fa-light fa-bag-shopping"></i>
-                    <span className="badge">{cartQuantity}</span>
+                    <span ref={ref} className="badge">{cartQuantity}</span>
                 </button>
                 <button onClick={toggleMenu} id="hamburgerMenu" className="icon-link btn-icon-link">
                     <i className="fa-light fa-bars-staggered"></i>

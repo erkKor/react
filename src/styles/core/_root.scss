@@ -362,6 +362,10 @@ margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: visible;
+}
+.hidden-badge{
+    visibility: hidden;
 }
 
 .d-none{
@@ -373,6 +377,10 @@ margin: 0;
 
 .offcanvas-body{
     flex-grow: 0;
+}
+
+.filler{
+    height: 665px;
 }
 
 @include ul{
