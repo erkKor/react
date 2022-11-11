@@ -27,8 +27,11 @@ export const ShoppingCartProvider = ({children}) => {
             } else{
                 return items.map(item => {
                     if (item.articleNumber === articleNumber) {
+                        
                         return {...item, quantity: item.quantity + 1}
+                        
                     } else{
+
                         return item
                     }
                 })

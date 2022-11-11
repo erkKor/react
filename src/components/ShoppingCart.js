@@ -4,7 +4,8 @@ import ShoppingCartItem from './items/ShoppingCartItem'
 
 const ShoppingCart = () => {
   const {cartItems} = useShoppingCart()
-  
+  console.log(cartItems)
+  cartItems.map(item => {console.log(item)})
   return (
     <div className="shoppingcart offcanvas offcanvas-end" tabindex="-1" id="shoppingCart" aria-labelledby="shoppingCartLabel">
       <div className="offcanvas-header">
@@ -17,6 +18,7 @@ const ShoppingCart = () => {
         }
       </div>
       <div className="checkout">
+
         <button className="button-theme">Check Out
           <div className="button-theme-border"></div>
         </button>

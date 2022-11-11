@@ -1,8 +1,10 @@
 import React from 'react'
 import Button from './Button'
+import Stars from './Stars'
 import { NavLink } from 'react-router-dom'
 import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import { currencyFormatter } from '../../utilities/CurrencyFormater'
+
 
 const Card = ({product}) => {
     const {incrementQuantity} = useShoppingCart()
@@ -24,11 +26,12 @@ const Card = ({product}) => {
             <p>{product.category}</p>
             <h3>{product.name}</h3>
             <div className="stars">
+                 <Stars number={product.rating}/>
+                {/* <i className="fa-sharp fa-solid fa-star"></i>
                 <i className="fa-sharp fa-solid fa-star"></i>
                 <i className="fa-sharp fa-solid fa-star"></i>
                 <i className="fa-sharp fa-solid fa-star"></i>
-                <i className="fa-sharp fa-solid fa-star"></i>
-                <i className="fa-sharp fa-solid fa-star"></i>
+                <i className="fa-sharp fa-solid fa-star"></i> */}
             </div>
             <div className="_card-prices"> 
                 <div className="original-price"></div>
