@@ -1,11 +1,14 @@
 import React from 'react'
 import { useShoppingCart } from '../contexts/ShoppingCartContext'
+import { currencyFormatter } from '../utilities/CurrencyFormater'
 import ShoppingCartItem from './items/ShoppingCartItem'
 
 const ShoppingCart = () => {
   const {cartItems} = useShoppingCart()
-  console.log(cartItems)
-  cartItems.map(item => {console.log(item)})
+
+  let TotalPrice = 0
+  cartItems.map(item => TotalPrice = TotalPrice + item.product.price * item.quantity)
+
   return (
     <div className="shoppingcart offcanvas offcanvas-end" tabindex="-1" id="shoppingCart" aria-labelledby="shoppingCartLabel">
       <div className="offcanvas-header">
@@ -18,7 +21,7 @@ const ShoppingCart = () => {
         }
       </div>
       <div className="checkout">
-
+        <h5>Total: {currencyFormatter(TotalPrice)}</h5>
         <button className="button-theme">Check Out
           <div className="button-theme-border"></div>
         </button>
