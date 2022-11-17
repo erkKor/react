@@ -11,21 +11,21 @@ const OurSpeciality = () => {
                 <div className="wide-card">
                     <div className="card-content">
                         <h3>Track Your Order</h3>
-                        <a href="">Get started <i className="fa-solid fa-chevron-right"></i> </a>
+                        <a href="/">Get started <i className="fa-solid fa-chevron-right"></i> </a>
                     </div>
                     <div className="gray-square"></div>
                 </div>
                 <div className="wide-card">
                     <div className="card-content">
                         <h3>Make a Return</h3>
-                        <a href="">Get started <i className="fa-solid fa-chevron-right"></i> </a>
+                        <a href="/">Get started <i className="fa-solid fa-chevron-right"></i> </a>
                     </div>
                     <div className="gray-square"></div>
                 </div>
                 <div className="wide-card">
                     <div className="card-content">
                         <h3>Request a Price Adjustment</h3>
-                        <a href="">Get started <i className="fa-solid fa-chevron-right"></i> </a>
+                        <a href="/">Get started <i className="fa-solid fa-chevron-right"></i> </a>
                     </div>
                     <div className="gray-square"></div>
                 </div>

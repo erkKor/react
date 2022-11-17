@@ -16,15 +16,8 @@ const HomeView = () => {
   window.top.document.title = 'Fixxo.'
 
   const {products, getProducts} = useProductContext()
-  // const {featured, getFeaturedProducts} = useProductContext()
-  // const {square, getSquareProducts} = useProductContext()
-  // const {tripple, getTrippleProducts} = useProductContext()
-
   useEffect(() => {
     getProducts()
-    // getFeaturedProducts(8)
-    // getSquareProducts(4)
-    // getTrippleProducts(3)
   }, [])
 
   let featuredP = products.slice(0,8)

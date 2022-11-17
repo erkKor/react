@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from './Button'
 import { NavLink } from 'react-router-dom'
-import { useShoppingCart } from '../../contexts/ShoppingCartContext'
 import { currencyFormatter } from '../../utilities/CurrencyFormater'
 
 const SmallCard = ({product}) => {
